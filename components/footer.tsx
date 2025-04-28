@@ -78,18 +78,6 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-
-          <div>
-            <h4 className="font-serif text-lg font-semibold text-white">Hours</h4>
-            <div className="mt-2 h-0.5 w-12 bg-[#CDB090]"></div>
-            <ul className="mt-4 space-y-2">
-              <li className="text-gray-400">Monday - Sunday</li>
-              <li className="text-gray-400">7:00 AM - 10:00 PM</li>
-              <li className="mt-4 text-gray-400">
-                <span className="font-serif italic">Open all days</span>
-              </li>
-            </ul>
-          </div>
         </div>
 
         <div className="mt-16 border-t border-gray-800 pt-8 text-center">
