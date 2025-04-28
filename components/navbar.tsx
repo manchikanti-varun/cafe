@@ -39,7 +39,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${isScrolled
-        ? "bg-white py-2 backdrop-blur-md bg-[url('/Nav-logo.png')] bg-cover text-[#0D0906]"
+        ? "bg-white py-2 backdrop-blur-md bg-cover text-[#0D0906]"
         : "bg-transparent py-4 text-white"
         }`}
     >
