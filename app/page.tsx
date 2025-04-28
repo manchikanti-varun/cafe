@@ -13,21 +13,16 @@ export default function Home() {
 
   const slides = [
     {
-      image: "/cafe-hero.jpg",
-      title: "Authentic South Indian Experience",
-      description: "Reviving a feeling, one cup at a time",
-    },
-    {
       image: "/sponge-cake.jpg",
       title: "Legendary Sponge Cake",
       description: "Our iconic recipe since 1995",
     },
     {
-      image: "/filter-coffee.jpg",
-      title: "Premium Filter Coffee",
-      description: "Brewed to perfection",
-    },
-  ]
+      image: "/kova_bun.png",
+      title: "Famous Kova Bun",
+      description: "Soft bun filled with our special milk-based sweet filling, a perfect tea-time companion.",
+    }
+  ];
 
   useEffect(() => {
     setIsVisible(true)
@@ -264,13 +259,8 @@ export default function Home() {
               {
                 name: "Famous Kova Bun",
                 desc: "Soft bun filled with our special milk-based sweet filling, a perfect tea-time companion.",
-                image: "/kova-bun.jpg",
-              },
-              {
-                name: "Premium Filter Coffee",
-                desc: "Brewed to perfection using traditional methods, our coffee brings the authentic taste of South India.",
-                image: "/filter-coffee.jpg",
-              },
+                image: "/kova_bun.png",
+              }
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -445,17 +435,17 @@ export default function Home() {
               {
                 title: "Why Tamil Nadu's Herbal Drinks Are Special",
                 excerpt: "Exploring the ancient wisdom behind our healing beverages...",
-                image: "/herbal-drinks.jpg",
+                image: "/Blog_img.png",
               },
               {
                 title: "The Story Behind Our Sponge Cake",
                 excerpt: "A recipe that traveled through time, carrying memories of generations...",
-                image: "/cake-story.jpg",
+                image: "/Blog_img.png",
               },
               {
                 title: "Importance of Nostalgia in Modern Cafes",
                 excerpt: "How we're bridging the gap between tradition and contemporary dining...",
-                image: "/cafe-nostalgia.jpg",
+                image: "/Blog_img.png",
               },
             ].map((blog, index) => (
               <motion.div

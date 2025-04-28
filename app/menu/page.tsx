@@ -572,7 +572,7 @@ export default function Menu() {
                 name: "Famous Kova Bun",
                 description: "Soft bun filled with our special milk-based sweet filling, a perfect tea-time companion",
                 price: "₹130",
-                image: "/kova-bun.jpg",
+                image: "/kova_bun.png",
                 story:
                   "Created during a particularly challenging time, this recipe symbolizes resilience and creativity in the face of adversity.",
               },

@@ -27,7 +27,7 @@ export default function Blogs() {
                 excerpt:
                   "Exploring the ancient wisdom behind our healing beverages and how they've stood the test of time in modern wellness.",
                 date: "April 15, 2023",
-                image: "herbal-drinks",
+                image: "Blog_img.png",
                 category: "Traditions",
               },
               {
@@ -35,7 +35,7 @@ export default function Blogs() {
                 excerpt:
                   "A recipe that traveled through time, carrying memories of generations and becoming a symbol of our café's heritage.",
                 date: "March 22, 2023",
-                image: "sponge-cake-story",
+                image: "Blog_img.png",
                 category: "Recipes",
               },
               {
@@ -43,7 +43,7 @@ export default function Blogs() {
                 excerpt:
                   "How we're bridging the gap between tradition and contemporary dining experiences to create meaningful connections.",
                 date: "February 10, 2023",
-                image: "nostalgia-cafes",
+                image: "Blog_img.png",
                 category: "Culture",
               },
               {
@@ -51,7 +51,7 @@ export default function Blogs() {
                 excerpt:
                   "Delving into the meticulous process behind the perfect cup of South Indian filter coffee and its cultural significance.",
                 date: "January 28, 2023",
-                image: "filter-coffee",
+                image: "Blog_img.png",
                 category: "Beverages",
               },
               {
@@ -59,7 +59,7 @@ export default function Blogs() {
                 excerpt:
                   "Rediscovering the nutritional powerhouses that were staples in traditional Tamil cuisine and their modern revival.",
                 date: "December 15, 2022",
-                image: "millets",
+                image: "Blog_img.png",
                 category: "Ingredients",
               },
             ].map((blog, index) => (
@@ -69,7 +69,7 @@ export default function Blogs() {
               >
                 <div className="relative h-56 overflow-hidden">
                   <Image
-                    src={`/placeholder.svg?height=400&width=600&text=${blog.image}`}
+                    src={`/Blog_img.png?height=400&width=600&text=${blog.image}`}
                     alt={blog.title}
                     width={600}
                     height={400}
