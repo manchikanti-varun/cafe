@@ -120,13 +120,13 @@ export default function Menu() {
                 name: "Country Chicken Egg 1 pc",
                 description: "Fresh farm egg served either boiled or as a fluffy omelette",
                 price: "₹30",
-                image: "/egg-dish.jpg",
+                image: "/egg.jpg",
               },
               {
                 name: "Egg 1 pc (Omelette)",
                 description: "Fresh farm egg served either boiled or as a fluffy omelette",
                 price: "₹30",
-                image: "/egg-dish.jpg",
+                image: "/omelette.jpg",
               },
             ].map((item, index) => (
               <motion.div
