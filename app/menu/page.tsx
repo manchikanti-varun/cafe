@@ -38,26 +38,32 @@ export default function Menu() {
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
+                name: "Milk",
+                description: "Fresh and creamy milk served hot or cold as per your preference",
+                price: "₹50",
+                image: "/milk.jpg",
+              },
+              {
                 name: "Thoothukudi Chai",
                 description: "Our signature spiced tea with cardamom, ginger, and a hint of cinnamon",
                 price: "₹60",
-                image: "/hot-beverages.jpg",
+                image: "/Thoothukudi_Chai.jpg",
               },
               {
-                name: "Herbal Tea",
-                description: "A soothing blend of local herbs known for their healing properties",
+                name: "Thoothukudi Diet Herbal Tea (Ginger Special Instant Herbal Tea)",
+                description: "A healthy and refreshing blend with ginger, crafted for wellness and fitness",
                 price: "₹70",
-                image: "/herbal-drinks.jpg",
+                image: "/ThoothukudiDietHerbalTea.jpg",
               },
               {
-                name: "Dawachai",
-                description: "Traditional medicinal tea, perfect for cold weather and immunity",
+                name: "Thoothukudi Dawachai (Forestly Collected Herbs)",
+                description: "Traditional medicinal tea made with wild herbs, perfect for immunity and cold seasons",
                 price: "₹80",
-                image: "/hot-beverages.jpg",
+                image: "/Thoothukudi_Dawachai.jpg",
               },
               {
-                name: "Thoothukudi Coffee",
-                description: "Rich filter coffee brewed the authentic South Indian way",
+                name: "Thoothukudi Coffee (Thati Bellam Sonti Coffee)",
+                description: "Authentic South Indian filter coffee brewed with palm jaggery and dry ginger",
                 price: "₹70",
                 image: "/filter-coffee.jpg",
               },
@@ -81,9 +87,6 @@ export default function Menu() {
                 <div className="mt-4">
                   <div className="flex items-center justify-between">
                     <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
-                    <span className="rounded-full bg-[#F9F5F0] px-3 py-1 text-sm font-bold text-[#653A2A]">
-                      {item.price}
-                    </span>
                   </div>
                   <p className="mt-2 text-[#653A2A]">{item.description}</p>
                 </div>
@@ -92,7 +95,7 @@ export default function Menu() {
           </div>
         </div>
       </section>
-      
+
       {/* Farm Fresh Bites Section */}
       <section className="relative py-16">
         <div className="absolute inset-0 bg-[url('/farm-fresh.jpg')] bg-cover bg-fixed bg-center bg-no-repeat opacity-10"></div>
@@ -103,25 +106,24 @@ export default function Menu() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-center font-serif text-3xl font-bold text-[#4D281F] md:text-4xl">
-              Farm Fresh Bites
-            </h2>
+            <h2 className="text-center font-serif text-3xl font-bold text-[#4D281F] md:text-4xl">Farm Fresh Bites</h2>
             <div className="mx-auto mt-2 h-1 w-24 bg-[#91604F]"></div>
             <p className="mx-auto mt-4 max-w-2xl text-center text-[#653A2A]">
-              Straight from the farm to your plate — enjoy the authentic flavors of country-style chicken and farm-fresh eggs
+              Straight from the farm to your plate — enjoy the authentic flavors of country-style chicken and farm-fresh
+              eggs
             </p>
           </motion.div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                name: "Country Chicken Curry",
-                description: "Tender country chicken cooked with authentic spices and traditional flavors",
-                price: "₹250",
-                image: "/country-chicken.jpg",
+                name: "Country Chicken Egg 1 pc",
+                description: "Fresh farm egg served either boiled or as a fluffy omelette",
+                price: "₹30",
+                image: "/egg-dish.jpg",
               },
               {
-                name: "Egg 1 pc (Boiled Egg / Omelette)",
+                name: "Egg 1 pc (Omelette)",
                 description: "Fresh farm egg served either boiled or as a fluffy omelette",
                 price: "₹30",
                 image: "/egg-dish.jpg",
@@ -133,22 +135,19 @@ export default function Menu() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex overflow-hidden rounded-lg bg-white shadow-md"
+                className="group overflow-hidden rounded-lg bg-white p-4 shadow-md transition-transform hover:-translate-y-1"
               >
-                <div className="relative h-auto w-1/3">
+                <div className="relative h-48 overflow-hidden rounded-lg">
                   <Image
                     src={item.image || "/placeholder.svg"}
                     alt={item.name}
                     fill
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="flex w-2/3 flex-col justify-center p-6">
+                <div className="mt-4">
                   <div className="flex items-center justify-between">
                     <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
-                    <span className="rounded-full bg-[#F9F5F0] px-3 py-1 text-sm font-bold text-[#653A2A]">
-                      {item.price}
-                    </span>
                   </div>
                   <p className="mt-2 text-[#653A2A]">{item.description}</p>
                 </div>
@@ -168,9 +167,7 @@ export default function Menu() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-center font-serif text-3xl font-bold text-[#4D281F] md:text-4xl">
-              Millet Delights
-            </h2>
+            <h2 className="text-center font-serif text-3xl font-bold text-[#4D281F] md:text-4xl">Millet Delights</h2>
             <div className="mx-auto mt-2 h-1 w-24 bg-[#91604F]"></div>
             <p className="mx-auto mt-4 max-w-2xl text-center text-[#653A2A]">
               Wholesome millet dishes for a nourishing and flavorful experience
@@ -181,18 +178,26 @@ export default function Menu() {
             {[
               {
                 name: "Millet Sambar Rice",
+                description: "Nutritious millet rice cooked with flavorful sambar and traditional spices",
+                price: "₹120",
                 image: "/millet-sambar-rice.jpg",
               },
               {
                 name: "Samalu Curd Rice",
+                description: "Cooling curd rice made with wholesome samalu (little millet) for a light meal",
+                price: "₹100",
                 image: "/samalu-curd-rice.jpg",
               },
               {
                 name: "Millet Curd Rice",
+                description: "Creamy curd rice blended with healthy millets for a refreshing and filling dish",
+                price: "₹110",
                 image: "/millet-curd-rice.jpg",
               },
               {
                 name: "Millet Idly",
+                description: "Soft, fluffy idlis made with a blend of millets, perfect for a healthy breakfast",
+                price: "₹90",
                 image: "/millet-idly.jpg",
               },
             ].map((item, index) => (
@@ -212,8 +217,11 @@ export default function Menu() {
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="mt-4 text-center">
-                  <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
+                <div className="mt-4">
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
+                  </div>
+                  <p className="mt-2 text-[#653A2A]">{item.description}</p>
                 </div>
               </motion.div>
             ))}
@@ -237,7 +245,7 @@ export default function Menu() {
             </p>
           </motion.div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 name: "Dry Fruit Shake",
@@ -270,22 +278,19 @@ export default function Menu() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex overflow-hidden rounded-lg bg-white shadow-md"
+                className="group overflow-hidden rounded-lg bg-white p-4 shadow-md transition-transform hover:-translate-y-1"
               >
-                <div className="relative h-auto w-1/3">
+                <div className="relative h-48 overflow-hidden rounded-lg">
                   <Image
                     src={item.image || "/placeholder.svg"}
                     alt={item.name}
                     fill
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="flex w-2/3 flex-col justify-center p-6">
+                <div className="mt-4">
                   <div className="flex items-center justify-between">
                     <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
-                    <span className="rounded-full bg-[#F9F5F0] px-3 py-1 text-sm font-bold text-[#653A2A]">
-                      {item.price}
-                    </span>
                   </div>
                   <p className="mt-2 text-[#653A2A]">{item.description}</p>
                 </div>
@@ -312,31 +317,67 @@ export default function Menu() {
             </p>
           </motion.div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                name: "Paneer Puff",
+                name: "Onion Samosa (5 pc)",
+                description: "Crispy mini samosas filled with spiced onions, perfect for snacking",
+                price: "₹75",
+                image: "/samosa.jpg",
+              },
+              {
+                name: "Corn Samosa (4 pc)",
+                description: "Golden fried samosas stuffed with sweet corn and mild spices",
+                price: "₹80",
+                image: "/samosa.jpg",
+              },
+              {
+                name: "Paneer Puff (2 pc)",
                 description: "Flaky pastry filled with spiced cottage cheese and vegetables",
                 price: "₹90",
-                image: "/shot-bites.jpg",
+                image: "/puff.jpg",
+              },
+              {
+                name: "Egg Puff (2 pc)",
+                description: "Buttery pastry filled with a delicious spicy egg masala",
+                price: "₹95",
+                image: "/puff.jpg",
               },
               {
                 name: "Chicken Puff",
                 description: "Our bestseller with tender spiced chicken wrapped in buttery layers",
                 price: "₹100",
-                image: "/shot-bites.jpg",
+                image: "/puff.jpg",
               },
               {
-                name: "Vegetable Sandwich",
+                name: "Veg Sandwich",
                 description: "Fresh vegetables with our special chutney on homemade bread",
                 price: "₹80",
-                image: "/shot-bites.jpg",
+                image: "/veg-sandwich.jpg",
+              },
+              {
+                name: "Paneer Sandwich",
+                description: "Soft bread stuffed with spiced paneer and fresh vegetables",
+                price: "₹90",
+                image: "/paneer-sandwich.jpg",
+              },
+              {
+                name: "Chicken Sandwich",
+                description: "Juicy chicken with crunchy veggies in a flavorful sandwich",
+                price: "₹110",
+                image: "/chicken-sandwich.jpg",
               },
               {
                 name: "Millet Cutlet",
                 description: "Healthy and delicious patties made with local millets and spices",
                 price: "₹85",
-                image: "/shot-bites.jpg",
+                image: "/millet-cutlet.jpg",
+              },
+              {
+                name: "Chicken Cutlet",
+                description: "Crispy cutlets filled with spiced minced chicken, fried to perfection",
+                price: "₹100",
+                image: "/chicken-cutlet.jpg",
               },
             ].map((item, index) => (
               <motion.div
@@ -345,22 +386,19 @@ export default function Menu() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex overflow-hidden rounded-lg bg-white shadow-md"
+                className="group overflow-hidden rounded-lg bg-white p-4 shadow-md transition-transform hover:-translate-y-1"
               >
-                <div className="relative h-auto w-1/3">
+                <div className="relative h-48 overflow-hidden rounded-lg">
                   <Image
                     src={item.image || "/placeholder.svg"}
                     alt={item.name}
                     fill
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="flex w-2/3 flex-col justify-center p-6">
+                <div className="mt-4">
                   <div className="flex items-center justify-between">
                     <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
-                    <span className="rounded-full bg-[#F9F5F0] px-3 py-1 text-sm font-bold text-[#653A2A]">
-                      {item.price}
-                    </span>
                   </div>
                   <p className="mt-2 text-[#653A2A]">{item.description}</p>
                 </div>
@@ -458,9 +496,6 @@ export default function Menu() {
                 <div className="mt-4">
                   <div className="flex items-center justify-between">
                     <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
-                    <span className="rounded-full bg-[#F9F5F0] px-3 py-1 text-sm font-bold text-[#653A2A]">
-                      {item.price}
-                    </span>
                   </div>
                   <p className="mt-2 text-[#653A2A]">{item.description}</p>
                 </div>
@@ -527,9 +562,6 @@ export default function Menu() {
                 <div className="mt-4">
                   <div className="flex items-center justify-between">
                     <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
-                    <span className="rounded-full bg-[#F9F5F0] px-3 py-1 text-sm font-bold text-[#653A2A]">
-                      {item.price}
-                    </span>
                   </div>
                   <p className="mt-2 text-[#653A2A]">{item.description}</p>
                 </div>
@@ -557,7 +589,7 @@ export default function Menu() {
             </p>
           </motion.div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2">
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 name: "Legendary Sponge Cake",
@@ -583,25 +615,22 @@ export default function Menu() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="overflow-hidden rounded-lg bg-white shadow-lg"
+                className="group overflow-hidden rounded-lg bg-white p-4 shadow-md transition-transform hover:-translate-y-1"
               >
-                <div className="relative h-64">
+                <div className="relative h-48 overflow-hidden rounded-lg">
                   <Image
                     src={item.image || "/placeholder.svg"}
                     alt={item.name}
                     fill
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-6">
+                <div className="mt-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-serif text-2xl font-bold text-[#4D281F]">{item.name}</h3>
-                    <span className="rounded-full bg-[#F9F5F0] px-4 py-2 text-sm font-bold text-[#653A2A]">
-                      {item.price}
-                    </span>
+                    <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
                   </div>
                   <p className="mt-2 text-[#653A2A]">{item.description}</p>
-                  <div className="mt-4 rounded-lg bg-[#F9F5F0] p-4">
+                  <div className="mt-4 rounded-lg bg-[#F9F5F0] p-3">
                     <p className="font-serif italic text-[#653A2A]">{item.story}</p>
                   </div>
                 </div>

@@ -1,31 +1,31 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { Menu, X } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const [activeLink, setActiveLink] = useState("/")
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [activeLink, setActiveLink] = useState("/");
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
-        setIsScrolled(true)
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false)
+        setIsScrolled(false);
       }
-    }
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
-    setActiveLink(window.location.pathname)
-  }, [])
+    setActiveLink(window.location.pathname);
+  }, []);
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -34,18 +34,23 @@ export default function Navbar() {
     { name: "Blogs", path: "/blogs" },
     { name: "Franchise", path: "/franchise" },
     { name: "Contact Us", path: "/contact-us" },
-  ]
+  ];
 
   return (
     <header
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${isScrolled
-        ? "bg-white py-2 backdrop-blur-md bg-cover text-[#0D0906]"
-        : "bg-transparent py-4 text-white"
+          ? "bg-white py-2 backdrop-blur-md bg-cover text-[#0D0906]"
+          : "bg-transparent py-4 text-white"
         }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
+        {/* Logo */}
         <Link href="/" className="z-10 flex items-center">
-          <img src="/Nav-logo.png" alt="Thoothukudi Cafe" className="h-16" />
+          <img
+            src="/Nav-logo.png"
+            alt="Thoothukudi Cafe"
+            className="h-16"
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -55,12 +60,16 @@ export default function Navbar() {
               <li key={index}>
                 <Link
                   href={link.path}
-                  className={`relative font-medium transition-colors hover:text-[#CDB090] ${activeLink === link.path ? "text-[#CDB090]" : ""}`}
+                  className={`relative font-medium transition-colors hover:text-[#CDB090] ${activeLink === link.path ? "text-[#CDB090]" : ""
+                    }`}
                   onClick={() => setActiveLink(link.path)}
                 >
                   {link.name}
                   {activeLink === link.path && (
-                    <motion.div layoutId="underline" className="absolute -bottom-1 left-0 h-0.5 w-full bg-[#CDB090]" />
+                    <motion.div
+                      layoutId="underline"
+                      className="absolute -bottom-1 left-0 h-0.5 w-full bg-[#CDB090]"
+                    />
                   )}
                 </Link>
               </li>
@@ -70,7 +79,8 @@ export default function Navbar() {
 
         {/* Mobile Navigation Toggle */}
         <button
-          className="z-10 text-white md:hidden"
+          className={`z-10 md:hidden transition-colors ${isScrolled ? "text-[#0D0906]" : "text-white"
+            }`}
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
@@ -100,10 +110,13 @@ export default function Navbar() {
                     >
                       <Link
                         href={link.path}
-                        className={`block py-2 text-center font-serif text-2xl font-medium text-white transition-colors hover:text-[#CDB090] ${activeLink === link.path ? "text-[#CDB090]" : ""}`}
+                        className={`block py-2 text-center font-serif text-2xl font-medium transition-colors ${activeLink === link.path
+                            ? "text-[#CDB090]"
+                            : "text-white"
+                          } hover:text-[#CDB090]`}
                         onClick={() => {
-                          setActiveLink(link.path)
-                          setIsOpen(false)
+                          setActiveLink(link.path);
+                          setIsOpen(false);
                         }}
                       >
                         {link.name}
@@ -117,5 +130,5 @@ export default function Navbar() {
         )}
       </AnimatePresence>
     </header>
-  )
+  );
 }
