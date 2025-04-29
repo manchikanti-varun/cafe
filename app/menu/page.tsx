@@ -95,68 +95,6 @@ export default function Menu() {
         </div>
       </section>
 
-
-      {/* Farm Fresh Bites Section */}
-      <section className="relative py-16">
-        <div className="absolute inset-0 bg-[url('/farm-fresh.jpg')] bg-cover bg-fixed bg-center bg-no-repeat opacity-10"></div>
-        <div className="relative container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-center font-serif text-3xl font-bold text-[#4D281F] md:text-4xl">Farm Fresh Bites</h2>
-            <div className="mx-auto mt-2 h-1 w-24 bg-[#91604F]"></div>
-            <p className="mx-auto mt-4 max-w-2xl text-center text-[#653A2A]">
-              Straight from the farm to your plate — enjoy the authentic flavors of country-style chicken and farm-fresh
-              eggs
-            </p>
-          </motion.div>
-
-
-          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                name: "Country Chicken Boiled Egg",
-                description: "Fresh farm egg served either boiled or as a fluffy omelette",
-                image: "/egg.jpg",
-              },
-              {
-                name: "Country Chicken Egg (Omelette)",
-                description: "Fresh farm egg served either boiled or as a fluffy omelette",
-                image: "/omelette.jpg",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="group overflow-hidden rounded-lg bg-white p-4 shadow-md transition-transform hover:-translate-y-1"
-              >
-                <div className="relative h-48 overflow-hidden rounded-lg">
-                  <Image
-                    src={item.image || "/placeholder.svg"}
-                    alt={item.name}
-                    fill
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                <div className="mt-4">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
-                  </div>
-                  <p className="mt-2 text-[#653A2A]">{item.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
       {/* Millet Delights Section */}
       <section className="relative py-16">
         <div className="absolute inset-0 bg-[url('/millet-delight.jpg')] bg-cover bg-fixed bg-center bg-no-repeat opacity-10"></div>
@@ -226,20 +164,21 @@ export default function Menu() {
         </div>
       </section>
 
-
-      {/* Cold Beverages Section */}
-      <section className="bg-[#F9F5F0] py-16">
-        <div className="container mx-auto px-4">
+      {/* Farm Fresh Bites Section */}
+      <section className="relative py-16">
+        <div className="absolute inset-0 bg-[url('/farm-fresh.jpg')] bg-cover bg-fixed bg-center bg-no-repeat opacity-10"></div>
+        <div className="relative container mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-center font-serif text-3xl font-bold text-[#4D281F] md:text-4xl">Cold Beverages</h2>
+            <h2 className="text-center font-serif text-3xl font-bold text-[#4D281F] md:text-4xl">Farm Fresh Bites</h2>
             <div className="mx-auto mt-2 h-1 w-24 bg-[#91604F]"></div>
             <p className="mx-auto mt-4 max-w-2xl text-center text-[#653A2A]">
-              Refreshing cold drinks to cool you down, made with fresh ingredients and traditional recipes
+              Straight from the farm to your plate — enjoy the authentic flavors of country-style chicken and farm-fresh
+              eggs
             </p>
           </motion.div>
 
@@ -247,23 +186,14 @@ export default function Menu() {
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                name: "Dry Fruit Shake",
-                description: "A luxurious blend of premium dry fruits, milk, and a hint of cardamom",
-                image: "/cold-beverages.jpg",
+                name: "Country Chicken Boiled Egg",
+                description: "Fresh farm egg served either boiled or as a fluffy omelette",
+                image: "/egg.jpg",
               },
               {
-                name: "Badam Milk",
-                description: "Creamy almond-infused milk with saffron and cardamom, served chilled",
-                image: "/cold-beverages.jpg",
-              },
-              {
-                name: "Pulpy Grape Juice",
-                description: "Freshly squeezed grape juice with natural pulp for authentic flavor", image: "/cold-beverages.jpg",
-              },
-              {
-                name: "Coconut Cream Shake",
-                description: "Smooth and refreshing coconut shake with a hint of vanilla",
-                image: "/cold-beverages.jpg",
+                name: "Country Chicken Egg (Omelette)",
+                description: "Fresh farm egg served either boiled or as a fluffy omelette",
+                image: "/omelette.jpg",
               },
             ].map((item, index) => (
               <motion.div
@@ -294,6 +224,74 @@ export default function Menu() {
         </div>
       </section>
 
+      {/* Cold Beverages Section */}
+      <section className="bg-[#F9F5F0] py-16">
+        <div className="container mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-center font-serif text-3xl font-bold text-[#4D281F] md:text-4xl">Cold Beverages</h2>
+            <div className="mx-auto mt-2 h-1 w-24 bg-[#91604F]"></div>
+            <p className="mx-auto mt-4 max-w-2xl text-center text-[#653A2A]">
+              Refreshing cold drinks to cool you down, made with fresh ingredients and traditional recipes
+            </p>
+          </motion.div>
+
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            {
+              [
+                {
+                  name: "Dry Fruit Shake",
+                  description: "A luxurious blend of premium dry fruits, milk, and a hint of cardamom",
+                  image: "/dry-fruit-shake.jpg",
+                },
+                {
+                  name: "Badam Milk",
+                  description: "Creamy almond-infused milk with saffron and cardamom, served chilled",
+                  image: "/badam-milk.jpg",
+                },
+                {
+                  name: "Pulpy Grape Juice",
+                  description: "Freshly squeezed grape juice with natural pulp for authentic flavor",
+                  image: "/grape-juice.jpg",
+                },
+                {
+                  name: "Coconut Cream Shake",
+                  description: "Smooth and refreshing coconut shake with a hint of vanilla",
+                  image: "/coconut-cream-shake.jpg",
+                },
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group overflow-hidden rounded-lg bg-white p-4 shadow-md transition-transform hover:-translate-y-1"
+              >
+                <div className="relative h-48 overflow-hidden rounded-lg">
+                  <Image
+                    src={item.image || "/placeholder.svg"}
+                    alt={item.name}
+                    fill
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="mt-4">
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-serif text-xl font-bold text-[#4D281F]">{item.name}</h3>
+                  </div>
+                  <p className="mt-2 text-[#653A2A]">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Shot Bites Section */}
       <section className="relative py-16">
@@ -427,11 +425,6 @@ export default function Menu() {
                   image: "/sambar-potato.jpg",
                 },
                 {
-                  name: "Millet Feast",
-                  description: "Complete meal with sambar rice, curd rice & sweet lapsi",
-                  image: "/millet-feast.jpg",
-                },
-                {
                   name: "Chai Vibes + Millet Cutlet",
                   description: "Our signature chai paired with a healthy millet cutlet",
                   image: "/chai-millet-cutlet.jpg",
@@ -439,12 +432,12 @@ export default function Menu() {
                 {
                   name: "Chai Vibes + Chicken Cutlet",
                   description: "Our signature chai paired with a spicy chicken cutlet",
-                  image: "/chai-chicken-cutlet.jpg",
+                  image: "/chai-millet-cutlet.jpg",
                 },
                 {
                   name: "Chai Break + Onion Samosa",
                   description: "Perfect tea-time combo with our spicy onion samosa",
-                  image: "/chai-onion-samosa.jpg",
+                  image: "/chai-corn-samosa.jpg",
                 },
                 {
                   name: "Chai Break + Corn Samosa",
@@ -509,7 +502,7 @@ export default function Menu() {
               {
                 name: "Coconut Pudding",
                 description: "Creamy coconut pudding with a hint of cardamom and topped with toasted coconut flakes",
-                image: "/desserts.jpg",
+                image: "/Coconut_Pudding.jpg",
               },
               {
                 name: "Millet Lapsi",
@@ -519,7 +512,7 @@ export default function Menu() {
               {
                 name: "Mango Delight",
                 description: "Seasonal mango dessert with layers of cream and mango pulp, topped with pistachios",
-                image: "/desserts.jpg",
+                image: "/Mango_Delight.jpg",
               },
             ].map((item, index) => (
               <motion.div
