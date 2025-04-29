@@ -193,7 +193,7 @@ export default function Menu() {
               {
                 name: "Country Chicken Egg (Omelette)",
                 description: "Fresh farm egg served either boiled or as a fluffy omelette",
-                image: "/omelette.jpg",
+                image: "/Omelette.jpg",
               },
             ].map((item, index) => (
               <motion.div
