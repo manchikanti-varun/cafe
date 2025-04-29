@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, ChevronLeft, ChevronRight, Clock, MapPin, Phone } from "lucide-react"
+import { ArrowRight, ChevronLeft, ChevronRight, MapPin, Phone, Mail, Instagram } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
 export default function Home() {
@@ -20,9 +20,9 @@ export default function Home() {
     {
       image: "/kova_bun.png",
       title: "Famous Kova Bun",
-      description: "Soft bun filled with our special milk-based sweet filling, a perfect tea-time companion.",
-    }
-  ];
+      description: "Soft bun with our special milk-based sweet filling",
+    } 
+  ]
 
   useEffect(() => {
     setIsVisible(true)
@@ -179,9 +179,8 @@ export default function Home() {
                   <button
                     key={index}
                     onClick={() => setCurrentSlide(index)}
-                    className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                      currentSlide === index ? "bg-[#CDB090] w-6" : "bg-gray-500"
-                    }`}
+                    className={`h-2 w-2 rounded-full transition-all duration-300 ${currentSlide === index ? "bg-[#CDB090] w-6" : "bg-gray-500"
+                      }`}
                     aria-label={`Go to slide ${index + 1}`}
                   ></button>
                 ))}
@@ -435,17 +434,17 @@ export default function Home() {
               {
                 title: "Why Tamil Nadu's Herbal Drinks Are Special",
                 excerpt: "Exploring the ancient wisdom behind our healing beverages...",
-                image: "/Blog_img.png",
+                image: "/Our_Journal.jpeg",
               },
               {
                 title: "The Story Behind Our Sponge Cake",
                 excerpt: "A recipe that traveled through time, carrying memories of generations...",
-                image: "/Blog_img.png",
+                image: "/Our_Journal.jpeg",
               },
               {
                 title: "Importance of Nostalgia in Modern Cafes",
                 excerpt: "How we're bridging the gap between tradition and contemporary dining...",
-                image: "/Blog_img.png",
+                image: "/Our_Journal.jpeg",
               },
             ].map((blog, index) => (
               <motion.div
@@ -534,26 +533,27 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="mt-10 grid gap-6 md:grid-cols-3"
+              className="mt-10 grid grid-cols-2 gap-y-8 md:grid-cols-4 gap-6"
             >
               <div className="flex flex-col items-center">
-                <Clock className="h-8 w-8 text-[#CDB090]" />
-                <h3 className="mt-4 font-serif text-xl font-semibold">Hours</h3>
-                <p className="mt-2 text-center">
-                  Mon-Sun: 7:00 AM - 10:00 PM
-                  <br />
-                  <span className="text-sm italic">Open all days</span>
-                </p>
+                <Mail className="h-8 w-8 text-[#CDB090]" />
+                <h3 className="mt-4 font-serif text-xl font-semibold">Email</h3>
+                <p className="mt-2 text-center text-sm">thethoothukudicafe@gmail.com</p>
               </div>
               <div className="flex flex-col items-center">
                 <MapPin className="h-8 w-8 text-[#CDB090]" />
                 <h3 className="mt-4 font-serif text-xl font-semibold">Location</h3>
-                <p className="mt-2 text-center">123 Heritage Street, Thoothukudi</p>
+                <p className="mt-2 text-center text-sm">Thoothukudi Café, Hyderabad</p>
               </div>
               <div className="flex flex-col items-center">
                 <Phone className="h-8 w-8 text-[#CDB090]" />
                 <h3 className="mt-4 font-serif text-xl font-semibold">Contact</h3>
-                <p className="mt-2 text-center">+91 98765 43210</p>
+                <p className="mt-2 text-center text-sm">+91 79957 11408</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <Instagram className="h-8 w-8 text-[#CDB090]" />
+                <h3 className="mt-4 font-serif text-xl font-semibold">Instagram</h3>
+                <p className="mt-2 text-center text-sm">@thoothukudicafe</p>
               </div>
             </motion.div>
 

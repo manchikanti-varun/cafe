@@ -201,13 +201,13 @@ export default function Franchise() {
                 <p className="mt-4">
                   <strong>Email:</strong>{" "}
                   <a href="mailto:franchise@thoothukudicafe.com" className="text-[#91604F] hover:underline">
-                    franchise@thoothukudicafe.com
+                    thethoothukudicafe@gmail.com
                   </a>
                 </p>
                 <p className="mt-2">
                   <strong>Phone:</strong>{" "}
                   <a href="tel:+919876543210" className="text-[#91604F] hover:underline">
-                    +91 98765 43210
+                    +91 79957 11408
                   </a>
                 </p>
               </div>

@@ -6,7 +6,7 @@ export default function Blogs() {
   return (
     <main className="pt-16">
       {/* Hero Section */}
-      <section className="relative flex h-[60vh] w-full items-center justify-center overflow-hidden bg-[url('/placeholder.svg?height=800&width=1920')] bg-cover bg-center bg-no-repeat">
+      <section className="relative flex h-[60vh] w-full items-center justify-center overflow-hidden bg-[url('/Our_Journal.jpeg')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="font-serif text-5xl font-bold md:text-6xl">Our Journal</h1>
@@ -27,7 +27,7 @@ export default function Blogs() {
                 excerpt:
                   "Exploring the ancient wisdom behind our healing beverages and how they've stood the test of time in modern wellness.",
                 date: "April 15, 2023",
-                image: "Blog_img.png",
+                image: "Blog1.png",
                 category: "Traditions",
               },
               {
@@ -35,7 +35,7 @@ export default function Blogs() {
                 excerpt:
                   "A recipe that traveled through time, carrying memories of generations and becoming a symbol of our café's heritage.",
                 date: "March 22, 2023",
-                image: "Blog_img.png",
+                image: "Blog2.png",
                 category: "Recipes",
               },
               {
@@ -43,7 +43,7 @@ export default function Blogs() {
                 excerpt:
                   "How we're bridging the gap between tradition and contemporary dining experiences to create meaningful connections.",
                 date: "February 10, 2023",
-                image: "Blog_img.png",
+                image: "Blog3.png",
                 category: "Culture",
               },
               {
@@ -51,7 +51,7 @@ export default function Blogs() {
                 excerpt:
                   "Delving into the meticulous process behind the perfect cup of South Indian filter coffee and its cultural significance.",
                 date: "January 28, 2023",
-                image: "Blog_img.png",
+                image: "Blog4.png",
                 category: "Beverages",
               },
               {
@@ -59,7 +59,7 @@ export default function Blogs() {
                 excerpt:
                   "Rediscovering the nutritional powerhouses that were staples in traditional Tamil cuisine and their modern revival.",
                 date: "December 15, 2022",
-                image: "Blog_img.png",
+                image: "Blog5.png",
                 category: "Ingredients",
               },
             ].map((blog, index) => (

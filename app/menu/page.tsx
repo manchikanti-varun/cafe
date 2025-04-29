@@ -118,12 +118,12 @@ export default function Menu() {
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                name: "Country Chicken Egg 1 pc",
+                name: "Country Chicken Boiled Egg",
                 description: "Fresh farm egg served either boiled or as a fluffy omelette",
                 image: "/egg.jpg",
               },
               {
-                name: "Egg 1 pc (Omelette)",
+                name: "Country Chicken Egg (Omelette)",
                 description: "Fresh farm egg served either boiled or as a fluffy omelette",
                 image: "/omelette.jpg",
               },
@@ -316,22 +316,22 @@ export default function Menu() {
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
             {[
               {
-                name: "Onion Samosa (5 pc)",
+                name: "Onion Samosa",
                 description: "Crispy mini samosas filled with spiced onions, perfect for snacking",
                 image: "/samosa.jpg",
               },
               {
-                name: "Corn Samosa (4 pc)",
+                name: "Corn Samosa",
                 description: "Golden fried samosas stuffed with sweet corn and mild spices",
                 image: "/samosa.jpg",
               },
               {
-                name: "Paneer Puff (2 pc)",
+                name: "Paneer Puff",
                 description: "Flaky pastry filled with spiced cottage cheese and vegetables",
                 image: "/puff.jpg",
               },
               {
-                name: "Egg Puff (2 pc)",
+                name: "Egg Puff",
                 description: "Buttery pastry filled with a delicious spicy egg masala",
                 image: "/puff.jpg",
               },
@@ -429,7 +429,7 @@ export default function Menu() {
               {
                 name: "Millet Feast",
                 description: "Complete meal with sambar rice, curd rice & sweet lapsi",
-                image: "/breakfast.jpg",
+                image: "/MilletFeast.jpg",
               },
               {
                 name: "Chai Vibes + Millet Cutlet",
