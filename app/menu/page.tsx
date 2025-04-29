@@ -416,46 +416,46 @@ export default function Menu() {
 
           <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
-              {
-                name: "Sambar Rice × Omelette Bliss",
-                description: "Our nutritious millet sambar rice paired with a perfectly cooked country egg omelette",
-                image: "/breakfast.jpg",
-              },
-              {
-                name: "Sambar Rice × Crispy Potato Fry",
-                description: "Millet sambar rice served with crispy spiced potato fry",
-                image: "/breakfast.jpg",
-              },
-              {
-                name: "Millet Feast",
-                description: "Complete meal with sambar rice, curd rice & sweet lapsi",
-                image: "/MilletFeast.jpg",
-              },
-              {
-                name: "Chai Vibes + Millet Cutlet",
-                description: "Our signature chai paired with a healthy millet cutlet",
-                image: "/breakfast.jpg",
-              },
-              {
-                name: "Chai Vibes + Chicken Cutlet",
-                description: "Our signature chai paired with a spicy chicken cutlet",
-                image: "/breakfast.jpg",
-              },
-              {
-                name: "Chai Break + Onion Samosa",
-                description: "Perfect tea-time combo with our spicy onion samosa",
-                image: "/breakfast.jpg",
-              },
-              {
-                name: "Chai Break + Corn Samosa",
-                description: "Our aromatic chai with a crispy corn-filled samosa",
-                image: "/breakfast.jpg",
-              },
-              {
-                name: "Your Choice: Rice & Sweet Treat",
-                description: "Choose any rice dish and pair it with a dessert of your choice",
-                image: "/breakfast.jpg",
-              },
+                {
+                  name: "Sambar Rice × Omelette Bliss",
+                  description: "Our nutritious millet sambar rice paired with a perfectly cooked country egg omelette",
+                  image: "/sambar-omelette.jpg",
+                },
+                {
+                  name: "Sambar Rice × Crispy Potato Fry",
+                  description: "Millet sambar rice served with crispy spiced potato fry",
+                  image: "/sambar-potato.jpg",
+                },
+                {
+                  name: "Millet Feast",
+                  description: "Complete meal with sambar rice, curd rice & sweet lapsi",
+                  image: "/millet-feast.jpg",
+                },
+                {
+                  name: "Chai Vibes + Millet Cutlet",
+                  description: "Our signature chai paired with a healthy millet cutlet",
+                  image: "/chai-millet-cutlet.jpg",
+                },
+                {
+                  name: "Chai Vibes + Chicken Cutlet",
+                  description: "Our signature chai paired with a spicy chicken cutlet",
+                  image: "/chai-chicken-cutlet.jpg",
+                },
+                {
+                  name: "Chai Break + Onion Samosa",
+                  description: "Perfect tea-time combo with our spicy onion samosa",
+                  image: "/chai-onion-samosa.jpg",
+                },
+                {
+                  name: "Chai Break + Corn Samosa",
+                  description: "Our aromatic chai with a crispy corn-filled samosa",
+                  image: "/chai-corn-samosa.jpg",
+                },
+                {
+                  name: "Your Choice: Rice & Sweet Treat",
+                  description: "Choose any rice dish and pair it with a dessert of your choice",
+                  image: "/rice-sweet-combo.jpg",
+                },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -514,7 +514,7 @@ export default function Menu() {
               {
                 name: "Millet Lapsi",
                 description: "Traditional sweet dish made with millet, ghee, jaggery, and dry fruits",
-                image: "/desserts.jpg",
+                image: "/Millet_Lapsi.jpg",
               },
               {
                 name: "Mango Delight",

@@ -4,7 +4,7 @@ export default function Franchise() {
   return (
     <main className="pt-16">
       {/* Hero Section */}
-      <section className="relative flex h-[60vh] w-full items-center justify-center overflow-hidden bg-[url('/placeholder.svg?height=800&width=1920')] bg-cover bg-center bg-no-repeat">
+      <section className="relative flex h-[60vh] w-full items-center justify-center overflow-hidden bg-[url('/thoothukudi _franchies.jpeg?height=800&width=1920')] bg-cover bg-center bg-no-repeat">
         <div className="absolute inset-0 bg-black/50"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="font-serif text-5xl font-bold md:text-6xl">Grow With Us</h1>
