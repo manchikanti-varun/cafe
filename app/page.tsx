@@ -434,17 +434,17 @@ export default function Home() {
               {
                 title: "Why Tamil Nadu's Herbal Drinks Are Special",
                 excerpt: "Exploring the ancient wisdom behind our healing beverages...",
-                image: "/Our_Journal.jpeg",
+                image: "/Blog1.jpg",
               },
               {
                 title: "The Story Behind Our Sponge Cake",
                 excerpt: "A recipe that traveled through time, carrying memories of generations...",
-                image: "/Our_Journal.jpeg",
+                image: "/Blog2.jpg",
               },
               {
                 title: "Importance of Nostalgia in Modern Cafes",
                 excerpt: "How we're bridging the gap between tradition and contemporary dining...",
-                image: "/Our_Journal.jpeg",
+                image: "/Blog3.jpg",
               },
             ].map((blog, index) => (
               <motion.div
