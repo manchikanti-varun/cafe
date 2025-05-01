@@ -128,8 +128,8 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 1 }}
             className="mb-8 max-w-md text-lg leading-relaxed text-gray-300 md:text-xl"
           >
-            Experience the finest coffee and delicacies crafted with passion and tradition. Our heritage recipes bring
-            the authentic flavors of South India to your table.
+            Experience the finest coffee and delicacies crafted with passion and tradition. Our heritage recipes bring 
+            authentic flavors to your table.
           </motion.p>
 
           <motion.div
