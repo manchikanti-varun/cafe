@@ -12,16 +12,16 @@ export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null)
 
   const slides = [
-    {
-      image: "/sponge-cake.jpg",
-      title: "Legendary Sponge Cake",
-      description: "Our iconic recipe since 1995",
-    },
-    {
-      image: "/kova_bun.png",
-      title: "Famous Kova Bun",
-      description: "Soft bun with our special milk-based sweet filling",
-    } 
+      {
+        image: "/sponge-cake.jpg",
+        title: "Legendary Sponge Cake",
+        description: "Our iconic recipe since 1995",
+      },
+      {
+        image: "/kova_bun.png",
+        title: "Famous Kova Bun",
+        description: "Soft bun with our special milk-based sweet filling",
+      }
   ]
 
   useEffect(() => {
@@ -250,16 +250,21 @@ export default function Home() {
 
           <div className="grid gap-8 md:grid-cols-3">
             {[
-              {
-                name: "Legendary Sponge Cake",
-                desc: "Our iconic recipe since 1995, this light and airy cake has a secret ingredient that makes it unforgettable.",
-                image: "/sponge-cake.jpg",
-              },
-              {
-                name: "Famous Kova Bun",
-                desc: "Soft bun filled with our special milk-based sweet filling, a perfect tea-time companion.",
-                image: "/kova_bun.png",
-              }
+                {
+                  name: "Legendary Sponge Cake",
+                  desc: "Our iconic recipe since 1995, this light and airy cake has a secret ingredient that makes it unforgettable.",
+                  image: "/sponge-cake.jpg",
+                },
+                {
+                  name: "Famous Kova Bun",
+                  desc: "Soft bun filled with our special milk-based sweet filling, a perfect tea-time companion.",
+                  image: "/kova_bun.png",
+                },
+                {
+                  name: "Millets: The Forgotten Superfoods",
+                  desc: "Rediscovering the nutritional powerhouses that were staples in traditional Tamil cuisine and their modern revival.",
+                  image: "/Blog5.jpg",
+                }
             ].map((item, index) => (
               <motion.div
                 key={index}
