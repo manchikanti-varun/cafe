@@ -321,12 +321,12 @@ export default function Menu() {
               {
                 name: "Corn Samosa",
                 description: "Golden fried samosas stuffed with sweet corn and mild spices",
-                image: "/samosa.jpg",
+                image: "/corn-samosa.jpg",
               },
               {
                 name: "Paneer Puff",
                 description: "Flaky pastry filled with spiced cottage cheese and vegetables",
-                image: "/puff.jpg",
+                image: "/PaneerPuff.jpg",
               },
               {
                 name: "Egg Puff",
@@ -336,7 +336,7 @@ export default function Menu() {
               {
                 name: "Chicken Puff",
                 description: "Our bestseller with tender spiced chicken wrapped in buttery layers",
-                image: "/puff.jpg",
+                image: "/ChickenPuff.jpg",
               },
               {
                 name: "Veg Sandwich",
@@ -432,12 +432,12 @@ export default function Menu() {
                 {
                   name: "Chai Vibes + Chicken Cutlet",
                   description: "Our signature chai paired with a spicy chicken cutlet",
-                  image: "/chai-millet-cutlet.jpg",
+                  image: "/chai-chicken-cutlet.jpg",
                 },
                 {
                   name: "Chai Break + Onion Samosa",
                   description: "Perfect tea-time combo with our spicy onion samosa",
-                  image: "/chai-corn-samosa.jpg",
+                  image: "/chai-onion-samosa.jpg",
                 },
                 {
                   name: "Chai Break + Corn Samosa",
