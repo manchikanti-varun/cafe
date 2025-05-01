@@ -13,7 +13,11 @@ export const metadata: Metadata = {
   title: "THOOTHUKUDI Café - Authentic South Indian Experience",
   description:
     "A premium South Indian vintage-themed café celebrating Tamil Nadu's heritage with authentic flavors and nostalgic ambiance.",
+  icons: {
+    icon: "/favicon.png", 
+  },
 }
+
 
 export default function RootLayout({
   children,

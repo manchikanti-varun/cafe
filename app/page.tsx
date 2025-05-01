@@ -263,7 +263,7 @@ export default function Home() {
                 {
                   name: "Millets: The Forgotten Superfoods",
                   desc: "Rediscovering the nutritional powerhouses that were staples in traditional Tamil cuisine and their modern revival.",
-                  image: "/Blog5.jpg",
+                  image: "/MilletHome.jpg",
                 }
             ].map((item, index) => (
               <motion.div
