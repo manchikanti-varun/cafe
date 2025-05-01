@@ -437,12 +437,12 @@ export default function Menu() {
                 {
                   name: "Chai Break + Onion Samosa",
                   description: "Perfect tea-time combo with our spicy onion samosa",
-                  image: "/chai-onion-samosa.jpg",
+                  image: "/chai-corn-samosa.jpg",
                 },
                 {
                   name: "Chai Break + Corn Samosa",
                   description: "Our aromatic chai with a crispy corn-filled samosa",
-                  image: "/chai-corn-samosa.jpg",
+                  image: "/chai-onion-samosa.jpg",
                 },
                 {
                   name: "Your Choice: Rice & Sweet Treat",
