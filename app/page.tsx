@@ -101,7 +101,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-4 font-serif text-6xl font-bold tracking-wider text-white md:text-7xl lg:text-8xl"
+            className="mb-4 font-serif text-4xl font-bold tracking-wider text-white sm:text-5xl md:text-6xl lg:text-7xl"
           >
             THOOTHUKUDI
           </motion.h1>
