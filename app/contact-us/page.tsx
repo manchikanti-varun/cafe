@@ -9,7 +9,7 @@ export default function ContactUs() {
     <main className="pt-16">
       {/* Hero Section */}
       <section className="relative flex h-[60vh] w-full items-center justify-center overflow-hidden bg-[url('/contact_us.jpeg')] bg-cover bg-center bg-no-repeat">
-        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-black/80"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="font-serif text-5xl font-bold md:text-6xl">Contact Us</h1>
           <div className="mx-auto mt-4 h-1 w-24 bg-[#CDB090]"></div>
@@ -195,22 +195,25 @@ export default function ContactUs() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full"
+              className="w-full h-[450px] rounded-lg"
+              title="Thoothukudi Café Location"
             ></iframe>
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-[#653A2A]">We're located in Hyderabad, easily accessible from all major landmarks.</p>
-            <p className="mt-2 text-[#653A2A]">
+            <p className="text-[#653A2A] font-bold">
+              We're located in Hyderabad, easily accessible from all major landmarks.
+            </p>
+            <div className="mt-4">
               <a
                 href="https://maps.app.goo.gl/XD9MvZn5sY5n8Y6J8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-[#91604F] hover:underline"
+                className="inline-block rounded-full bg-[#91604F] px-6 py-2 font-semibold text-white transition hover:bg-[#7b4e3f]"
               >
-                Get directions on Google Maps
+                Get Directions on Google Maps
               </a>
-            </p>
+            </div>
           </div>
         </div>
       </section>

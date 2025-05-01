@@ -504,7 +504,7 @@ export default function Home() {
 
       {/* Contact Preview Section */}
       <section className="relative bg-[url('/cafe-interior.jpg')] bg-cover bg-center bg-no-repeat py-24">
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/80"></div>
         <div className="relative z-10 container mx-auto px-4 text-white">
           <div className="mx-auto max-w-3xl text-center">
             <motion.h2

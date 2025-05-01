@@ -5,7 +5,7 @@ export default function Franchise() {
     <main className="pt-16">
       {/* Hero Section */}
       <section className="relative flex h-[60vh] w-full items-center justify-center overflow-hidden bg-[url('/thoothukudi_franchies.jpeg')] bg-cover bg-center bg-no-repeat">
-        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-black/80"></div>
         <div className="relative z-10 text-center text-white">
           <h1 className="font-serif text-5xl font-bold md:text-6xl">Grow With Us</h1>
           <div className="mx-auto mt-4 h-1 w-24 bg-[#CDB090]"></div>
