@@ -1,10 +1,45 @@
 "use client"
 
-import Image from "next/image"
-import { Clock, Instagram, Mail, MapPin, Phone } from "lucide-react"
+import { useState, useRef } from "react"
+import { Instagram, Mail, MapPin, Phone } from "lucide-react"
 import { motion } from "framer-motion"
+import { submitContactForm } from "@/app/actions/form-actions"
 
 export default function ContactUs() {
+  const [formStatus, setFormStatus] = useState<{
+    message: string
+    type: "success" | "error" | null
+  }>({
+    message: "",
+    type: null,
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const formRef = useRef<HTMLFormElement>(null)
+
+  async function handleSubmit(formData: FormData) {
+    setIsSubmitting(true)
+    setFormStatus({ message: "", type: null })
+
+    try {
+      const result = await submitContactForm(formData)
+
+      if (result.error) {
+        setFormStatus({ message: result.error, type: "error" })
+      } else if (result.success) {
+        setFormStatus({ message: result.success, type: "success" })
+        // Reset the form using the ref
+        formRef.current?.reset()
+      }
+    } catch (error) {
+      setFormStatus({
+        message: "An unexpected error occurred. Please try again.",
+        type: "error",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <main className="pt-16">
       {/* Hero Section */}
@@ -102,7 +137,16 @@ export default function ContactUs() {
               <h2 className="font-serif text-3xl font-bold text-[#4D281F] md:text-4xl">Send Us a Message</h2>
               <div className="mt-2 h-1 w-24 bg-[#91604F]"></div>
 
-              <form className="mt-8 rounded-lg bg-white p-8 shadow-lg">
+              <form ref={formRef} action={handleSubmit} className="mt-8 rounded-lg bg-white p-8 shadow-lg">
+                {formStatus.message && (
+                  <div
+                    className={`mb-6 rounded-md p-4 ${formStatus.type === "success" ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800"
+                      }`}
+                  >
+                    {formStatus.message}
+                  </div>
+                )}
+
                 <div className="grid gap-6 md:grid-cols-2">
                   <div className="col-span-2 md:col-span-1">
                     <label htmlFor="name" className="mb-2 block font-medium text-[#4D281F]">
@@ -111,6 +155,7 @@ export default function ContactUs() {
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       className="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-[#91604F] focus:outline-none focus:ring-1 focus:ring-[#91604F]"
                       required
                     />
@@ -122,6 +167,7 @@ export default function ContactUs() {
                     <input
                       type="tel"
                       id="phone"
+                      name="phone"
                       className="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-[#91604F] focus:outline-none focus:ring-1 focus:ring-[#91604F]"
                       required
                     />
@@ -133,6 +179,7 @@ export default function ContactUs() {
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       className="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-[#91604F] focus:outline-none focus:ring-1 focus:ring-[#91604F]"
                       required
                     />
@@ -144,6 +191,7 @@ export default function ContactUs() {
                     <input
                       type="text"
                       id="subject"
+                      name="subject"
                       className="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-[#91604F] focus:outline-none focus:ring-1 focus:ring-[#91604F]"
                     />
                   </div>
@@ -153,6 +201,7 @@ export default function ContactUs() {
                     </label>
                     <textarea
                       id="message"
+                      name="message"
                       rows={6}
                       className="w-full rounded-md border border-gray-300 px-4 py-2 focus:border-[#91604F] focus:outline-none focus:ring-1 focus:ring-[#91604F]"
                       required
@@ -162,9 +211,10 @@ export default function ContactUs() {
                 <div className="mt-6">
                   <button
                     type="submit"
-                    className="w-full rounded-md bg-[#653A2A] px-6 py-3 font-medium text-white transition-colors hover:bg-[#4D281F]"
+                    disabled={isSubmitting}
+                    className="w-full rounded-md bg-[#653A2A] px-6 py-3 font-medium text-white transition-colors hover:bg-[#4D281F] disabled:bg-gray-400"
                   >
-                    Send Message
+                    {isSubmitting ? "Sending..." : "Send Message"}
                   </button>
                 </div>
               </form>
@@ -195,13 +245,13 @@ export default function ContactUs() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              className="w-full h-[450px] rounded-lg"
+              className="h-[450px] w-full rounded-lg"
               title="Thoothukudi Café Location"
             ></iframe>
           </div>
 
           <div className="mt-8 text-center">
-            <p className="text-[#653A2A] font-bold">
+            <p className="font-bold text-[#653A2A]">
               We're located in Hyderabad, easily accessible from all major landmarks.
             </p>
             <div className="mt-4">
