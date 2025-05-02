@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, ChevronLeft, ChevronRight, MapPin, Phone, Mail, Instagram } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import { blogPosts } from "@/lib/blog-data"
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -12,16 +13,16 @@ export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null)
 
   const slides = [
-      {
-        image: "/sponge-cake.jpg",
-        title: "Legendary Sponge Cake",
-        description: "Our iconic recipe since 1995",
-      },
-      {
-        image: "/kova_bun.png",
-        title: "Famous Kova Bun",
-        description: "Soft bun with our special milk-based sweet filling",
-      }
+    {
+      image: "/sponge-cake.jpg",
+      title: "Legendary Sponge Cake",
+      description: "Our iconic recipe since 1995",
+    },
+    {
+      image: "/kova_bun.png",
+      title: "Famous Kova Bun",
+      description: "Soft bun with our special milk-based sweet filling",
+    },
   ]
 
   useEffect(() => {
@@ -128,7 +129,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 1 }}
             className="mb-8 max-w-md text-lg leading-relaxed text-gray-300 md:text-xl"
           >
-            Experience the finest coffee and delicacies crafted with passion and tradition. Our heritage recipes bring 
+            Experience the finest coffee and delicacies crafted with passion and tradition. Our heritage recipes bring
             authentic flavors to your table.
           </motion.p>
 
@@ -250,21 +251,21 @@ export default function Home() {
 
           <div className="grid gap-8 md:grid-cols-3">
             {[
-                {
-                  name: "Legendary Sponge Cake",
-                  desc: "Our iconic recipe since 1995, this light and airy cake has a secret ingredient that makes it unforgettable.",
-                  image: "/sponge-cake.jpg",
-                },
-                {
-                  name: "Famous Kova Bun",
-                  desc: "Soft bun filled with our special milk-based sweet filling, a perfect tea-time companion.",
-                  image: "/kova_bun.png",
-                },
-                {
-                  name: "Millets: The Forgotten Superfoods",
-                  desc: "Rediscovering the nutritional powerhouses that were staples in traditional Tamil cuisine and their modern revival.",
-                  image: "/MilletHome.jpg",
-                }
+              {
+                name: "Legendary Sponge Cake",
+                desc: "Our iconic recipe since 1995, this light and airy cake has a secret ingredient that makes it unforgettable.",
+                image: "/sponge-cake.jpg",
+              },
+              {
+                name: "Famous Kova Bun",
+                desc: "Soft bun filled with our special milk-based sweet filling, a perfect tea-time companion.",
+                image: "/kova_bun.png",
+              },
+              {
+                name: "Millets: The Forgotten Superfoods",
+                desc: "Rediscovering the nutritional powerhouses that were staples in traditional Tamil cuisine and their modern revival.",
+                image: "/MilletHome.jpg",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -435,23 +436,7 @@ export default function Home() {
           </motion.div>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Why Tamil Nadu's Herbal Drinks Are Special",
-                excerpt: "Exploring the ancient wisdom behind our healing beverages...",
-                image: "/Blog1.jpg",
-              },
-              {
-                title: "The Story Behind Our Sponge Cake",
-                excerpt: "A recipe that traveled through time, carrying memories of generations...",
-                image: "/Blog2.jpg",
-              },
-              {
-                title: "Importance of Nostalgia in Modern Cafes",
-                excerpt: "How we're bridging the gap between tradition and contemporary dining...",
-                image: "/Blog3.jpg",
-              },
-            ].map((blog, index) => (
+            {blogPosts.slice(0, 3).map((blog, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -474,7 +459,7 @@ export default function Home() {
                   </h3>
                   <p className="mt-2 text-[#653A2A]">{blog.excerpt}</p>
                   <Link
-                    href="/blogs"
+                    href={`/blogs/${blog.slug}`}
                     className="mt-4 inline-flex items-center font-medium text-[#91604F] transition-colors hover:text-[#4D281F]"
                   >
                     Read More

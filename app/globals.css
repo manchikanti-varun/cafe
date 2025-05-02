@@ -53,6 +53,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -79,6 +80,7 @@
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -89,6 +91,7 @@
     transform: translateY(20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -100,6 +103,7 @@
     transform: translateY(-20px);
     opacity: 0;
   }
+
   to {
     transform: translateY(0);
     opacity: 1;
@@ -110,9 +114,11 @@
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.05);
   }
+
   100% {
     transform: scale(1);
   }
@@ -132,4 +138,35 @@
 
 .animate-pulse-slow {
   animation: pulse 3s infinite;
+}
+
+/* Blog Styles */
+@layer components {
+  .prose .cafe-details {
+    @apply my-6 rounded-lg bg-[#F9F5F0] p-4;
+  }
+
+  .prose h2 {
+    @apply mt-8 font-serif text-2xl font-bold text-[#4D281F];
+  }
+
+  .prose h3 {
+    @apply mt-6 font-serif text-xl font-bold text-[#653A2A];
+  }
+
+  .prose p {
+    @apply my-4 text-[#653A2A];
+  }
+
+  .prose ul {
+    @apply my-4 list-disc pl-6 text-[#653A2A];
+  }
+
+  .prose ol {
+    @apply my-4 list-decimal pl-6 text-[#653A2A];
+  }
+
+  .prose blockquote {
+    @apply my-6 border-l-4 border-[#CDB090] bg-[#F9F5F0] p-4 italic text-[#653A2A];
+  }
 }

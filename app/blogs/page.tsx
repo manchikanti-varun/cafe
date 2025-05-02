@@ -1,6 +1,5 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { blogPosts } from "@/lib/blog-data"
+import BlogCard from "@/components/blog-card"
 
 export default function Blogs() {
   return (
@@ -21,79 +20,8 @@ export default function Blogs() {
       <section className="bg-[#F9F5F0] py-16">
         <div className="container mx-auto px-4">
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Why Tamil Nadu's Herbal Drinks Are Special",
-                excerpt:
-                  "Exploring the ancient wisdom behind our healing beverages and how they've stood the test of time in modern wellness.",
-                date: "April 15, 2023",
-                image: "Blog1.jpg",
-                category: "Traditions",
-              },
-              {
-                title: "The Story Behind Our Sponge Cake",
-                excerpt:
-                  "A recipe that traveled through time, carrying memories of generations and becoming a symbol of our café's heritage.",
-                date: "March 22, 2023",
-                image: "Blog2.jpg",
-                category: "Recipes",
-              },
-              {
-                title: "Importance of Nostalgia in Modern Cafes",
-                excerpt:
-                  "How we're bridging the gap between tradition and contemporary dining experiences to create meaningful connections.",
-                date: "February 10, 2023",
-                image: "Blog3.jpg",
-                category: "Culture",
-              },
-              {
-                title: "The Art of Filter Coffee",
-                excerpt:
-                  "Delving into the meticulous process behind the perfect cup of South Indian filter coffee and its cultural significance.",
-                date: "January 28, 2023",
-                image: "Blog4.jpg",
-                category: "Beverages",
-              },
-              {
-                title: "Millets: The Forgotten Superfoods",
-                excerpt:
-                  "Rediscovering the nutritional powerhouses that were staples in traditional Tamil cuisine and their modern revival.",
-                date: "December 15, 2022",
-                image: "Blog5.jpg",
-                category: "Ingredients",
-              },
-            ].map((blog, index) => (
-              <div
-                key={index}
-                className="group overflow-hidden rounded-lg bg-white shadow-md transition-transform hover:-translate-y-1"
-              >
-                <div className="relative h-56 overflow-hidden">
-                  <Image
-                    src={`/${blog.image}`}
-                    alt={blog.title}
-                    width={600}
-                    height={400}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute left-4 top-4 rounded-full bg-[#653A2A] px-3 py-1 text-xs font-medium text-white">
-                    {blog.category}
-                  </div>
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-[#91604F]">{blog.date}</p>
-                  <h3 className="mt-2 font-serif text-xl font-bold text-[#4D281F] group-hover:text-[#653A2A]">
-                    {blog.title}
-                  </h3>
-                  <p className="mt-3 text-[#653A2A]">{blog.excerpt}</p>
-                  <Link
-                    href={`/blogs/${blog.title.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="mt-4 inline-flex items-center font-medium text-[#91604F] hover:text-[#4D281F]"
-                  >
-                    Read More
-                    <ArrowRight className="ml-1 h-4 w-4" />
-                  </Link>
-                </div>
-              </div>
+            {blogPosts.map((blog) => (
+              <BlogCard key={blog.id} blog={blog} />
             ))}
           </div>
         </div>
