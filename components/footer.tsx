@@ -32,7 +32,7 @@ export default function Footer() {
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href="https://www.youtube.com/@thoothukudicafe"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 text-gray-400 transition-colors hover:border-[#CDB090] hover:text-[#CDB090]"
                 aria-label="YouTube"
               >
