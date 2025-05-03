@@ -16,7 +16,7 @@ export default function Footer() {
             </p>
             <div className="mt-6 flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/19vcZeb5Z7/?mibextid=wwXIfr"
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 text-gray-400 transition-colors hover:border-[#CDB090] hover:text-[#CDB090]"
                 aria-label="Facebook"
               >
@@ -57,7 +57,6 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-
           <div>
             <h4 className="font-serif text-lg font-semibold text-white">Contact Us</h4>
             <div className="mt-2 h-0.5 w-12 bg-[#CDB090]"></div>
@@ -89,6 +88,28 @@ export default function Footer() {
                 <Instagram className="mr-2 h-5 w-5 text-[#CDB090]" />
                 <a
                   href="https://www.instagram.com/thoothukudicafe/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[#CDB090]"
+                >
+                  @thoothukudicafe
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Facebook className="mr-2 h-5 w-5 text-[#CDB090]" />
+                <a
+                  href="https://www.facebook.com/share/19vcZeb5Z7/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 hover:text-[#CDB090]"
+                >
+                  @thoothukudicafe
+                </a>
+              </li>
+              <li className="flex items-center">
+                <Youtube className="mr-2 h-5 w-5 text-[#CDB090]" />
+                <a
+                  href="https://www.youtube.com/@thoothukudicafe"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-[#CDB090]"
