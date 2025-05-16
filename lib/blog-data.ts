@@ -523,7 +523,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Discover delicious and healthy millet dishes like Millet Idly and Sambar Rice at Thoothukudi Café—your go-to spot for wholesome South Indian flavors.",
     date: "May 9, 2025",
     category: "Health Food",
-    image: "Blog5.jpg",
+    image: "/Blog5.jpg",
     content: `
       <h2>Exploring Millet Delights at Thoothukudi Cafe</h2>
       <p>Imagine walking into a cozy cafe where the aroma of traditional spices mingles with the promise of wholesome, healthy meals. Welcome to Thoothukudi Cafe, a gem for food lovers who crave dishes that are as nutritious as they are delicious. At the heart of this cafe's menu are its Millet Delights—a collection of dishes crafted with millets, the superfood taking the culinary world by storm. From fluffy millet idlis to comforting millet rice dishes, Thoothukudi Cafe is redefining healthy eating with a touch of South Indian tradition. Ready to dive into a world of flavors? Let's explore what makes this cafe a must-visit.</p>
@@ -627,7 +627,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Explore Thoothukudi Café's best cold beverages—Dry Fruit Shake, Badam Milk, Grape Juice & more. Pure, fresh, and handcrafted delights!",
     date: "May 9, 2025",
     category: "Beverages",
-    image: "Blog6.jpg",
+    image: "/Blog6.jpg",
     content: `
       <h2>Discover the Chilled Charm of Thoothukudi Café's Cold Beverages</h2>
       <p>If you ever find yourself in the mood for something cool, creamy, and just plain amazing, you've got to come to Thoothukudi Café. Whether you need to beat the heat or just want to spoil yourself, our selection of cold drinks is guaranteed to bring the chill and take your spirits higher. We don't merely serve drinks—we serve lovingly crafted beverages with tradition, love, and only the finest ingredients.</p>
@@ -751,7 +751,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Discover Thoothukudi Café in Shamshabad—home to fresh, flavorful Shot Bites like puffs, samosas, cutlets, and sandwiches you'll love!",
     date: "May 11, 2025",
     category: "Snacks",
-    image: "Blog7.jpg",
+    image: "/Blog7.jpg",
     content: `
       <h2>Thoothukudi Café – Your Favorite Spot for Irresistible Shot Bites</h2>
       
@@ -872,7 +872,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Enjoy Coconut Pudding, Millet Lapsi & Mango Delight at Thoothukudi Café. No delivery—visit us for fresh, traditional South Indian desserts.",
     date: "May 14, 2025",
     category: "Desserts",
-    image: "Blog8.jpg",
+    image: "/Blog8.jpg",
     content: `
       <h2>Discover Heavenly Desserts at Thoothukudi Café</h2>
       
