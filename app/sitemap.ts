@@ -3,7 +3,7 @@ import { blogPosts } from "@/lib/blog-data"
 
 export default function sitemap(): MetadataRoute.Sitemap {
     // Base URL for the website
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://thoothukudicafe.com"
+    const baseUrl = "https://thoothukudicafe.com"
 
     // Current date for lastModified
     const currentDate = new Date()
