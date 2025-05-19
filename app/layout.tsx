@@ -5,7 +5,9 @@ import "./globals.css"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import ScrollToTop from "@/components/scroll-to-top"
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script"
+import { Suspense } from "react"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" })
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" })
@@ -15,10 +17,9 @@ export const metadata: Metadata = {
   description:
     "A premium South Indian vintage-themed café celebrating Tamil Nadu's heritage with authentic flavors and nostalgic ambiance.",
   icons: {
-    icon: "/favicon.png", 
+    icon: "/favicon.png",
   },
 }
-
 
 export default function RootLayout({
   children,
@@ -27,12 +28,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-4SB32B5M3Q" />
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-4SB32B5M3Q');
+            `,
+          }}
+        />
+      </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
-        <Navbar />
-        {children}
-        <Footer />
-        <ScrollToTop />
-        <Analytics />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Navbar />
+          {children}
+          <Footer />
+          <ScrollToTop />
+          <Analytics />
+        </Suspense>
       </body>
     </html>
   )
