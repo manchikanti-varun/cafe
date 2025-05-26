@@ -462,7 +462,7 @@ export default function Home() {
                     href={`/blogs/${blog.slug}`}
                     className="mt-4 inline-flex items-center font-medium text-[#91604F] transition-colors hover:text-[#4D281F]"
                   >
-                    Read More
+                    Discover More Insights
                     <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                   </Link>
                 </div>
