@@ -103,7 +103,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
                                                     href={`/blogs/${relatedPost.slug}`}
                                                     className="mt-2 inline-flex items-center text-sm font-medium text-[#91604F] hover:text-[#4D281F]"
                                                 >
-                                                    Read More
+                                                    Discover More Insights
                                                     <ArrowRight className="ml-1 h-3 w-3" />
                                                 </Link>
                                             </div>
