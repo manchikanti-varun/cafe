@@ -237,12 +237,12 @@ export const blogPosts: BlogPost[] = [
       
       <p>In addition to serving soul-calming herbal teas, <a href="http://thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Thoothukudi</a> Cafe boasts some of Hyderabad's most delicious baked delicacies, with our famous Kova Bun taking center stage. We take pride in being one of Hyderabad's top bakeries and cafes, tucked away in the bustling center of Shamshabad. Our Kova Bun, which combines tradition, flavor, and pure enjoyment, is a must-try delight for any foodie, whether they are locals or visitors. Let's examine why Thoothukudi Cafe is the place to go for baked treats and why our bun is more than simply a snack.</p>
       
-      <h2>The Magic of Our Kova Bun</h2>
+      <h2>The Magic of Our <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer"> Kova Bun</a></h2>
       <p>The Kova Bun at Thoothukudi Cafe is not your typical bun; it's a celebration of South Indian culinary tradition encased in a silky, golden pastry. This classic delight, inspired by the coastal flavors of Thoothukudi, Tamil Nadu, features a fluffy bun with a thick, creamy kova (milk-based sweet) filling that melts in your mouth. Every bite is the right combination of sweetness and texture, making it a favorite among dessert and snack fans equally.</p>
       
       <p>Our Kova Buns are freshly baked every day, so you get that warm, just-out-of-the-oven feeling with every order. Whether you serve it with our famous herbal tea or on its own, this bun is sure to leave you wanting more.</p>
       
-      <h2>Why Thoothukudi Cafe is Hyderabad's Best Bakery and Cafe</h2>
+      <h2>Why Thoothukudi Cafe is Hyderabad's Best Bakery and <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Cafe</a></h2>
       <p>Located in the heart of Shamshabad, Thoothukudi Cafe stands out as one of the best bakeries and cafes in Hyderabad for a reason. Our commitment to quality, authenticity, and customer satisfaction sets us apart in the bustling food scene of Hyderabad. Here's what makes us special:</p>
       
       <ul>
@@ -265,7 +265,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>Whether you're a first-time visitor or a regular, our Kova Bun is sure to become your new obsession. Pair it with one of our herbal teas for the ultimate Thoothukudi Cafe experience.</p>
       
-      <h2>Visit Thoothukudi Cafe in Shamshabad</h2>
+      <h2>Visit <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a> in Shamshabad</h2>
       <p>If you're in Hyderabad, don't miss out on visiting Thoothukudi Cafe in Shamshabad, which is conveniently located near Rajiv Gandhi International Airport. As one of Hyderabad's greatest bakeries and cafés, we're passionate about providing cuisine and beverages that warm the heart and soul. Whether you're looking for our Kova Bun, herbal tea recipes, or both, we guarantee an unforgettable experience.</p>
       
       <p>Visit thoothukudicafe.com to view our full menu and place an order online. Stay in touch with us on social media for updates on new bakery goods and special discounts!</p>
@@ -278,7 +278,7 @@ export const blogPosts: BlogPost[] = [
       <h3>What is a Kova Bun?</h3>
       <p>Kova Buns are a delightful dish that capture the flavor of Thoothukudi's culinary heritage. This soft, golden bun is freshly baked for a fluffy, melt-in-your-mouth texture and liberally stuffed with kova, a rich, creamy milk-based sweet prepared by reducing milk to a thick, delectable consistency.</p>
       
-      <h3>Can I order the Kova Bun online?</h3>
+      <h3>Can I order the <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Kova Bun</a> online?</h3>
       <p>Thoothukudi Cafe has made it easy for you to enjoy our trademark Kova Buns from the comfort of your own home. Simply visit thoothupudicafe.com to view our entire menu, including the Kova Bun and other delightful bakery goods.</p>
       
       <h3>What pairs well with the Kova Bun?</h3>
@@ -303,7 +303,7 @@ export const blogPosts: BlogPost[] = [
       <h2>A Destination for Organic, Ayurvedic Hot Beverages Near You</h2>
       <p>Are you constantly Googling "beverages near me" and getting the same old results? It's time for something authentic — something that's good for your body, mind, and soul. At Thoothukudi Café, our hot beverages are crafted using organic, ayurvedic, and time-tested ingredients that elevate your daily routine.</p>
       
-      <p>Whether you're sipping on our spicy Thoothukudi Chai, detoxifying with herbal tea, or indulging in filter coffee sweetened naturally with palm jaggery, each cup is a step toward better health. We believe that taste and wellness should go hand in hand — and our beverage menu proves just that.</p>
+      <p>Whether you're sipping on our spicy <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Thoothukudi Chai</a>, detoxifying with herbal tea, or indulging in filter coffee sweetened naturally with palm jaggery, each cup is a step toward better health. We believe that taste and wellness should go hand in hand — and our beverage menu proves just that.</p>
       
       <h2>The Magic of Milk – Fresh, Creamy & Nutrient-Rich</h2>
       <h3>Ingredients of Our Milk Beverage</h3>
@@ -325,7 +325,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Why It's a Daily Ritual</h3>
       <p>Our café's milk is popular among elders, children, and fitness lovers. Whether you're trying to strengthen your immune system or simply unwind before bed, this drink fits every lifestyle.</p>
       
-      <h2>Thoothukudi Chai – A Spiced Legacy in Every Sip</h2>
+      <h2><a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Thoothukudi Chai</a> – A Spiced Legacy in Every Sip</h2>
       <h3>Natural Ingredients That Heal</h3>
       <ul>
         <li>Black tea leaves</li>
@@ -347,7 +347,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>Pair it with our fresh kova bun or a slice of banana cake, and you've got a satisfying treat.</p>
       
-      <h2>Thoothukudi Diet Herbal Tea – Your Go-To Organic Tea</h2>
+      <h2><a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Thoothukudi Diet Herbal Tea</a> – Your Go-To Organic Tea</h2>
       <h3>What Makes It Special</h3>
       <ul>
         <li>Instant ginger infusion</li>
@@ -421,7 +421,7 @@ export const blogPosts: BlogPost[] = [
             <th>Caffeine-Free</th>
           </tr>
           <tr>
-            <td>Milk</td>
+            <td><a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Milk</a></td>
             <td>Cow's Milk</td>
             <td>Daily nutrition</td>
             <td>✅</td>
@@ -449,7 +449,7 @@ export const blogPosts: BlogPost[] = [
             <td>✅</td>
           </tr>
           <tr>
-            <td>Filter Coffee</td>
+            <td><a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Filter Coffee</a></td>
             <td>Jaggery, Sonti</td>
             <td>Focus & Taste</td>
             <td>✅</td>
@@ -484,11 +484,11 @@ export const blogPosts: BlogPost[] = [
       </blockquote>
       
       <blockquote>
-        <p>"Thoothukudi Coffee is the only one I can drink without acid reflux. The jaggery is a game-changer." – Arvind, Attapur</p>
+        <p>"<a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Thoothukudi Coffee</a> is the only one I can drink without acid reflux. The jaggery is a game-changer." – Arvind, Attapur</p>
       </blockquote>
       
       <blockquote>
-        <p>"Best 'beverages near me' I've found. I now come here every evening." – Meera, Thoothukudi</p>
+        <p>"Best 'beverages near me' I've found. I now come here every evening." – Meera, <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Thoothukudi</a></p>
       </blockquote>
       
       <h2>FAQs</h2>
@@ -525,10 +525,10 @@ export const blogPosts: BlogPost[] = [
     category: "Health Food",
     image: "/Blog5.jpg",
     content: `
-      <h2>Exploring Millet Delights at Thoothukudi Cafe</h2>
+      <h2>Exploring Millet Delights at <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a></h2>
       <p>Imagine walking into a cozy cafe where the aroma of traditional spices mingles with the promise of wholesome, healthy meals. Welcome to Thoothukudi Cafe, a gem for food lovers who crave dishes that are as nutritious as they are delicious. At the heart of this cafe's menu are its Millet Delights—a collection of dishes crafted with millets, the superfood taking the culinary world by storm. From fluffy millet idlis to comforting millet rice dishes, Thoothukudi Cafe is redefining healthy eating with a touch of South Indian tradition. Ready to dive into a world of flavors? Let's explore what makes this cafe a must-visit.</p>
       
-      <h2>Why Millets? The Superfood Trend</h2>
+      <h2>Why <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Millets</a>? The Superfood Trend</h2>
       <p>Millets are having a moment, and for good reason. These tiny grains are nutritional powerhouses, packed with fiber, protein, and essential minerals. But what's the big deal about millets, and why are they popping up on menus everywhere?</p>
       
       <h3>Nutritional Benefits of Millets</h3>
@@ -537,16 +537,16 @@ export const blogPosts: BlogPost[] = [
       <h3>Why Millets Are Sustainable</h3>
       <p>Beyond their health perks, millets are a gift to the planet. These grains thrive in harsh conditions, requiring minimal water and fertilizers compared to rice or wheat. By choosing millet-based dishes at Thoothukudi Cafe, you're not just treating your body—you're supporting eco-friendly farming practices. It's like giving Mother Earth a high-five with every bite.</p>
       
-      <h2>Welcome to Thoothukudi Cafe</h2>
+      <h2>Welcome to <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a></h2>
       <p>Tucked away in the heart of the city, Thoothukudi Cafe is more than just a place to eat—it's a celebration of wholesome, traditional foods reimagined for modern palates. Let's take a closer look at what makes this cafe so special.</p>
       
       <h3>The Vision Behind Thoothukudi Cafe</h3>
       <p>The folks at Thoothukudi Cafe believe food should nourish both body and soul. Their mission? To bring millets, a staple of ancient diets, back into the spotlight. By blending traditional South Indian recipes with the goodness of millets, they're creating meals that feel like a warm hug from grandma's kitchen. It's comfort food with a healthy twist.</p>
       
-      <h3>A Cozy Ambiance for Food Lovers</h3>
+      <h3>A Cozy Ambiance for <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Food Lovers</a></h3>
       <p>Picture this: soft lighting, wooden tables, and the gentle hum of conversation. Thoothukudi Cafe's ambiance is as inviting as its menu. Whether you're grabbing a quick breakfast or lingering over lunch with friends, the warm vibe makes every visit feel like a mini escape. It's the kind of place where you'll want to snap a pic of your meal and savor every moment.</p>
       
-      <h2>The Millet Delights Menu</h2>
+      <h2>The <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Millet Delights</a> Menu</h2>
       <p>Now, let's get to the good stuff—the food! Thoothukudi Cafe's Millet Delights menu is a love letter to millets, featuring dishes that are hearty, flavorful, and oh-so-satisfying. Here's a peek at the stars of the show.</p>
       
       <h3>Millet Sambar Rice: A Flavorful Classic</h3>
@@ -582,7 +582,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Health Benefits of Millet Rice</h3>
       <p>Swapping regular rice for millet rice is like upgrading your meal to first class. It's lower in calories, higher in fiber, and keeps you fuller for longer. Plus, it's a great source of B vitamins, which boost energy and brain health. With every spoonful, you're fueling your body with goodness.</p>
       
-      <h2>Why Choose Thoothukudi Cafe?</h2>
+      <h2>Why Choose <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a>?</h2>
       <p>With so many dining options out there, what makes Thoothukudi Cafe stand out? It's all about quality, passion, and a commitment to healthy eating.</p>
       
       <h3>Fresh Ingredients, Authentic Flavors</h3>
@@ -591,10 +591,10 @@ export const blogPosts: BlogPost[] = [
       <h3>A Menu for All Tastes</h3>
       <p>Whether you're a die-hard South Indian foodie or just dipping your toes into millet-based cuisine, there's something for everyone. From light bites like Samalu Curd Rice to hearty Millet Sambar Rice, the menu caters to all tastes and dietary needs. It's a foodie paradise!</p>
       
-      <h2>Tips for Enjoying Millet Delights</h2>
+      <h2>Tips for Enjoying <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Millet Delights</a></h2>
       <p>Ready to visit Thoothukudi Cafe? Here are a few tips to make your experience even better.</p>
       
-      <h3>Best Times to Visit Thoothukudi Cafe</h3>
+      <h3>Best Times to Visit <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a></h3>
       <p>For a relaxed dining experience, aim for mid-morning or early afternoon. The cafe is less crowded, and you'll have plenty of time to savor your meal. Weekends are great for a leisurely brunch—bring your friends and make it a foodie adventure!</p>
       
       <h3>Pairing Millet Dishes with Beverages</h3>
@@ -629,12 +629,12 @@ export const blogPosts: BlogPost[] = [
     category: "Beverages",
     image: "/Blog6.jpg",
     content: `
-      <h2>Discover the Chilled Charm of Thoothukudi Café's Cold Beverages</h2>
+      <h2>Discover the Chilled Charm of Thoothukudi Café's <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Cold Beverages</a></h2>
       <p>If you ever find yourself in the mood for something cool, creamy, and just plain amazing, you've got to come to Thoothukudi Café. Whether you need to beat the heat or just want to spoil yourself, our selection of cold drinks is guaranteed to bring the chill and take your spirits higher. We don't merely serve drinks—we serve lovingly crafted beverages with tradition, love, and only the finest ingredients.</p>
       
       <p>So sit down (or grab a takeaway cup) and let's take a plunge into our signature cold beverages that are turning the city upside down in the most delicious manner possible.</p>
       
-      <h2>Introduction to Thoothukudi Café</h2>
+      <h2>Introduction to <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Thoothukudi Café</a></h2>
       <h3>Where Taste Meets Tradition</h3>
       <p>Thoothukudi Café is not your ordinary neighborhood café. We take the best of traditional recipes and marry them with today's café atmosphere, so each time you step through our doors, you get that feeling of home. What we're trying to do is bring you drinks and bites that have a story to tell — one connected to local heritage, done with love, and infused with spirit. When you enter, you're not a customer, you're part of the family.</p>
       
@@ -647,7 +647,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>When it's hot outside, your body's craving more than just cold — it wants nutrition too. That's why our beverages aren't just refreshing, they're packed with health benefits. From antioxidant-rich grapes to energy-boosting almonds and soothing coconut cream, we've got drinks that taste great and do your body good.</p>
       
-      <h2>Our Signature Cold Beverages</h2>
+      <h2>Our Signature <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Cold Beverages</a></h2>
       <h3>Dry Fruit Shake – A Royal Treat in a Glass</h3>
       <p>What Makes It Special</p>
       <p>Our Dry Fruit Shake is hands-down one of the creamiest, richest drinks on the menu. It's created with a rich mix of top-quality cashews, almonds, pistachios, and dates, all overnight soaked and fresh-blended every day. A touch of cardamom adds that gorgeous aromatic finish, giving it the quality of something extra special — nearly like a dessert in a glass.</p>
@@ -659,7 +659,7 @@ export const blogPosts: BlogPost[] = [
       <p>Do you need a boost of energy before heading to the gym? Are you searching for a tasty snack to keep you satisfied between meals? Hoping to make a great impression on your coffee date? Try the Dry Fruit Shake. It's a perfect choice for any time you want to indulge, especially when you want to enjoy something special.</p>
       
       <h3>Badam Milk – A Chilled Twist on a Classic</h3>
-      <h4>The Legacy of Badam Milk in Indian Homes</h4>
+      <h4>The Legacy of <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Badam Milk</a> in Indian Homes</h4>
       <p>Badam milk is an old favorite that many people enjoyed as warm almond milk before bedtime. At Thoothukudi Café, we've transformed it into something refreshing by serving it ice-cold. This version still includes all the traditional ingredients—soaked almonds, a touch of saffron, and fresh milk—but now it's perfect for hot summer days. Enjoying it chilled gives this classic drink a new and exciting twist, especially when you want to cool down.</p>
       
       <h4>Chilling It to Perfection</h4>
@@ -668,7 +668,7 @@ export const blogPosts: BlogPost[] = [
       <h4>Why You'll Love It</h4>
       <p>If you're someone who likes to blend tradition with taste, this drink will hit home. It's mild yet flavorful, soothing yet energizing. Plus, it's a drink you can feel good about giving your kids too — all-natural, no preservatives.</p>
       
-      <h3>Pulpy Grape Juice – Nature's Sweet Sip</h3>
+      <h3><a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Pulpy Grape Juice</a> – Nature's Sweet Sip</h3>
       <h4>Not Just Any Grape Juice</h4>
       <p>We're not talking about bottled grape drink with added sugar. Our Pulpy Grape Juice is made from locally-sourced grapes, squeezed fresh and served with the pulp intact for that real, juicy texture. Every sip gives you a burst of sweet-tart freshness, just the way nature intended.</p>
       
@@ -698,10 +698,10 @@ export const blogPosts: BlogPost[] = [
       <h3>No Artificial Flavors – Only Real Taste</h3>
       <p>When you sip our shakes, you won't taste chemicals or fake essences. That's because we don't use them. Our philosophy is simple: If we wouldn't serve it to our families, we won't serve it to you.</p>
       
-      <h2>Pairing Suggestions at Thoothukudi Café</h2>
+      <h2>Pairing Suggestions at <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Thoothukudi Café</a></h2>
       <h3>Kova Bun & Cold Beverages – A Match Made in Heaven</h3>
       <p>Our Kova Buns are legendary — soft, sweet, and filled with rich kova that melts in your mouth. Pair one with our Dry Fruit Shake or Coconut Cream Shake, and you've got a combo that's both indulgent and satisfying.</p>
-      <p>Check out our full menu of snacks and sweets at Thoothukudi Café Menu.</p>
+      <p>Check out our full menu of snacks and sweets at <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Thoothukudi Café Menu</a>.</p>
       
       <h3>Snacks That Elevate the Chill</h3>
       <p>Want something savory? Our herbal snacks and spiced bakery items go wonderfully with a tall glass of Pulpy Grape Juice or chilled Badam Milk. Trust us, the contrast of flavors is addictive.</p>
@@ -728,7 +728,7 @@ export const blogPosts: BlogPost[] = [
       <p>So whether you're a local or just passing through, make it a point to try our cold delights. Come chill the Thoothukudi way — naturally refreshing, wildly delicious, and always satisfying.</p>
       
       <h2>FAQs</h2>
-      <h3>1. What makes your dry fruit shake different from others?</h3>
+      <h3>1. What makes your dry fruit shake different from <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">others</a>?</h3>
       <p>Our Dry Fruit Shake stands out because we don't cut corners. We use a generous mix of premium soaked almonds, cashews, pistachios, and dates, blended fresh daily with chilled milk and a hint of natural cardamom. It's rich, creamy, and free from artificial flavors or sweeteners — just pure indulgence in every sip.</p>
       
       <h3>2. Are your beverages safe and suitable for kids?</h3>
@@ -754,17 +754,17 @@ export const blogPosts: BlogPost[] = [
     image: "/Blog7.jpg",
     content: `
       <h2>Thoothukudi Café – Your Favorite Spot for Irresistible Shot Bites</h2>
-      
+  
       <h3>Welcome to Thoothukudi Café</h3>
-      <p>Step into Thoothukudi Café, Shamshabad's hidden gem where authentic South Indian flavors meet modern convenience. Don't let the name fool you—we're proudly located in Shamshabad, but we carry the soul of Thoothukudi in every bite. From sizzling hot puffs to hearty cutlets, we've curated a menu that's full of personality and flavor.</p>
-      
+      <p>Step into <a href="https://www.thoothukudicafe.com/">Thoothukudi Café</a>, Shamshabad's hidden gem where authentic South Indian flavors meet modern convenience. Don't let the name fool you—we're proudly located in Shamshabad, but we carry the soul of Thoothukudi in every bite. From sizzling hot puffs to hearty cutlets, we've curated a menu that's full of personality and flavor.</p>
+  
       <h3>What Sets Thoothukudi Café Apart?</h3>
       <p>We're not just another café serving snacks—we're a brand that believes in quality, tradition, and comfort food with a twist. Every snack is freshly made, packed with local flavor, and served with warmth. It's not just about food here—it's about experience.</p>
-      
+  
       <h3>The Concept of Shot Bites</h3>
       <p>So, what exactly are Shot Bites? Think of them as small, power-packed snack portions designed for the modern foodie. These aren't your average tea-time snacks. They're crispy, creamy, spicy, and wholesome all at once.</p>
-      <p>Whether you're in a hurry or just want to chill with friends, Shot Bites are your go-to solution. Light on the stomach, big on flavor.</p>
-      
+      <p>Whether you're in a hurry or just want to chill with friends, Shot Bites are your go-to solution. Light on the stomach, big on flavor. Curious about the ingredients that make these so special? Explore our <a href="https://www.thoothukudicafe.com/menu">full menu here</a>.</p>
+  
       <h3>Why Our Shot Bites Are a Must-Try</h3>
       <ul>
         <li>Perfect for snacking without guilt</li>
@@ -773,45 +773,45 @@ export const blogPosts: BlogPost[] = [
         <li>Freshly prepared every day</li>
         <li>Affordable and satisfying</li>
       </ul>
-      
+  
       <h2>Our Signature Shot Bites Menu</h2>
-      
+  
       <h3>🧅 Onion Samosa – The Crispy Legend</h3>
       <p>This is what snack dreams are made of. Our Onion Samosa is thin, crunchy, and packed with finely chopped onions, green chilies, and our special spice blend. Every bite reminds you of those nostalgic street stalls—but cleaner and better.</p>
-      <p>👉 Best with: Herbal Tea</p>
-      
+      <p>👉 Best with: Herbal Tea. Check out our <a href="https://thoothukudicafe.com/blogs/discover-the-art-of-herbal-tea">Herbal Tea blog</a> for pairing tips!</p>
+  
       <h3>🌽 Corn Samosa – Sweet & Savory Harmony</h3>
       <p>A lighter take on the samosa, our Corn Samosa combines juicy sweet corn with aromatic herbs and a hint of heat. It's golden, crisp, and kid-approved.</p>
       <p>👉 Perfect with: Pulpy Grape Juice</p>
-      
+  
       <h3>🧀 Paneer Puff – Creamy Meets Crispy</h3>
       <p>Imagine buttery pastry layers filled with spicy paneer and sautéed veggies. The Paneer Puff is a vegetarian's best friend. It's flaky on the outside, rich and flavorful on the inside.</p>
       <p>👉 Try it with: Badam Milk</p>
-      
+  
       <h3>🥚 Egg Puff – Masala & Egg Magic</h3>
       <p>Hard-boiled eggs are coated in a tangy masala, then wrapped in puff pastry and baked till golden. Our Egg Puff is filling, comforting, and totally drool-worthy.</p>
       <p>👉 Best with: Ayurvedic Tea</p>
-      
+  
       <h3>🍗 Chicken Puff – A Bestseller in Shamshabad</h3>
       <p>Spiced shredded chicken encased in buttery pastry. Our Chicken Puff is hands-down the crowd favorite. Once you try it, there's no going back.</p>
       <p>👉 Ideal with: Coconut Cream Shake</p>
-      
+  
       <h3>🥪 Veg Sandwich – Fresh, Light & Flavorful</h3>
       <p>Our Veg Sandwich comes with crisp vegetables and a tangy house chutney layered between slices of soft homemade bread. It's healthy, satisfying, and perfect for a light lunch.</p>
-      
+  
       <h3>🧀 Paneer Sandwich – Spice It Up</h3>
       <p>This isn't your average sandwich. Our Paneer Sandwich is spicy, cheesy, and packed with crunch and flavor. Great for vegetarians who don't want to compromise on taste.</p>
-      
+  
       <h3>🍗 Chicken Sandwich – The Ultimate Snackwich</h3>
       <p>Loaded with juicy marinated chicken and crunchy veggies, the Chicken Sandwich is protein-packed and full of flavor. It's a hit among gym-goers and foodies alike.</p>
-      
+  
       <h3>🌾 Millet Cutlet – Healthy & Hearty</h3>
       <p>Looking for something nutritious? Our Millet Cutlet is made with local millets, spices, and veggies. It's high in fiber, easy on the stomach, and delicious enough to forget it's healthy!</p>
-      <p>👉 Pro tip: Pair it with a Dry Fruit Shake</p>
-      
+      <p>👉 Pro tip: Pair it with a Dry Fruit Shake. Or dive into our <a href="https://thoothukudicafe.com/blogs/thoothukudi-cafes-millet-magic">Millet Magic blog</a> to learn more.</p>
+  
       <h3>🥩 Chicken Cutlet – Crunch Outside, Juicy Inside</h3>
       <p>This one's for the meat lovers. Chicken Cutlets at Thoothukudi Café are crispy, spiced to perfection, and loaded with flavor. They're filling and finger-licking good.</p>
-      
+  
       <h2>Perfect Beverage Pairings</h2>
       <p>Snacks are good. But snacks with drinks? Game-changing.</p>
       <p>Here are some classic pairings:</p>
@@ -821,50 +821,50 @@ export const blogPosts: BlogPost[] = [
         <li>Millet Cutlet + Dry Fruit Shake</li>
         <li>Paneer Sandwich + Coconut Cream Shake</li>
       </ul>
-      <p>You can explore our full drinks menu on the official website.</p>
-      
+      <p>Explore the full selection on our <a href="https://thoothukudicafe.com/blogs/discover-the-chilled-charm-of-thoothukudi-cafes-cold-beverages">Cold Beverages blog</a>.</p>
+  
       <h3>Made Fresh in Shamshabad, Loved Everywhere</h3>
       <p>We proudly call Shamshabad our home. Every item is prepared right here, using locally sourced ingredients and traditional methods. So when you support us, you're also supporting local farmers and businesses.</p>
-      
+  
       <h3>Healthy and Wholesome Options</h3>
       <p>We know many of you care about health—so do we. That's why options like Millet Cutlet, Veg Sandwich, and our Herbal Teas are crafted to be both delicious and nutritious.</p>
-      
+  
       <h3>Our Loyal Community in Shamshabad</h3>
       <p>Ask anyone around the neighborhood, and they'll tell you—Thoothukudi Café is more than a café. It's where families gather, friends hang out, and strangers become regulars. We've built our reputation on trust, taste, and consistency.</p>
-      
+  
       <h3>Our Ingredients Promise</h3>
       <p>No preservatives. No frozen shortcuts. No compromises.</p>
       <p>At Thoothukudi Café, every puff, cutlet, and sandwich is made from scratch using handpicked ingredients. That's our promise.</p>
-      
+  
       <h3>How to Reach Thoothukudi Café</h3>
-      <p>📍 We're located conveniently in Shamshabad, close to major landmarks and easily accessible. Just search "Thoothukudi Café Shamshabad" on Google Maps.</p>
-      
+      <p>📍 We're located conveniently in Shamshabad, close to major landmarks and easily accessible. Just search "Thoothukudi Café Shamshabad" on Google Maps or reach us via our <a href="https://www.thoothukudicafe.com/contact">Contact Page</a>.</p>
+  
       <h3>Order Online for Instant Cravings</h3>
-      <p>Can't visit? No problem. Just hop onto our official website and place your order. Whether it's one Chicken Puff or ten Corn Samosas, we deliver fast and fresh.</p>
-      
+      <p>Can't visit? No problem. Just hop onto our <a href="https://www.thoothukudicafe.com/">official website</a> and place your order. Whether it's one Chicken Puff or ten Corn Samosas, we deliver fast and fresh.</p>
+  
       <h3>Why We're More Than Just a Café</h3>
       <p>Thoothukudi Café isn't just about snacks. It's about nostalgia. It's about bringing the rich street food flavors of Tamil Nadu to urban Shamshabad. It's about making every bite count.</p>
-      
+  
       <h3>Final Thoughts – Your Next Favorite Café Awaits</h3>
-      <p>If you're tired of the same old fast food and want something comforting yet exciting, then Thoothukudi Café is calling your name. From crispy snacks to creamy drinks, we've got everything you need to spice up your snack game. Come for the puffs, stay for the vibes.</p>
-      
+      <p>If you're tired of the same old fast food and want something comforting yet exciting, then Thoothukudi Café is calling your name. From crispy snacks to creamy drinks, we've got everything you need to spice up your snack game. Come for the puffs, stay for the vibes. Also, don't miss our feature on <a href="https://thoothukudicafe.com/blogs/thoothukudi-cafe-hyderabads-must-try-bakery">Hyderabad’s must-try bakery</a>.</p>
+  
       <h2>FAQs – Get to Know Thoothukudi Café</h2>
       <h3>1. Are your Shot Bites made fresh daily?</h3>
       <p>Yes, absolutely! Every item on our menu is freshly prepared each day right here in Shamshabad using handpicked ingredients.</p>
-      
+  
       <h3>2. Do you offer home delivery?</h3>
       <p>Not at the moment. We're currently focused on providing the best dine-in and takeaway experience at our Shamshabad location.</p>
-      
+  
       <h3>3. Can I place a bulk or party order?</h3>
       <p>Currently, we don't take bulk or party orders. But you're always welcome to stop by and grab your favorites in person!</p>
-      
+  
       <h3>4. Are there vegetarian options available?</h3>
       <p>Definitely! We've got delicious vegetarian picks like Paneer Puff, Veg Sandwich, Millet Cutlet, Corn Samosa, and more.</p>
-      
+  
       <h3>5. Is Thoothukudi Café a good place to hang out with friends or family?</h3>
       <p>100%! Our café offers a cozy and friendly vibe that's perfect for chilling with your gang or enjoying a quiet snack break.</p>
-    `,
-  },
+    `
+  },  
   {
     id: 8,
     slug: "discover-heavenly-desserts-at-thoothukudi-cafe",
@@ -874,97 +874,96 @@ export const blogPosts: BlogPost[] = [
     category: "Desserts",
     image: "/Blog8.jpg",
     content: `
-      <h2>Discover Heavenly Desserts at Thoothukudi Café</h2>
-      
-      <h3>Introduction to Thoothukudi Café</h3>
-      <h4>A Taste of Tradition and Innovation</h4>
-      <p>Welcome to Thoothukudi Café, where every bite feels like home and every dessert tells a story. Nestled in the heart of tradition and surrounded by flavors of the south, we pride ourselves on bringing you the best of both worlds—age-old recipes and modern-day flair. From rich heritage sweets to seasonal delights, our café is your go-to spot for indulgent, soulful desserts.</p>
-      
-      <h4>Why Our Desserts Are a Crowd Favorite</h4>
-      <p>Let's be honest—desserts are the soul of any café experience. But at Thoothukudi Café, they're more than that. They're handcrafted with local love, made from pure ingredients, and served with warmth. Whether it's a creamy coconut treat or a millet-based nostalgic dessert, you're in for a wholesome experience. Our desserts aren't just tasty—they're Instagram-worthy, health-conscious, and rooted in tradition.</p>
-      
-      <h3>A Deep Dive into Our Signature Desserts</h3>
-      <h4>Coconut Pudding – A Tropical Indulgence</h4>
-      <p>Take a moment to picture this: a creamy, luscious pudding infused with the gentle warmth of cardamom, topped with golden-brown toasted coconut flakes. That's our Coconut Pudding for you—comforting, silky, and oh-so-decadent.</p>
-      
-      <h5>The Rich Flavors Behind the Creaminess</h5>
-      <p>We use fresh coconut milk, not canned alternatives. The pudding's gentle sweetness comes from natural ingredients, with no artificial flavors. It's the kind of dessert that melts in your mouth and leaves a tropical note on your palate.</p>
-      
-      <h5>Health Benefits of Coconut-Based Desserts</h5>
-      <p>Coconut is more than just tasty. It's loaded with good fats, supports digestion, and boosts immunity. Unlike heavy cream-based sweets, this pudding is light, making it a guilt-free dessert. Curious about coconut nutrition? Here's a detailed read.</p>
-      
-      <h4>Millet Lapsi – The Nutritious Nostalgia</h4>
-      <p>Lapsi is an Indian sweet many of us grew up with—but we've added our own healthy twist. Our Millet Lapsi brings together fiber-rich millets, aromatic ghee, rich jaggery, and a generous sprinkle of dry fruits.</p>
-      
-      <h5>The Power of Millets and Traditional Sweeteners</h5>
-      <p>Millets are trending, and for good reason—they're packed with fiber, iron, and slow-digesting carbs. By choosing jaggery over refined sugar, we're also giving your body a natural mineral-rich sweetener. It's a dessert that tastes like grandma's kitchen and nourishes like a superfood bowl.</p>
-      
-      <h5>A Dessert That's Close to the Heart</h5>
-      <p>This dish is served warm, making it a great comfort food on rainy days. Many of our guests pair it with herbal tea or just enjoy it as an energy-boosting midday snack. You can read more about the benefits of jaggery to understand why this choice is healthier.</p>
-      
-      <h4>Mango Delight – Summer in Every Bite</h4>
-      <p>If summer had a flavor, it would be our Mango Delight. Made with real mango pulp, layers of fresh cream, and topped with chopped pistachios, this dessert is pure sunshine in a cup.</p>
-      
-      <h5>Why Mango is Called the King of Fruits</h5>
-      <p>Mangoes are loaded with vitamin A, antioxidants, and fiber. They're also irresistibly sweet. Our Mango Delight is a seasonal special, and we only use fresh mangoes during the summer months to ensure peak flavor and freshness.</p>
-      
-      <h5>Seasonal Specials for a Refreshing Treat</h5>
-      <p>This dessert flies off the shelves. We get people asking for it weeks in advance. It's a light, creamy, fruit-forward treat that's perfect for beating the heat and satisfying your sweet cravings all at once.</p>
-      
-      <h3>What Makes Thoothukudi Café's Desserts Unique</h3>
-      <h4>Locally Sourced Ingredients</h4>
-      <p>We believe in keeping it local. All our ingredients—from jaggery to mangoes to coconut—are sourced from trusted vendors and farms in South India. This ensures freshness, authenticity, and support for local communities.</p>
-      
-      <h4>Crafted with Love and Authentic Recipes</h4>
-      <p>Every dessert is made in-house by our trained chefs. We don't believe in shortcuts—no pre-made mixes or artificial additives. Our recipes are rooted in generations of tradition, tweaked just enough to appeal to modern palates.</p>
-      
-      <h3>Healthier Dessert Options You Can Trust</h3>
-      <h4>Jaggery Over Sugar – A Sweet Shift</h4>
-      <p>At Thoothukudi Café, we choose jaggery over refined sugar in many of our dishes. Why? Because jaggery is rich in iron, calcium, and magnesium, and doesn't cause a sugar crash. It adds a depth of flavor that white sugar just can't match.</p>
-      
-      <h4>Millets as Superfoods in Desserts</h4>
-      <p>Millets like foxtail and little millet are being called the "grains of the future." We've embraced this movement by incorporating them into our Lapsi. They're perfect for people with gluten sensitivity or those watching their weight.</p>
-      <p>Want more healthy food options? Check out our shot bites section for guilt-free snacking!</p>
-      
-      <h3>Pairing Desserts with Our Signature Beverages</h3>
-      <h4>Best Drinks to Enjoy with Coconut Pudding</h4>
-      <p>Pair our Coconut Pudding with a steaming cup of herbal tea or our special organic tea. The delicate flavors of coconut and cardamom get enhanced when sipped along with earthy tea notes.</p>
-      
-      <h4>A Sweet Combo: Millet Lapsi and Herbal Tea</h4>
-      <p>The nuttiness of Millet Lapsi balances beautifully with our ayurvedic tea offerings. It's a warm, soul-soothing combination, especially during chilly evenings or monsoon mornings.</p>
-      
-      <h3>Customer Love: Reviews and Testimonials</h3>
-      <h4>What People Are Saying About Our Desserts</h4>
-      <p>"Thoothukudi Café's Mango Delight is my absolute favorite. I wait all year for mango season just for this!" – Swetha, kukatpally</p>
-      <p>"The Coconut Pudding is divine! Light, flavorful, and so satisfying." – Arjun, Shamshabadh</p>
-      <p>"I love how the Millet Lapsi feels like a dessert and a healthy meal at the same time." – Divya, Alwal</p>
-      <p>Check out more happy customer stories and photos on our Instagram Page https://www.instagram.com/thoothukudicafe/.</p>
-      
-      <h3>Visit Us Today</h3>
-      <h4>Location and Ambience</h4>
-      <p>Whether you're a dessert lover or just curious, Thoothukudi Café is the place to be. We offer a warm, cozy environment with subtle coastal décor, perfect for relaxing with friends or enjoying a solo dessert indulgence.</p>
-      
-      <h4>How to Find Us Online</h4>
-      <p>Explore our full menu, order online, or check out more about our café at thoothukudicafe.com. We're also available on major food delivery platforms.</p>
-      
-      <h3>Conclusion: Taste the Soul of South India</h3>
-      <p>Desserts at Thoothukudi Café aren't just sweet—they're soulful. From coconut to millet to mango, each dish brings together culture, nutrition, and flavor in a way that feels like home. Whether you're into traditional sweets or trying something new, we've got something for everyone. So why wait? Visit us today and treat yourself to a dessert journey like no other!</p>
-      
-      <h3>Frequently Asked Questions (FAQs)</h3>
-      <h4>1. Are your desserts suitable for people with dietary restrictions?</h4>
-      <p>Yes! We offer millet-based and jaggery-sweetened options which are healthier and suitable for people with gluten or sugar sensitivities.</p>
-      
-      <h4>2. Can I order desserts online for delivery?</h4>
-      <p>At the moment, Thoothukudi Café does not offer delivery services. We invite you to visit our café in person and enjoy our freshly prepared desserts in a cozy and welcoming environment.</p>
-      
-      <h4>3. Are your mango desserts available year-round?</h4>
-      <p>No. We serve our Mango Delight only during the mango season to ensure you're getting the freshest and most flavorful experience.</p>
-      
-      <h4>4. Do you use preservatives or artificial colors?</h4>
-      <p>Never. All our desserts are made fresh daily using natural, high-quality ingredients with no preservatives or artificial additives.</p>
-      
-      <h4>5. Can I host a dessert tasting party at Thoothukudi Café?</h4>
-      <p>Yes, absolutely! We'd love to help you organize a dessert-themed event. Please reach out via our contact page for more details and reservations.</p>
-    `,
+    <h2>Discover Heavenly Desserts at Thoothukudi Café</h2>
+    
+    <h3>Introduction to Thoothukudi Café</h3>
+    <h4>A Taste of Tradition and Innovation</h4>
+    <p>Welcome to <a href="/about" class="text-yellow-700 underline">Thoothukudi Café</a>, where every bite feels like home and every dessert tells a story. Nestled in the heart of tradition and surrounded by flavors of the South, we bring you the best of both worlds—age-old recipes and modern-day flair. From rich heritage sweets to seasonal delights, our café is your go-to spot for indulgent, soulful desserts.</p>
+    
+    <h4>Why Our Desserts Are a Crowd Favorite</h4>
+    <p>Let's be honest—desserts are the soul of any café experience. But at Thoothukudi Café, they're more than that. They're handcrafted with local love, made from pure ingredients, and served with warmth. Whether it's a creamy coconut treat or a millet-based nostalgic dessert, you're in for a wholesome experience. Our desserts aren't just tasty—they're Instagram-worthy, health-conscious, and rooted in tradition.</p>
+    
+    <h3>A Deep Dive into Our Signature Desserts</h3>
+    <h4>Coconut Pudding – A Tropical Indulgence</h4>
+    <p>Take a moment to picture this: a creamy, luscious pudding infused with the gentle warmth of cardamom, topped with golden-brown toasted coconut flakes. That's our Coconut Pudding—comforting, silky, and oh-so-decadent.</p>
+    
+    <h5>The Rich Flavors Behind the Creaminess</h5>
+    <p>We use fresh coconut milk, not canned alternatives. The pudding's gentle sweetness comes from natural ingredients, with no artificial flavors. It's the kind of dessert that melts in your mouth and leaves a tropical note on your palate.</p>
+    
+    <h5>Health Benefits of Coconut-Based Desserts</h5>
+    <p>Coconut is more than just tasty. It's loaded with good fats, supports digestion, and boosts immunity. Unlike heavy cream-based sweets, this pudding is light and guilt-free. Curious about coconut nutrition? Visit our <a href="/blog/health-benefits-of-coconut" class="text-yellow-700 underline">blog on coconut benefits</a>.</p>
+    
+    <h4>Millet Lapsi – The Nutritious Nostalgia</h4>
+    <p>Lapsi is an Indian sweet many of us grew up with—but we've added our own healthy twist. Our Millet Lapsi blends fiber-rich millets, aromatic ghee, rich jaggery, and a generous sprinkle of dry fruits.</p>
+    
+    <h5>The Power of Millets and Traditional Sweeteners</h5>
+    <p>Millets are trending for good reason—they're packed with fiber, iron, and slow-digesting carbs. By choosing jaggery over refined sugar, we provide a natural mineral-rich sweetener. It tastes like grandma's kitchen and nourishes like a superfood bowl.</p>
+    
+    <h5>A Dessert That's Close to the Heart</h5>
+    <p>Served warm, it's perfect on rainy days. Many guests pair it with herbal tea or enjoy it as an energy-boosting snack. Want to learn more? Read our blog on <a href="/blog/benefits-of-jaggery" class="text-yellow-700 underline">why jaggery is a healthy sweetener</a>.</p>
+    
+    <h4>Mango Delight – Summer in Every Bite</h4>
+    <p>If summer had a flavor, it would be our Mango Delight. Made with real mango pulp, fresh cream layers, and chopped pistachios, this dessert is pure sunshine in a cup.</p>
+    
+    <h5>Why Mango is Called the King of Fruits</h5>
+    <p>Mangoes are packed with vitamin A, antioxidants, and fiber. We only use fresh mangoes during peak season for maximum flavor. Visit our <a href="/menu" class="text-yellow-700 underline">dessert menu</a> for availability.</p>
+    
+    <h5>Seasonal Specials for a Refreshing Treat</h5>
+    <p>This dessert flies off the shelves. People ask for it weeks in advance. It’s light, creamy, and perfect for beating the heat and satisfying sweet cravings.</p>
+    
+    <h3>What Makes Thoothukudi Café's Desserts Unique</h3>
+    <h4>Locally Sourced Ingredients</h4>
+    <p>All our ingredients—from jaggery to mangoes to coconut—are sourced from trusted South Indian farms. This ensures freshness, authenticity, and support for local communities.</p>
+    
+    <h4>Crafted with Love and Authentic Recipes</h4>
+    <p>Every dessert is made in-house by trained chefs. No shortcuts—no mixes or artificial additives. Our recipes are rooted in tradition, refined for modern tastes.</p>
+    
+    <h3>Healthier Dessert Options You Can Trust</h3>
+    <h4>Jaggery Over Sugar – A Sweet Shift</h4>
+    <p>Jaggery is rich in iron, calcium, and magnesium, and avoids the sugar crash. It adds deep, rich flavor that refined sugar can’t match. <a href="/blog/benefits-of-jaggery" class="text-yellow-700 underline">Learn why we love jaggery</a>.</p>
+    
+    <h4>Millets as Superfoods in Desserts</h4>
+    <p>Millets like foxtail and little millet are gluten-free and great for weight-conscious eaters. We use them in our Lapsi and other <a href="/menu#shot-bites" class="text-yellow-700 underline">healthy snack bites</a> too.</p>
+    
+    <h3>Pairing Desserts with Our Signature Beverages</h3>
+    <h4>Best Drinks to Enjoy with Coconut Pudding</h4>
+    <p>Try it with a cup of our <a href="/menu#beverages" class="text-yellow-700 underline">organic or herbal tea</a>. Coconut and cardamom flavors shine with earthy tea notes.</p>
+    
+    <h4>A Sweet Combo: Millet Lapsi and Herbal Tea</h4>
+    <p>The nuttiness of Lapsi pairs beautifully with our ayurvedic tea. It’s a comforting combo, perfect for chilly evenings or lazy mornings.</p>
+    
+    <h3>Customer Love: Reviews and Testimonials</h3>
+    <h4>What People Are Saying About Our Desserts</h4>
+    <p>"Thoothukudi Café's Mango Delight is my absolute favorite. I wait all year for mango season just for this!" – Swetha, Kukatpally</p>
+    <p>"The Coconut Pudding is divine! Light, flavorful, and so satisfying." – Arjun, Shamshabad</p>
+    <p>"I love how the Millet Lapsi feels like a dessert and a healthy meal at the same time." – Divya, Alwal</p>
+    <p>See more on our <a href="https://www.instagram.com/thoothukudicafe/" class="text-yellow-700 underline" target="_blank">Instagram Page</a>.</p>
+    
+    <h3>Visit Us Today</h3>
+    <h4>Location and Ambience</h4>
+    <p>Whether you’re a dessert lover or just curious, Thoothukudi Café offers a warm, cozy setting with subtle coastal décor—perfect for relaxing or indulging.</p>
+    
+    <h4>How to Find Us Online</h4>
+    <p>Explore our <a href="/menu" class="text-yellow-700 underline">full menu</a>, learn more <a href="/about" class="text-yellow-700 underline">about us</a>, or <a href="/contact" class="text-yellow-700 underline">get in touch</a>. We’re also listed on top food delivery apps—just search for Thoothukudi Café in Shamshabad.</p>
+    
+    <h3>Conclusion: Taste the Soul of South India</h3>
+    <p>At Thoothukudi Café, desserts aren’t just sweet—they’re soulful. From coconut to millet to mango, each dish reflects culture, nutrition, and flavor. Ready for a taste of tradition? <a href="/contact" class="text-yellow-700 underline">Visit us today</a>!</p>
+    
+    <h3>Frequently Asked Questions (FAQs)</h3>
+    <h4>1. Are your desserts suitable for people with dietary restrictions?</h4>
+    <p>Yes! We offer millet-based and jaggery-sweetened options which are healthier and suitable for people with gluten or sugar sensitivities.</p>
+    
+    <h4>2. Can I order desserts online for delivery?</h4>
+    <p>Currently, we don’t offer direct delivery. Visit us at our Shamshabad location for the freshest dessert experience.</p>
+    
+    <h4>3. Are your mango desserts available year-round?</h4>
+    <p>No. Mango Delight is a summer seasonal special. Follow us on <a href="https://www.instagram.com/thoothukudicafe/" class="text-yellow-700 underline" target="_blank">Instagram</a> for updates.</p>
+    
+    <h4>4. Do you use preservatives or artificial colors?</h4>
+    <p>No. All our desserts are made fresh daily using natural, high-quality ingredients with no additives or preservatives.</p>
+    
+    <h4>5. Can I host a dessert tasting party at Thoothukudi Café?</h4>
+    <p>Yes! We'd love to help. <a href="/contact" class="text-yellow-700 underline">Reach out via our contact page</a> for details and reservations.</p>
+  `,
   }
 ]
