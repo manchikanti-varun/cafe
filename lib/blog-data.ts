@@ -965,5 +965,101 @@ export const blogPosts: BlogPost[] = [
     <h4>5. Can I host a dessert tasting party at Thoothukudi Café?</h4>
     <p>Yes! We'd love to help. <a href="/contact" class="text-yellow-700 underline">Reach out via our contact page</a> for details and reservations.</p>
   `,
+  },
+  {
+    id: 9,
+    slug: "why-herbal-tea-is-good-for-you",
+    title: "Why Herbal Tea Is Good for You",
+    excerpt:
+      "Discover why herbal tea boosts health & wellness. Visit Thoothukudi Cafe in Hyderabad for top herbal drinks!",
+    date: "May 15, 2025",
+    category: "Health & Wellness",
+    image: "/blog9.png",
+    content: `
+      <h2>Why Herbal Tea Is Good for You</h2>
+      <p>Picture this: you're curled up with a warm mug, the soothing aroma of chamomile or the zesty kick of ginger wafting up, instantly making your day feel a little brighter. That's the magic of herbal tea! Unlike your morning coffee or sugary soda, herbal teas offer a delicious, guilt-free way to hydrate while packing a punch of health benefits. At <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a> in Hyderabad, we're passionate about bringing you the best herbal drinks that not only taste amazing but also nourish your body and soul.</p>
+
+      <h3>What Makes Herbal Tea Special?</h3>
+      <p>Herbal teas aren't just another beverage on the shelf—they're a vibrant, natural way to elevate your daily routine. Unlike traditional teas like green or black, which come from the Camellia sinensis plant, herbal teas are crafted from a delightful mix of dried herbs, fruits, flowers, and spices.</p>
+
+      <h4>A Caffeine-Free Delight</h4>
+      <p>One of the biggest perks of herbal tea is that it's naturally caffeine-free. If you're someone who loves a cozy drink but doesn't want the jitters or a sleepless night, herbal teas are your best friend. At <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a>, our herbal blends are crafted to deliver flavor and wellness without the caffeine crash.</p>
+
+      <h3>The Health Benefits of Herbal Tea</h3>
+      <p>Herbal teas aren't just tasty—they're like a hug from Mother Nature, packed with health benefits backed by science.</p>
+
+      <h4>Boosting Your Immune System</h4>
+      <p>Herbal teas are loaded with antioxidants, like polyphenols, that help fight off free radicals. Ginger tea, for instance, is a powerhouse for boosting immunity, thanks to its anti-inflammatory and antioxidant properties. At Thoothukudi Cafe, our ginger and hibiscus blends are crafted to give your immune system a natural boost.</p>
+
+      <h4>Promoting Relaxation and Better Sleep</h4>
+      <p>Chamomile tea is practically a lullaby in a cup, known for its calming effects that can help you unwind and sleep better. Research suggests chamomile can even help postpartum women sleep better and reduce depression. Sip one of our chamomile blends at Thoothukudi Cafe to melt away the day's stress.</p>
+
+      <h4>Supporting Digestive Health</h4>
+      <p>Herbal teas like peppermint and ginger are your go-to remedies for digestive issues. Peppermint tea can soothe nausea, bloating, and stomach cramps, while ginger is a time-tested fix for indigestion and nausea. At our cafe, we blend these ingredients with care to ensure you get both flavor and relief in every sip.</p>
+
+      <h3>Visit <a href="https://www.thoothukudicafe.com/contact-us" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a> in Hyderabad</h3>
+      <p>For a cup of tea that is as wonderful as it is soulful, visit the Thoothukudi Cafe in Hyderabad when you're looking for the perfect herbal tea experience. We are a celebration of flavors, health, and community, not just a cafe.</p>
+
+      <h3>FAQs</h3>
+      <h4>What makes herbal tea different from regular tea?</h4>
+      <p>Herbal tea, or tisane, is made from herbs, fruits, and spices, not the Camellia sinensis plant used for green or black tea. This makes it naturally caffeine-free and packed with unique health benefits.</p>
+
+      <h4>Can I drink herbal tea every day?</h4>
+      <p>Herbal teas are generally safe for daily consumption, but moderation is key. Visit <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a> to try our safe, high-quality blends.</p>
+    `,
+  },
+  {
+    id: 10,
+    slug: "what-is-millet-uncover-the-power-of-millets",
+    title: "What is Millet? Uncover the power of millets!",
+    excerpt:
+      "Learn about millets and their benefits. Try millet sambar rice, idly, and curd rice at Thoothukudi Cafe in Hyderabad for a healthy, tasty meal!",
+    date: "May 16, 2025",
+    category: "Health Food",
+    image: "/blog10.png",
+    content: `
+      <h2>What is Millet? Discover Healthy Dining at Thoothukudi Cafe in Hyderabad</h2>
+      <p>Picture this: you're craving a hearty, wholesome meal that's not just delicious but also good for your body and the planet. Enter millets—the ancient grains making a modern comeback. At <a href="https://www.thoothukudicafe.com" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a>, we're all about celebrating these tiny nutritional powerhouses with dishes like millet sambar rice, millet idly, and millet curd rice.</p>
+
+      <h3>Introduction to Millets: The Ancient Superfood</h3>
+      <h4>Defining Millets: What Are They?</h4>
+      <p>Millets are small-seeded grains that have been a staple in diets across Asia and Africa for thousands of years. Unlike rice or wheat, these grains are incredibly resilient, thriving in harsh climates with minimal water. Think of them as the underdog of the grain world—humble yet mighty.</p>
+
+      <h4>A Brief History of Millets</h4>
+      <p>Millets aren't new kids on the block. They've been around since ancient civilizations, feeding communities long before processed foods took over. In India, millets were a dietary cornerstone, especially in rural areas, before polished rice and wheat became dominant. Today, they're experiencing a renaissance as people rediscover their health benefits and sustainability.</p>
+
+      <h3>Why Millets Are Making a Comeback</h3>
+      <h4>Nutritional Powerhouse: Health Benefits of Millets</h4>
+      <p>Why all the buzz about millets? For starters, they're packed with nutrients. Rich in fiber, protein, and essential minerals like magnesium and iron, millets are like a multivitamin in grain form. They're gluten-free, low on the glycemic index, and great for heart health. Studies show millets can help manage blood sugar and cholesterol levels.</p>
+
+      <h4>Sustainable and Eco-Friendly Grain</h4>
+      <p>Millets aren't just good for you—they're good for the planet too. These grains require less water and fewer pesticides than rice or wheat, making them a sustainable choice in a world grappling with climate change. By choosing millet-based dishes at <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a>, you're supporting eco-friendly farming practices.</p>
+
+      <h3>Signature Millet Dishes at Thoothukudi Cafe</h3>
+      <h4>Millet Sambar Rice: A South Indian Classic</h4>
+      <p>Imagine a steaming plate of sambar rice, but with a healthy twist. Our millet sambar rice combines the tangy, spicy goodness of traditional South Indian sambar with the nutty flavor of millets. It's comfort food that doesn't weigh you down. Packed with veggies and protein-rich lentils, this dish is a crowd-pleaser.</p>
+
+      <h4>Millet Idly: Soft, Fluffy, and Nutritious</h4>
+      <p>Idly lovers, rejoice! Our millet idly is soft, fluffy, and oh-so-healthy. Made with a blend of millets, these idlis are lighter on your stomach and packed with nutrients. Pair them with our coconut chutney or sambar for a breakfast that's as satisfying as it is wholesome.</p>
+
+      <h4>Millet Curd Rice: Comfort Food Redefined</h4>
+      <p>Curd rice is the ultimate comfort food, right? At Thoothukudi Cafe, we've taken it up a notch with millet curd rice. The creamy texture of curd paired with the hearty, nutty millets creates a dish that's both soothing and nutritious.</p>
+
+      <h3>Visit <a href="https://www.thoothukudicafe.com/contact-us" target="_blank" rel="noopener noreferrer">Thoothukudi Cafe</a> Today</h3>
+      <p>Ready to taste the millet magic? Thoothukudi Cafe is conveniently located in Hyderabad, with branches in Film Nagar, Kismatpur, Kapil Towers, and Manikonda. Whether you're a local or just visiting, we're easy to find.</p>
+
+      <h3>Explore Our Franchise Opportunities</h3>
+      <p>Love what we're doing? Why not bring Thoothukudi Cafe to your city? Our franchise program lets you join our mission to promote healthy, millet-based dining.</p>
+
+      <h3>FAQs</h3>
+      <h4>What makes millets different from other grains?</h4>
+      <p>Millets are small, nutrient-dense grains that are gluten-free, low on the glycemic index, and packed with fiber, protein, and minerals. Unlike rice or wheat, they require less water to grow, making them eco-friendly.</p>
+
+      <h4>Are the millet dishes at Thoothukudi Cafe suitable for dietary restrictions?</h4>
+      <p>Our millet-based dishes, like <a href="https://www.thoothukudicafe.com/menu" target="_blank" rel="noopener noreferrer">millet idly and curd rice</a>, are naturally gluten-free and ideal for those with gluten sensitivities or diabetes.</p>
+
+      <h4>Where does Thoothukudi Cafe source its millets?</h4>
+      <p>We source our millets from local farmers in Telangana, Andhra Pradesh, and Karnataka, ensuring freshness and supporting sustainable farming.</p>
+    `,
   }
 ]
