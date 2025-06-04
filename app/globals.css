@@ -94,43 +94,77 @@
   }
 }
 
-/* Critical mobile LCP optimizations */
+/* Separate navbar logo optimization - no conflicts */
+.navbar-logo-optimized {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  will-change: auto;
+  height: 3rem;
+  /* 48px on mobile */
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .navbar-logo-optimized {
+    height: 4rem;
+    /* 64px on desktop */
+  }
+}
+
+/* Hero text optimization - separate from navbar */
+.hero-text-optimized {
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+  font-synthesis: none;
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+/* Critical mobile LCP optimizations - more specific targeting */
 @media (max-width: 768px) {
 
-  /* Force immediate system font rendering on mobile */
-  h1,
-  .hero-title {
+  /* Target only hero title, not navbar */
+  .hero-section h1,
+  .hero-section .hero-title {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-display: block !important;
     text-rendering: optimizeSpeed !important;
     font-synthesis: none !important;
     contain: layout style paint !important;
     content-visibility: auto !important;
-  }
-
-  /* Reduce font size aggressively on mobile */
-  .hero-title {
     font-size: 2rem !important;
     /* Force 32px on mobile */
     line-height: 1.1 !important;
     letter-spacing: 0.05em !important;
   }
 
-  /* Optimize mobile rendering */
-  .mobile-lcp-critical {
-    font-display: block !important;
-    text-rendering: optimizeSpeed !important;
-    contain: layout style paint !important;
-    content-visibility: auto !important;
+  /* Navbar specific mobile optimization - separate from hero */
+  .navbar-container {
+    contain: layout style;
+  }
+
+  /* Don't apply hero optimizations to navbar */
+  nav,
+  nav *,
+  header,
+  header * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-display: swap;
   }
 }
 
-/* Desktop font loading */
+/* Desktop font loading - more specific */
 @media (min-width: 769px) {
 
-  .fonts-loaded h1,
-  .fonts-loaded .hero-title {
+  .fonts-loaded .hero-section h1,
+  .fonts-loaded .hero-section .hero-title {
     font-family: var(--font-serif) !important;
+  }
+
+  .fonts-loaded nav,
+  .fonts-loaded header {
+    font-family: var(--font-sans) !important;
   }
 }
 
@@ -302,15 +336,6 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Logo-specific optimizations */
-.navbar-logo {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  transform: translateZ(0);
-  /* Force GPU acceleration */
-  will-change: auto;
 }
 
 /* Mobile viewport optimizations */

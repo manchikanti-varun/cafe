@@ -112,7 +112,7 @@ export default function Home() {
           </div>
 
           {/* Main LCP element - HEAVILY optimized for mobile */}
-          <h1 className="mb-4 text-2xl font-bold tracking-wider text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+          <h1 className="hero-text-optimized mb-4 text-2xl font-bold tracking-wider text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             THOOTHUKUDI
           </h1>
 

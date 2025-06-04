@@ -46,7 +46,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${isScrolled
+      className={`navbar-container fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${isScrolled
           ? "bg-white py-2 shadow-md backdrop-blur-md"
           : isHomePage
             ? "bg-transparent py-4"
@@ -61,7 +61,7 @@ export default function Navbar() {
             alt="Thoothukudi Cafe"
             width={64}
             height={64}
-            className="navbar-logo h-12 w-auto md:h-16" // Fixed: removed conflicting h-16, now uses h-12 on mobile and h-16 on desktop
+            className="navbar-logo-optimized"
             priority
             sizes="(max-width: 768px) 48px, 64px"
             quality={85}
