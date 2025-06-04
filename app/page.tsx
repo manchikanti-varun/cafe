@@ -66,25 +66,6 @@ export default function Home() {
     }
   }
 
-  // Optimized animation variants that don't delay LCP
-  const titleVariants = {
-    initial: { opacity: 1, y: 0 }, // Start visible for LCP
-    animate: { opacity: 1, y: 0 },
-    loaded: fontsLoaded ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 },
-  }
-
-  const subtitleVariants = {
-    initial: { opacity: 1, y: 0 }, // Start visible for LCP
-    animate: { opacity: 1, y: 0 },
-    loaded: fontsLoaded ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 },
-  }
-
-  // Delayed animations for non-critical elements
-  const delayedVariants = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-  }
-
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section with Integrated Carousel */}
@@ -141,16 +122,25 @@ export default function Home() {
             secret of nature
           </p>
 
-          <p className="mb-8 max-w-md text-lg leading-relaxed text-gray-300 md:text-xl hero-text lcp-optimized lcp-subtitle">
+          {/* Mobile-optimized description - hidden on mobile for better LCP */}
+          <p className="mb-8 hidden max-w-md text-lg leading-relaxed text-gray-300 md:block md:text-xl hero-text lcp-optimized lcp-subtitle">
             Experience the finest coffee and delicacies crafted with passion and tradition. Our heritage recipes bring
             authentic flavors to your table.
+          </p>
+
+          {/* Mobile description - shorter and simpler */}
+          <p className="mb-8 max-w-sm text-base leading-relaxed text-gray-300 md:hidden hero-text lcp-optimized">
+            Authentic South Indian flavors since 1995
           </p>
 
           {/* Delayed animations for non-critical elements */}
           <motion.div
             initial="initial"
             animate="animate"
-            variants={delayedVariants}
+            variants={{
+              initial: { opacity: 0, y: 20 },
+              animate: { opacity: 1, y: 0 },
+            }}
             transition={{ duration: 0.4, delay: 0.5 }}
             className="flex flex-col space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"
           >
@@ -173,7 +163,10 @@ export default function Home() {
           <motion.div
             initial="initial"
             animate="animate"
-            variants={delayedVariants}
+            variants={{
+              initial: { opacity: 0, y: 20 },
+              animate: { opacity: 1, y: 0 },
+            }}
             transition={{ duration: 0.6, delay: 0.8 }}
             className="absolute bottom-20 right-10 hidden max-w-xs rounded-lg bg-black/40 p-6 backdrop-blur-sm md:block"
           >
@@ -227,7 +220,10 @@ export default function Home() {
           <motion.div
             initial="initial"
             animate="animate"
-            variants={delayedVariants}
+            variants={{
+              initial: { opacity: 0, y: 20 },
+              animate: { opacity: 1, y: 0 },
+            }}
             transition={{ delay: 1, duration: 1 }}
             className="absolute bottom-10 left-1/2 -translate-x-1/2 transform cursor-pointer"
             onClick={handleScroll}
