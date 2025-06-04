@@ -5,6 +5,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -55,7 +56,17 @@ export default function Navbar() {
       <div className="container mx-auto flex items-center justify-between px-4">
         {/* Logo */}
         <Link href="/" className="z-10 flex items-center">
-          <img src="/Nav-logo.png" alt="Thoothukudi Cafe" className="h-16" />
+          <Image
+            src="/Nav-logo.png"
+            alt="Thoothukudi Cafe"
+            width={64}
+            height={64}
+            className="navbar-logo h-12 w-auto md:h-16" // Fixed: removed conflicting h-16, now uses h-12 on mobile and h-16 on desktop
+            priority
+            sizes="(max-width: 768px) 48px, 64px"
+            quality={85}
+            placeholder="empty"
+          />
         </Link>
 
         {/* Desktop Navigation */}

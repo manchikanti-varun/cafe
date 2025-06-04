@@ -59,7 +59,26 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Preload critical logo image */}
-        <link rel="preload" href="/Nav-logo.png" as="image" type="image/png" fetchPriority="high" />
+        <link
+          rel="preload"
+          href="/Nav-logo.png"
+          as="image"
+          type="image/png"
+          fetchPriority="high"
+          media="(max-width: 768px)"
+        />
+        <link
+          rel="preload"
+          href="/Nav-logo.png"
+          as="image"
+          type="image/png"
+          fetchPriority="high"
+          media="(min-width: 769px)"
+        />
+
+        {/* DNS prefetch for faster connections */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
 
         {/* Load fonts with proper fallback strategy */}
         <link
@@ -113,38 +132,38 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function() {
-                // Add font-loading class immediately
-                document.documentElement.classList.add('font-loading');
-                
-                // Optimize logo loading for mobile
-                if (window.innerWidth < 768) {
-                  const logoPreload = document.createElement('link');
-                  logoPreload.rel = 'preload';
-                  logoPreload.href = '/Nav-logo.png';
-                  logoPreload.as = 'image';
-                  logoPreload.fetchPriority = 'high';
-                  document.head.appendChild(logoPreload);
-                }
-                
-                // Remove when fonts are ready
-                if ('fonts' in document) {
-                  Promise.race([
-                    document.fonts.ready,
-                    new Promise(resolve => setTimeout(resolve, window.innerWidth < 768 ? 1500 : 3000)) // Faster timeout on mobile
-                  ]).then(() => {
-                    document.documentElement.classList.remove('font-loading');
-                    document.documentElement.classList.add('fonts-loaded');
-                  });
-                } else {
-                  // Fallback for older browsers
-                  setTimeout(() => {
-                    document.documentElement.classList.remove('font-loading');
-                    document.documentElement.classList.add('fonts-loaded');
-                  }, window.innerWidth < 768 ? 1500 : 3000);
-                }
-              })();
-            `,
+      (function() {
+        // Add font-loading class immediately
+        document.documentElement.classList.add('font-loading');
+        
+        // Detect mobile for faster timeouts
+        const isMobile = window.innerWidth < 768;
+        const fontTimeout = isMobile ? 1000 : 3000; // Faster timeout on mobile
+        
+        // Preload logo immediately on mobile
+        if (isMobile) {
+          const logoImg = new Image();
+          logoImg.src = '/Nav-logo.png';
+          logoImg.decode().catch(() => {}); // Ignore decode errors
+        }
+        
+        // Remove when fonts are ready with mobile-optimized timeout
+        if ('fonts' in document) {
+          Promise.race([
+            document.fonts.ready,
+            new Promise(resolve => setTimeout(resolve, fontTimeout))
+          ]).then(() => {
+            document.documentElement.classList.remove('font-loading');
+            document.documentElement.classList.add('fonts-loaded');
+          });
+        } else {
+          setTimeout(() => {
+            document.documentElement.classList.remove('font-loading');
+            document.documentElement.classList.add('fonts-loaded');
+          }, fontTimeout);
+        }
+      })();
+    `,
           }}
         />
 

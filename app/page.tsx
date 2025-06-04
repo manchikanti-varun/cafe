@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
       {/* Hero Section with Integrated Carousel */}
-      <section className="relative h-screen w-full overflow-hidden bg-[#0D0906]">
+      <section className="hero-section relative h-screen w-full overflow-hidden bg-[#0D0906]">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute right-0 top-0 h-[800px] w-[800px] rounded-full border border-[#CDB090]/20"></div>
@@ -112,7 +112,7 @@ export default function Home() {
           </div>
 
           {/* Main LCP element - optimized for immediate rendering */}
-          <h1 className="mb-4 font-serif text-4xl font-bold tracking-wider text-white sm:text-5xl md:text-6xl lg:text-7xl hero-title lcp-optimized lcp-text">
+          <h1 className="mb-4 font-serif text-4xl font-bold tracking-wider text-white sm:text-5xl md:text-6xl lg:text-7xl hero-title lcp-optimized lcp-text mobile-lcp-optimized">
             THOOTHUKUDI
           </h1>
 

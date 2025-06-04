@@ -263,3 +263,69 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* Mobile-specific logo optimization */
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 3rem;
+    /* 48px instead of 64px on mobile */
+    width: auto;
+    contain: layout style paint;
+    content-visibility: auto;
+  }
+
+  /* Faster transitions on mobile */
+  .hero-title {
+    font-size: 2.5rem;
+    /* Smaller on mobile for faster paint */
+    line-height: 1.1;
+    contain: layout style paint;
+    content-visibility: auto;
+  }
+
+  /* Optimize mobile font loading */
+  .font-loading .hero-title {
+    font-family: system-ui, -apple-system, sans-serif !important;
+    font-display: swap;
+  }
+
+  /* Critical mobile LCP optimizations */
+  .mobile-lcp-optimized {
+    font-display: swap;
+    text-rendering: optimizeSpeed;
+    contain: layout style paint;
+    content-visibility: auto;
+    font-synthesis: none;
+  }
+}
+
+/* Logo-specific optimizations */
+.navbar-logo {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  /* Force GPU acceleration */
+  will-change: auto;
+}
+
+/* Mobile viewport optimizations */
+@media (max-width: 768px) {
+
+  /* Reduce initial paint complexity */
+  .hero-section {
+    background-attachment: scroll;
+    /* Remove fixed on mobile */
+  }
+
+  /* Optimize mobile animations */
+  .animate-on-load {
+    animation-duration: 0.2s;
+    /* Faster animations on mobile */
+  }
+
+  /* Mobile-first font loading */
+  .font-loading * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-display: swap;
+  }
+}
