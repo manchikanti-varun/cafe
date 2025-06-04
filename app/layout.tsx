@@ -9,11 +9,11 @@ import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import { Suspense } from "react"
 
-// Optimized font loading with font-display: swap and better fallbacks
+// AGGRESSIVE FONT SWAP CONFIGURATION
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  display: "swap", // Critical for LCP optimization
+  display: "swap", // IMMEDIATE SWAP
   preload: true,
   fallback: [
     "system-ui",
@@ -32,7 +32,7 @@ const inter = Inter({
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
-  display: "swap", // Critical for LCP optimization
+  display: "swap", // IMMEDIATE SWAP
   preload: true,
   fallback: ["Georgia", "Times New Roman", "Times", "serif"],
   adjustFontFallback: true,
@@ -53,34 +53,24 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${playfair.variable} font-swap-fallback`}>
       <head>
-        {/* Critical font preloading for LCP optimization */}
+        {/* CRITICAL FONT SWAP PRELOADING */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        {/* Preload critical logo image */}
+
+        {/* IMMEDIATE FONT SWAP PRELOADS */}
         <link
           rel="preload"
-          href="/Nav-logo.png"
-          as="image"
-          type="image/png"
-          fetchPriority="high"
-          media="(max-width: 768px)"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+          as="style"
         />
         <link
           rel="preload"
-          href="/Nav-logo.png"
-          as="image"
-          type="image/png"
-          fetchPriority="high"
-          media="(min-width: 769px)"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+          as="style"
         />
 
-        {/* DNS prefetch for faster connections */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-
-        {/* Load fonts with proper fallback strategy */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
@@ -90,80 +80,110 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
         />
 
-        {/* Critical CSS for immediate font rendering */}
+        {/* CRITICAL LOGO PRELOAD */}
+        <link rel="preload" href="/Nav-logo.png" as="image" type="image/png" fetchPriority="high" />
+
+        {/* DNS PREFETCH */}
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+        {/* FONT SWAP CRITICAL CSS */}
         <style
           dangerouslySetInnerHTML={{
             __html: `
-              /* Critical font loading styles */
-              .font-loading * {
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+              /* IMMEDIATE FONT SWAP SYSTEM */
+              :root {
+                --font-swap-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                --font-swap-serif: Georgia, "Times New Roman", serif;
               }
               
-              .font-loading .font-serif,
-              .font-loading .hero-title,
-              .font-loading h1, .font-loading h2, .font-loading h3 {
-                font-family: Georgia, "Times New Roman", Times, serif !important;
+              .font-swap-fallback {
+                font-family: var(--font-swap-sans) !important;
+                font-display: swap !important;
+              }
+              
+              .font-swap-fallback .font-serif,
+              .font-swap-fallback h1, 
+              .font-swap-fallback h2, 
+              .font-swap-fallback h3 {
+                font-family: var(--font-swap-serif) !important;
+                font-display: swap !important;
               }
 
-              /* Prevent layout shift during font swap */
-              .hero-title {
-                font-size-adjust: 0.5;
-                line-height: 1.1;
-                font-synthesis: none;
+              /* HERO TEXT IMMEDIATE SWAP */
+              .hero-text-optimized {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+                font-display: block !important;
+                text-rendering: optimizeSpeed !important;
+                font-synthesis: none !important;
+                contain: layout style paint !important;
+                content-visibility: auto !important;
+                font-weight: bold !important;
+                letter-spacing: 0.05em !important;
               }
 
-              .hero-text {
-                font-size-adjust: 0.5;
-                line-height: 1.5;
-                font-synthesis: none;
+              /* MOBILE FONT SWAP */
+              @media (max-width: 768px) {
+                .hero-text-optimized {
+                  font-size: 2rem !important;
+                  line-height: 1.1 !important;
+                }
               }
 
-              /* Critical above-the-fold content optimization */
-              .lcp-optimized {
-                font-display: swap;
-                text-rendering: optimizeSpeed;
-                contain: layout style paint;
+              /* FONT SWAP READY STATE */
+              .font-swap-ready {
+                --font-swap-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+                --font-swap-serif: "Playfair Display", Georgia, "Times New Roman", serif;
               }
             `,
           }}
         />
 
-        {/* Font loading optimization script - runs immediately */}
+        {/* FONT SWAP OPTIMIZATION SCRIPT */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-      (function() {
-        // Add font-loading class immediately
-        document.documentElement.classList.add('font-loading');
-        
-        // Detect mobile for faster timeouts
-        const isMobile = window.innerWidth < 768;
-        const fontTimeout = isMobile ? 1000 : 3000; // Faster timeout on mobile
-        
-        // Preload logo immediately on mobile
-        if (isMobile) {
-          const logoImg = new Image();
-          logoImg.src = '/Nav-logo.png';
-          logoImg.decode().catch(() => {}); // Ignore decode errors
-        }
-        
-        // Remove when fonts are ready with mobile-optimized timeout
-        if ('fonts' in document) {
-          Promise.race([
-            document.fonts.ready,
-            new Promise(resolve => setTimeout(resolve, fontTimeout))
-          ]).then(() => {
-            document.documentElement.classList.remove('font-loading');
-            document.documentElement.classList.add('fonts-loaded');
-          });
-        } else {
-          setTimeout(() => {
-            document.documentElement.classList.remove('font-loading');
-            document.documentElement.classList.add('fonts-loaded');
-          }, fontTimeout);
-        }
-      })();
-    `,
+              (function() {
+                // IMMEDIATE FONT SWAP SETUP
+                document.documentElement.classList.add('font-swap-fallback');
+                
+                // MOBILE DETECTION FOR FASTER SWAP
+                const isMobile = window.innerWidth < 768;
+                const swapTimeout = isMobile ? 500 : 1500; // FASTER ON MOBILE
+                
+                // PRELOAD LOGO ON MOBILE
+                if (isMobile) {
+                  const logoImg = new Image();
+                  logoImg.src = '/Nav-logo.png';
+                  logoImg.decode().catch(() => {});
+                }
+                
+                // FONT SWAP SYSTEM
+                function enableFontSwap() {
+                  document.documentElement.classList.remove('font-swap-fallback');
+                  document.documentElement.classList.add('font-swap-ready');
+                  document.documentElement.classList.add('fonts-loaded');
+                }
+                
+                // IMMEDIATE SWAP AFTER TIMEOUT
+                setTimeout(enableFontSwap, swapTimeout);
+                
+                // OR WHEN FONTS ARE READY
+                if ('fonts' in document) {
+                  Promise.race([
+                    document.fonts.ready,
+                    new Promise(resolve => setTimeout(resolve, swapTimeout))
+                  ]).then(enableFontSwap);
+                }
+                
+                // DISPATCH FONT SWAP EVENT
+                window.addEventListener('load', () => {
+                  setTimeout(() => {
+                    window.dispatchEvent(new CustomEvent('fontsSwapped'));
+                  }, 100);
+                });
+              })();
+            `,
           }}
         />
 
@@ -181,7 +201,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} font-sans antialiased`}>
+      <body className={`${inter.className} font-sans antialiased font-swap mobile-font-swap`}>
         <Suspense fallback={<div>Loading...</div>}>
           <Navbar />
           {children}

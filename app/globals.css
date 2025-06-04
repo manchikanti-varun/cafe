@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Optimized font declarations with font-display: swap */
+/* AGGRESSIVE FONT SWAP IMPLEMENTATION */
 @font-face {
   font-family: "Inter";
-  font-display: swap;
+  font-display: swap; /* Immediate swap */
   font-weight: 100 900;
   font-style: normal;
   src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
@@ -13,26 +13,40 @@
 
 @font-face {
   font-family: "Playfair Display";
-  font-display: swap;
+  font-display: swap; /* Immediate swap */
   font-weight: 400 900;
   font-style: normal;
   src: url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
 }
 
-/* CSS Custom Properties for optimized font stacks */
+/* FONT SWAP SYSTEM - CSS Custom Properties */
 :root {
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu",
-    "Cantarell", sans-serif;
-  --font-serif: "Playfair Display", Georgia, "Times New Roman", "Times", serif;
+  /* Primary font stacks with swap */
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
 
-  /* System font stacks for immediate rendering */
-  --font-sans-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell",
-    sans-serif;
-  --font-serif-system: Georgia, "Times New Roman", "Times", serif;
+  /* Immediate fallback fonts */
+  --font-sans-fallback: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif-fallback: Georgia, "Times New Roman", serif;
 
-  /* Font metrics for better fallback matching */
+  /* Font swap states */
+  --font-swap-sans: var(--font-sans-fallback);
+  --font-swap-serif: var(--font-serif-fallback);
+
+  /* Font metrics for perfect matching */
   --font-size-adjust-sans: 0.5;
   --font-size-adjust-serif: 0.48;
+}
+
+/* FONT SWAP CLASSES */
+.font-swap-ready {
+  --font-swap-sans: var(--font-sans);
+  --font-swap-serif: var(--font-serif);
+}
+
+.font-swap-fallback {
+  --font-swap-sans: var(--font-sans-fallback);
+  --font-swap-serif: var(--font-serif-fallback);
 }
 
 @layer base {
@@ -89,93 +103,67 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-swap-sans);
     font-display: swap;
     text-rendering: optimizeSpeed;
   }
 }
 
-/* Separate navbar logo optimization - no conflicts */
-.navbar-logo-optimized {
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  transform: translateZ(0);
-  will-change: auto;
-  height: 3rem; /* 48px on mobile */
-  width: auto;
-}
-
-@media (min-width: 768px) {
-  .navbar-logo-optimized {
-    height: 4rem; /* 64px on desktop */
-  }
-}
-
-/* Hero text optimization - separate from navbar */
-.hero-text-optimized {
-  font-display: swap;
+/* IMMEDIATE FONT SWAP SYSTEM */
+.font-swap {
+  font-family: var(--font-swap-sans);
+  font-display: swap !important;
   text-rendering: optimizeSpeed;
   font-synthesis: none;
-  contain: layout style paint;
-  content-visibility: auto;
-  /* Add these for even better performance */
-  transform: translateZ(0); /* Hardware acceleration */
-  will-change: auto; /* Optimize for changes */
-  backface-visibility: hidden; /* Prevent flickering */
 }
 
-/* Critical mobile LCP optimizations - more specific targeting */
+.font-swap-serif {
+  font-family: var(--font-swap-serif);
+  font-display: swap !important;
+  text-rendering: optimizeSpeed;
+  font-synthesis: none;
+}
+
+/* HERO TEXT WITH AGGRESSIVE FONT SWAP */
+.hero-text-optimized {
+  font-family: var(--font-swap-serif) !important;
+  font-display: swap !important;
+  text-rendering: optimizeSpeed !important;
+  font-synthesis: none !important;
+  contain: layout style paint !important;
+  content-visibility: auto !important;
+  transform: translateZ(0);
+  will-change: auto;
+  backface-visibility: hidden;
+  isolation: isolate;
+}
+
+/* MOBILE FONT SWAP - INSTANT */
 @media (max-width: 768px) {
-  /* Target ONLY the main hero title, nothing else */
-  .hero-section .hero-text-optimized {
+  .hero-text-optimized {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-display: block !important;
-    text-rendering: optimizeSpeed !important;
-    font-synthesis: none !important;
-    contain: layout style paint !important;
-    content-visibility: auto !important;
-    font-size: 2rem !important; /* Force 32px on mobile */
+    font-size: 2rem !important;
     line-height: 1.1 !important;
     letter-spacing: 0.05em !important;
-    /* Additional mobile optimizations */
-    transform: translateZ(0) !important;
-    will-change: auto !important;
-    isolation: isolate !important; /* Create stacking context */
+    font-weight: bold !important;
   }
 
-  /* Ensure navbar is completely separate */
-  .navbar-container,
-  .navbar-container * {
+  /* Immediate font swap on mobile */
+  .font-swap-mobile {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-display: swap !important;
+    font-display: block !important;
   }
 
-  /* Prevent any global font loading from affecting hero */
-  .font-loading .hero-section .hero-text-optimized {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
-  }
-
-  .fonts-loaded .hero-section .hero-text-optimized {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+  .font-swap-mobile-serif {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-display: block !important;
   }
 }
 
-/* Desktop font loading - more specific */
-@media (min-width: 769px) {
-  .fonts-loaded .hero-section .hero-text-optimized {
-    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
-  }
-
-  .fonts-loaded .navbar-container,
-  .fonts-loaded .navbar-container * {
-    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
-  }
-}
-
-/* Font Loading Strategy Implementation */
-
-/* Phase 1: System fonts for immediate rendering */
+/* FONT SWAP STATES */
 .font-loading {
-  font-family: var(--font-sans-system);
+  font-family: var(--font-sans-fallback);
 }
 
 .font-loading .font-serif,
@@ -183,11 +171,10 @@
 .font-loading h1,
 .font-loading h2,
 .font-loading h3 {
-  font-family: var(--font-serif-system);
+  font-family: var(--font-serif-fallback);
   font-size-adjust: var(--font-size-adjust-serif);
 }
 
-/* Phase 2: Custom fonts after loading */
 .fonts-loaded {
   font-family: var(--font-sans);
 }
@@ -201,176 +188,139 @@
   font-size-adjust: var(--font-size-adjust-serif);
 }
 
-/* Critical LCP elements optimization */
-.hero-title {
-  font-display: swap;
-  text-rendering: optimizeSpeed;
-  font-synthesis: none;
-  font-size-adjust: var(--font-size-adjust-serif);
-  line-height: 1.1;
-  contain: layout style paint;
+/* INSTANT FONT SWAP UTILITY CLASSES */
+.swap-sans {
+  font-family: var(--font-swap-sans) !important;
+  font-display: swap !important;
 }
 
-.hero-text {
-  font-display: swap;
-  text-rendering: optimizeSpeed;
-  font-synthesis: none;
-  font-size-adjust: var(--font-size-adjust-sans);
-  line-height: 1.5;
-  contain: layout style paint;
+.swap-serif {
+  font-family: var(--font-swap-serif) !important;
+  font-display: swap !important;
 }
 
-/* LCP optimization classes */
+.swap-fallback-sans {
+  font-family: var(--font-sans-fallback) !important;
+  font-display: block !important;
+}
+
+.swap-fallback-serif {
+  font-family: var(--font-serif-fallback) !important;
+  font-display: block !important;
+}
+
+/* NAVBAR WITH FONT SWAP */
+.navbar-logo-optimized {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  will-change: auto;
+  height: 3rem;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .navbar-logo-optimized {
+    height: 4rem;
+  }
+}
+
+.navbar-container,
+.navbar-container * {
+  font-family: var(--font-swap-sans) !important;
+  font-display: swap !important;
+}
+
+/* CRITICAL LCP OPTIMIZATIONS WITH FONT SWAP */
 .lcp-optimized {
-  font-display: swap;
-  text-rendering: optimizeSpeed;
-  contain: layout style paint;
-  font-synthesis: none;
+  font-display: swap !important;
+  text-rendering: optimizeSpeed !important;
+  contain: layout style paint !important;
+  font-synthesis: none !important;
+  font-family: var(--font-swap-serif) !important;
 }
 
-.lcp-text {
-  font-size-adjust: var(--font-size-adjust-serif);
-  line-height: 1.1;
+/* FONT SWAP ANIMATIONS */
+.font-swap-transition {
+  transition: font-family 0.1s ease-in-out;
 }
 
-.lcp-subtitle {
-  font-size-adjust: var(--font-size-adjust-sans);
-  line-height: 1.5;
+.font-swap-instant {
+  transition: none !important;
 }
 
-/* Prevent layout shift during font loading */
-.stable-layout {
-  font-size-adjust: var(--font-size-adjust-sans);
-  line-height: 1.5;
+/* PRELOAD FONT SWAP HINTS */
+.preload-font-swap::before {
+  content: "";
+  font-family: var(--font-sans);
+  font-family: var(--font-serif);
+  position: absolute;
+  visibility: hidden;
+  width: 0;
+  height: 0;
 }
 
-/* Critical above-the-fold content */
-.critical-content {
-  font-display: swap;
-  text-rendering: optimizeSpeed;
-  contain: layout style paint;
-}
-
-/* Animation optimization for LCP */
-.animate-on-load {
-  opacity: 1;
-  transform: translateY(0);
-  transition: none;
-}
-
-.fonts-loaded .animate-on-load {
-  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-}
-
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-  .animate-on-load,
-  .fonts-loaded .animate-on-load {
-    transition: none !important;
-    animation: none !important;
-  }
-}
-
-/* Custom Scrollbar */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-/* Optimized animations with reduced motion consideration */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.animate-fade-in {
-  animation: fadeIn 0.4s ease-in-out forwards;
-}
-
-.animate-slide-up {
-  animation: slideUp 0.4s ease-in-out forwards;
-}
-
-/* Blog Styles with font optimization */
-@layer components {
-  .prose .cafe-details {
-    @apply my-6 rounded-lg bg-[#F9F5F0] p-4;
-  }
-
-  .prose h2 {
-    @apply mt-8 font-serif text-2xl font-bold text-[#4D281F];
-    font-display: swap;
-  }
-
-  .prose h3 {
-    @apply mt-6 font-serif text-xl font-bold text-[#653A2A];
-    font-display: swap;
-  }
-
-  .prose p {
-    @apply my-4 text-[#653A2A];
-    font-display: swap;
-  }
-}
-
-/* Ensure consistent rendering across browsers */
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Mobile viewport optimizations */
+/* MOBILE VIEWPORT OPTIMIZATIONS WITH FONT SWAP */
 @media (max-width: 768px) {
-  /* Reduce initial paint complexity */
   .hero-section {
-    background-attachment: scroll; /* Remove fixed on mobile */
+    background-attachment: scroll;
+    contain: layout style paint;
+    content-visibility: auto;
   }
 
-  /* Optimize mobile animations */
   .animate-on-load {
-    animation-duration: 0.2s; /* Faster animations on mobile */
+    animation-duration: 0.2s;
   }
 
-  /* Mobile-first font loading */
-  .font-loading * {
+  /* Force system fonts on mobile for instant rendering */
+  .mobile-font-swap * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
-    font-display: swap;
-  }
-  /* Reduce layout complexity on mobile */
-  .hero-section {
-    contain: layout style paint;
-    content-visibility: auto;
+    font-display: block !important;
   }
 
-  /* Optimize background images for mobile LCP */
-  .hero-section .absolute.inset-0 {
-    content-visibility: auto;
-    contain: layout style paint;
+  .mobile-font-swap .font-serif,
+  .mobile-font-swap h1,
+  .mobile-font-swap h2,
+  .mobile-font-swap h3 {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-display: block !important;
   }
 }
 
-/* CRITICAL: Override any conflicting font rules for hero text */
+/* DESKTOP FONT SWAP */
+@media (min-width: 769px) {
+  .desktop-font-swap {
+    font-family: var(--font-sans) !important;
+    font-display: swap !important;
+  }
+
+  .desktop-font-swap .font-serif,
+  .desktop-font-swap h1,
+  .desktop-font-swap h2,
+  .desktop-font-swap h3 {
+    font-family: var(--font-serif) !important;
+    font-display: swap !important;
+  }
+}
+
+/* FONT SWAP PERFORMANCE CLASSES */
+.font-swap-performance {
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+  font-synthesis: none;
+  contain: layout style paint;
+  content-visibility: auto;
+}
+
+.font-swap-critical {
+  font-display: block !important;
+  text-rendering: optimizeSpeed !important;
+  font-synthesis: none !important;
+  contain: layout style paint !important;
+  content-visibility: auto !important;
+}
+
+/* ENSURE HERO TEXT NEVER BLOCKS */
 .hero-text-optimized {
   font-display: swap !important;
   text-rendering: optimizeSpeed !important;
@@ -379,43 +329,156 @@
   content-visibility: auto !important;
 }
 
-/* Preload critical text for instant visibility */
-.hero-text-optimized::before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: 1.1;
-  letter-spacing: 0.05em;
-  visibility: hidden;
-  position: absolute;
-}
-
-/* Ensure hero text is never affected by global font loading states */
+/* OVERRIDE ALL FONT LOADING STATES FOR HERO */
 .font-loading .hero-text-optimized,
-.fonts-loaded .hero-text-optimized {
+.fonts-loaded .hero-text-optimized,
+.hero-loading .hero-text-optimized,
+.hero-loaded .hero-text-optimized {
   font-weight: bold !important;
-  letter-spacing: 0.05em !important; /* Changed from 'tracking' to 'letter-spacing' */
+  letter-spacing: 0.05em !important;
+  font-display: swap !important;
 }
 
+/* MOBILE SPECIFIC HERO FONT SWAP */
 @media (max-width: 768px) {
   .hero-text-optimized {
     font-size: 2rem !important;
     line-height: 1.1 !important;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-display: block !important;
+  }
+
+  /* Swap to serif after fonts load on mobile */
+  .fonts-loaded .hero-text-optimized {
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-display: swap !important;
   }
 }
 
-/* Critical loading states for even faster perceived performance */
-.hero-loading .hero-text-optimized {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
-  opacity: 1 !important;
-  transform: translateY(0) !important;
+/* FONT SWAP UTILITY SYSTEM */
+.swap-to-custom {
+  font-family: var(--font-sans-fallback);
+  font-display: swap;
 }
 
-.hero-loaded .hero-text-optimized {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
-  transition: font-family 0.1s ease-in-out;
+.swap-to-custom.fonts-ready {
+  font-family: var(--font-sans);
+}
+
+.swap-to-custom-serif {
+  font-family: var(--font-serif-fallback);
+  font-display: swap;
+}
+
+.swap-to-custom-serif.fonts-ready {
+  font-family: var(--font-serif);
+}
+
+/* BLOG STYLES WITH FONT SWAP */
+@layer components {
+  .prose .cafe-details {
+    @apply my-6 rounded-lg bg-[#F9F5F0] p-4;
+  }
+
+  .prose h2 {
+    @apply mt-8 font-serif text-2xl font-bold text-[#4D281F];
+    font-display: swap;
+    font-family: var(--font-swap-serif);
+  }
+
+  .prose h3 {
+    @apply mt-6 font-serif text-xl font-bold text-[#653A2A];
+    font-display: swap;
+    font-family: var(--font-swap-serif);
+  }
+
+  .prose p {
+    @apply my-4 text-[#653A2A];
+    font-display: swap;
+    font-family: var(--font-swap-sans);
+  }
+}
+
+/* ENSURE CONSISTENT RENDERING WITH FONT SWAP */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-display: swap;
+}
+
+/* CRITICAL FONT SWAP OVERRIDES */
+.critical-font-swap {
+  font-display: swap !important;
+  text-rendering: optimizeSpeed !important;
+  font-synthesis: none !important;
+  contain: layout style paint !important;
+  content-visibility: auto !important;
+  font-family: var(--font-swap-serif) !important;
+}
+
+/* INSTANT FONT SWAP FOR MOBILE LCP */
+@media (max-width: 768px) {
+  .instant-font-swap {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-display: block !important;
+    font-weight: bold !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  .instant-font-swap-serif {
+    font-family: Georgia, "Times New Roman", serif !important;
+    font-display: block !important;
+    font-weight: bold !important;
+  }
+}
+
+/* FONT SWAP READY STATE */
+.font-swap-ready .swap-to-custom {
+  font-family: var(--font-sans) !important;
+}
+
+.font-swap-ready .swap-to-custom-serif {
+  font-family: var(--font-serif) !important;
+}
+
+/* AGGRESSIVE FONT SWAP FOR ALL TEXT */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-display: swap !important;
+  font-family: var(--font-swap-serif) !important;
+}
+
+p,
+span,
+div,
+a,
+button {
+  font-display: swap !important;
+  font-family: var(--font-swap-sans) !important;
+}
+
+/* OVERRIDE FOR HERO TEXT - MOST CRITICAL */
+.hero-text-optimized {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-display: block !important;
+  text-rendering: optimizeSpeed !important;
+  font-synthesis: none !important;
+  contain: layout style paint !important;
+  content-visibility: auto !important;
+  transform: translateZ(0) !important;
+  will-change: auto !important;
+  isolation: isolate !important;
+  backface-visibility: hidden !important;
+}
+
+/* DESKTOP HERO FONT SWAP */
+@media (min-width: 769px) {
+  .hero-text-optimized {
+    font-family: "Playfair Display", Georgia, serif !important;
+    font-display: swap !important;
+  }
 }
