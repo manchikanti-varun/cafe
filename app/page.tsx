@@ -11,6 +11,7 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
   const [fontsLoaded, setFontsLoaded] = useState(false)
+  const [heroLoaded, setHeroLoaded] = useState(false)
   const heroRef = useRef<HTMLDivElement>(null)
 
   const slides = [
@@ -29,17 +30,29 @@ export default function Home() {
   useEffect(() => {
     setIsVisible(true)
 
+    // Immediate hero loading state
+    document.documentElement.classList.add("hero-loading")
+    setHeroLoaded(true)
+
     // Listen for font loading completion
     const handleFontsLoaded = () => {
       setFontsLoaded(true)
+      document.documentElement.classList.remove("hero-loading")
+      document.documentElement.classList.add("hero-loaded")
     }
 
     window.addEventListener("fontsLoaded", handleFontsLoaded)
 
-    // Fallback timeout
-    const fontTimeout = setTimeout(() => {
-      setFontsLoaded(true)
-    }, 3000)
+    // Faster fallback timeout for mobile
+    const isMobile = window.innerWidth < 768
+    const fontTimeout = setTimeout(
+      () => {
+        setFontsLoaded(true)
+        document.documentElement.classList.remove("hero-loading")
+        document.documentElement.classList.add("hero-loaded")
+      },
+      isMobile ? 1000 : 3000,
+    )
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
@@ -111,7 +124,7 @@ export default function Home() {
             <p className="text-lg text-[#CDB090] md:text-2xl">café</p>
           </div>
 
-          {/* Main LCP element - HEAVILY optimized for mobile */}
+          {/* OPTIMIZED HERO TITLE - Your LCP champion! */}
           <h1 className="hero-text-optimized mb-4 text-2xl font-bold tracking-wider text-white sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
             THOOTHUKUDI
           </h1>
@@ -242,6 +255,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Rest of your sections remain the same... */}
       {/* Our Signature Delights Section */}
       <section ref={heroRef} className="bg-[#F9F5F0] py-20">
         <div className="container mx-auto px-4">

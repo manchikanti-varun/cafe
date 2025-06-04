@@ -100,15 +100,13 @@
   image-rendering: crisp-edges;
   transform: translateZ(0);
   will-change: auto;
-  height: 3rem;
-  /* 48px on mobile */
+  height: 3rem; /* 48px on mobile */
   width: auto;
 }
 
 @media (min-width: 768px) {
   .navbar-logo-optimized {
-    height: 4rem;
-    /* 64px on desktop */
+    height: 4rem; /* 64px on desktop */
   }
 }
 
@@ -119,11 +117,14 @@
   font-synthesis: none;
   contain: layout style paint;
   content-visibility: auto;
+  /* Add these for even better performance */
+  transform: translateZ(0); /* Hardware acceleration */
+  will-change: auto; /* Optimize for changes */
+  backface-visibility: hidden; /* Prevent flickering */
 }
 
 /* Critical mobile LCP optimizations - more specific targeting */
 @media (max-width: 768px) {
-
   /* Target ONLY the main hero title, nothing else */
   .hero-section .hero-text-optimized {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
@@ -132,10 +133,13 @@
     font-synthesis: none !important;
     contain: layout style paint !important;
     content-visibility: auto !important;
-    font-size: 2rem !important;
-    /* Force 32px on mobile */
+    font-size: 2rem !important; /* Force 32px on mobile */
     line-height: 1.1 !important;
     letter-spacing: 0.05em !important;
+    /* Additional mobile optimizations */
+    transform: translateZ(0) !important;
+    will-change: auto !important;
+    isolation: isolate !important; /* Create stacking context */
   }
 
   /* Ensure navbar is completely separate */
@@ -260,7 +264,6 @@
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
-
   .animate-on-load,
   .fonts-loaded .animate-on-load {
     transition: none !important;
@@ -339,23 +342,31 @@
 
 /* Mobile viewport optimizations */
 @media (max-width: 768px) {
-
   /* Reduce initial paint complexity */
   .hero-section {
-    background-attachment: scroll;
-    /* Remove fixed on mobile */
+    background-attachment: scroll; /* Remove fixed on mobile */
   }
 
   /* Optimize mobile animations */
   .animate-on-load {
-    animation-duration: 0.2s;
-    /* Faster animations on mobile */
+    animation-duration: 0.2s; /* Faster animations on mobile */
   }
 
   /* Mobile-first font loading */
   .font-loading * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-display: swap;
+  }
+  /* Reduce layout complexity on mobile */
+  .hero-section {
+    contain: layout style paint;
+    content-visibility: auto;
+  }
+
+  /* Optimize background images for mobile LCP */
+  .hero-section .absolute.inset-0 {
+    content-visibility: auto;
+    contain: layout style paint;
   }
 }
 
@@ -368,11 +379,26 @@
   content-visibility: auto !important;
 }
 
+/* Preload critical text for instant visibility */
+.hero-text-optimized::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+  visibility: hidden;
+  position: absolute;
+}
+
 /* Ensure hero text is never affected by global font loading states */
 .font-loading .hero-text-optimized,
 .fonts-loaded .hero-text-optimized {
   font-weight: bold !important;
-  tracking: 0.05em !important;
+  letter-spacing: 0.05em !important; /* Changed from 'tracking' to 'letter-spacing' */
 }
 
 @media (max-width: 768px) {
@@ -380,4 +406,16 @@
     font-size: 2rem !important;
     line-height: 1.1 !important;
   }
+}
+
+/* Critical loading states for even faster perceived performance */
+.hero-loading .hero-text-optimized {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+.hero-loaded .hero-text-optimized {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+  transition: font-family 0.1s ease-in-out;
 }
