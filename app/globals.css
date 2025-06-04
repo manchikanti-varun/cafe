@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Font optimization with system font fallbacks */
+/* Optimized font declarations with font-display: swap */
 @font-face {
   font-family: "Inter";
   font-display: swap;
   font-weight: 100 900;
   font-style: normal;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 }
 
 @font-face {
@@ -15,6 +16,7 @@
   font-display: swap;
   font-weight: 400 900;
   font-style: normal;
+  src: url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap");
 }
 
 /* CSS Custom Properties for optimized font stacks */
@@ -27,6 +29,10 @@
   --font-sans-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Oxygen", "Ubuntu", "Cantarell",
     sans-serif;
   --font-serif-system: Georgia, "Times New Roman", "Times", serif;
+
+  /* Font metrics for better fallback matching */
+  --font-size-adjust-sans: 0.5;
+  --font-size-adjust-serif: 0.48;
 }
 
 @layer base {
@@ -90,7 +96,7 @@
 
 /* Font Loading Strategy Implementation */
 
-/* Phase 1: System fonts for immediate rendering (font-loading class) */
+/* Phase 1: System fonts for immediate rendering */
 .font-loading {
   font-family: var(--font-sans-system);
 }
@@ -101,9 +107,10 @@
 .font-loading h2,
 .font-loading h3 {
   font-family: var(--font-serif-system);
+  font-size-adjust: var(--font-size-adjust-serif);
 }
 
-/* Phase 2: Custom fonts after loading (fonts-loaded class) */
+/* Phase 2: Custom fonts after loading */
 .fonts-loaded {
   font-family: var(--font-sans);
 }
@@ -114,6 +121,7 @@
 .fonts-loaded h2,
 .fonts-loaded h3 {
   font-family: var(--font-serif);
+  font-size-adjust: var(--font-size-adjust-serif);
 }
 
 /* Critical LCP elements optimization */
@@ -121,29 +129,41 @@
   font-display: swap;
   text-rendering: optimizeSpeed;
   font-synthesis: none;
-  /* Ensure consistent sizing during font swap */
-  font-size-adjust: 0.5;
+  font-size-adjust: var(--font-size-adjust-serif);
   line-height: 1.1;
+  contain: layout style paint;
 }
 
 .hero-text {
   font-display: swap;
   text-rendering: optimizeSpeed;
   font-synthesis: none;
-  font-size-adjust: 0.5;
+  font-size-adjust: var(--font-size-adjust-sans);
   line-height: 1.5;
+  contain: layout style paint;
 }
 
-/* Optimize all text elements for performance */
-.optimize-text {
+/* LCP optimization classes */
+.lcp-optimized {
   font-display: swap;
   text-rendering: optimizeSpeed;
+  contain: layout style paint;
   font-synthesis: none;
+}
+
+.lcp-text {
+  font-size-adjust: var(--font-size-adjust-serif);
+  line-height: 1.1;
+}
+
+.lcp-subtitle {
+  font-size-adjust: var(--font-size-adjust-sans);
+  line-height: 1.5;
 }
 
 /* Prevent layout shift during font loading */
 .stable-layout {
-  font-size-adjust: 0.5;
+  font-size-adjust: var(--font-size-adjust-sans);
   line-height: 1.5;
 }
 
@@ -151,6 +171,28 @@
 .critical-content {
   font-display: swap;
   text-rendering: optimizeSpeed;
+  contain: layout style paint;
+}
+
+/* Animation optimization for LCP */
+.animate-on-load {
+  opacity: 1;
+  transform: translateY(0);
+  transition: none;
+}
+
+.fonts-loaded .animate-on-load {
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+
+  .animate-on-load,
+  .fonts-loaded .animate-on-load {
+    transition: none !important;
+    animation: none !important;
+  }
 }
 
 /* Custom Scrollbar */
@@ -163,7 +205,7 @@
   scrollbar-width: none;
 }
 
-/* Animations with reduced motion consideration */
+/* Optimized animations with reduced motion consideration */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -186,46 +228,12 @@
   }
 }
 
-@keyframes slideDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.05);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
 .animate-fade-in {
-  animation: fadeIn 0.8s ease-in-out forwards;
+  animation: fadeIn 0.4s ease-in-out forwards;
 }
 
 .animate-slide-up {
-  animation: slideUp 0.8s ease-in-out forwards;
-}
-
-.animate-slide-down {
-  animation: slideDown 0.8s ease-in-out forwards;
-}
-
-.animate-pulse-slow {
-  animation: pulse 3s infinite;
+  animation: slideUp 0.4s ease-in-out forwards;
 }
 
 /* Blog Styles with font optimization */
@@ -247,37 +255,6 @@
   .prose p {
     @apply my-4 text-[#653A2A];
     font-display: swap;
-  }
-
-  .prose ul {
-    @apply my-4 list-disc pl-6 text-[#653A2A];
-  }
-
-  .prose ol {
-    @apply my-4 list-decimal pl-6 text-[#653A2A];
-  }
-
-  .prose blockquote {
-    @apply my-6 border-l-4 border-[#CDB090] bg-[#F9F5F0] p-4 italic text-[#653A2A];
-    font-display: swap;
-  }
-}
-
-/* Performance optimizations for reduced motion */
-@media (prefers-reduced-motion: reduce) {
-
-  .animate-fade-in,
-  .animate-slide-up,
-  .animate-slide-down,
-  .animate-pulse-slow {
-    animation: none;
-  }
-}
-
-/* Font loading performance monitoring */
-@media (min-width: 768px) {
-  .hero-title {
-    font-size: clamp(3rem, 8vw, 6rem);
   }
 }
 

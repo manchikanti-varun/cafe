@@ -10,6 +10,7 @@ import { blogPosts } from "@/lib/blog-data"
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
+  const [fontsLoaded, setFontsLoaded] = useState(false)
   const heroRef = useRef<HTMLDivElement>(null)
 
   const slides = [
@@ -28,11 +29,27 @@ export default function Home() {
   useEffect(() => {
     setIsVisible(true)
 
+    // Listen for font loading completion
+    const handleFontsLoaded = () => {
+      setFontsLoaded(true)
+    }
+
+    window.addEventListener("fontsLoaded", handleFontsLoaded)
+
+    // Fallback timeout
+    const fontTimeout = setTimeout(() => {
+      setFontsLoaded(true)
+    }, 3000)
+
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
     }, 5000)
 
-    return () => clearInterval(interval)
+    return () => {
+      clearInterval(interval)
+      clearTimeout(fontTimeout)
+      window.removeEventListener("fontsLoaded", handleFontsLoaded)
+    }
   }, [slides.length])
 
   const nextSlide = () => {
@@ -47,6 +64,25 @@ export default function Home() {
     if (heroRef.current) {
       heroRef.current.scrollIntoView({ behavior: "smooth" })
     }
+  }
+
+  // Optimized animation variants that don't delay LCP
+  const titleVariants = {
+    initial: { opacity: 1, y: 0 }, // Start visible for LCP
+    animate: { opacity: 1, y: 0 },
+    loaded: fontsLoaded ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 },
+  }
+
+  const subtitleVariants = {
+    initial: { opacity: 1, y: 0 }, // Start visible for LCP
+    animate: { opacity: 1, y: 0 },
+    loaded: fontsLoaded ? { opacity: 1, y: 0 } : { opacity: 1, y: 0 },
+  }
+
+  // Delayed animations for non-critical elements
+  const delayedVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
   }
 
   return (
@@ -86,78 +122,58 @@ export default function Home() {
         {/* Content */}
         <div className="container relative z-10 mx-auto flex h-full flex-col items-start justify-center px-4 text-white md:px-6">
           <div className="mb-4 inline-block rounded-full border border-[#CDB090] px-4 py-1">
-            <p className="font-serif text-sm text-[#CDB090] critical-content">ESTD. 1995</p>
+            <p className="font-serif text-sm text-[#CDB090] lcp-optimized">ESTD. 1995</p>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0 }}
-            className="mb-2"
-          >
-            <p className="font-serif text-xl text-[#CDB090] md:text-2xl critical-content">café</p>
-          </motion.div>
+          {/* Critical LCP element - no animation delay */}
+          <div className="mb-2">
+            <p className="font-serif text-xl text-[#CDB090] md:text-2xl lcp-optimized lcp-subtitle">café</p>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0 }}
-            className="mb-4 font-serif text-4xl font-bold tracking-wider text-white sm:text-5xl md:text-6xl lg:text-7xl hero-title critical-content stable-layout"
-          >
+          {/* Main LCP element - optimized for immediate rendering */}
+          <h1 className="mb-4 font-serif text-4xl font-bold tracking-wider text-white sm:text-5xl md:text-6xl lg:text-7xl hero-title lcp-optimized lcp-text">
             THOOTHUKUDI
-          </motion.h1>
+          </h1>
 
-          <motion.div
-            initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: "100px" }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="mb-4 h-1 w-24 bg-[#CDB090]"
-          ></motion.div>
+          <div className="mb-4 h-1 w-24 bg-[#CDB090]"></div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="mb-6 font-serif text-xl italic text-[#CDB090] md:text-2xl critical-content"
-          >
+          <p className="mb-6 font-serif text-xl italic text-[#CDB090] md:text-2xl lcp-optimized lcp-subtitle">
             secret of nature
-          </motion.p>
+          </p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.1 }}
-            className="mb-8 max-w-md text-lg leading-relaxed text-gray-300 md:text-xl hero-text critical-content stable-layout"
-          >
+          <p className="mb-8 max-w-md text-lg leading-relaxed text-gray-300 md:text-xl hero-text lcp-optimized lcp-subtitle">
             Experience the finest coffee and delicacies crafted with passion and tradition. Our heritage recipes bring
             authentic flavors to your table.
-          </motion.p>
+          </p>
 
+          {/* Delayed animations for non-critical elements */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+            initial="initial"
+            animate="animate"
+            variants={delayedVariants}
+            transition={{ duration: 0.4, delay: 0.5 }}
             className="flex flex-col space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"
           >
             <Link
               href="/menu"
-              className="group flex items-center justify-center rounded-full bg-[#CDB090] px-8 py-3 font-medium text-[#0D0906] transition-all duration-300 hover:bg-[#CDB090]/90 optimize-text"
+              className="group flex items-center justify-center rounded-full bg-[#CDB090] px-8 py-3 font-medium text-[#0D0906] transition-all duration-300 hover:bg-[#CDB090]/90 lcp-optimized"
             >
               Explore Menu
               <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Link
               href="/our-story"
-              className="flex items-center justify-center rounded-full border border-[#CDB090] px-8 py-3 font-medium text-[#CDB090] transition-all duration-300 hover:bg-[#CDB090]/10 optimize-text"
+              className="flex items-center justify-center rounded-full border border-[#CDB090] px-8 py-3 font-medium text-[#CDB090] transition-all duration-300 hover:bg-[#CDB090]/10 lcp-optimized"
             >
               Our Story
             </Link>
           </motion.div>
 
-          {/* Carousel Info */}
+          {/* Carousel Info - delayed animation */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial="initial"
+            animate="animate"
+            variants={delayedVariants}
             transition={{ duration: 0.6, delay: 0.8 }}
             className="absolute bottom-20 right-10 hidden max-w-xs rounded-lg bg-black/40 p-6 backdrop-blur-sm md:block"
           >
@@ -169,10 +185,10 @@ export default function Home() {
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.5 }}
               >
-                <h3 className="font-serif text-xl font-bold text-[#CDB090] optimize-text">
+                <h3 className="font-serif text-xl font-bold text-[#CDB090] lcp-optimized">
                   {slides[currentSlide].title}
                 </h3>
-                <p className="mt-2 text-gray-300 optimize-text">{slides[currentSlide].description}</p>
+                <p className="mt-2 text-gray-300 lcp-optimized">{slides[currentSlide].description}</p>
               </motion.div>
             </AnimatePresence>
 
@@ -207,16 +223,17 @@ export default function Home() {
             </div>
           </motion.div>
 
-          {/* Scroll Down Indicator */}
+          {/* Scroll Down Indicator - delayed */}
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial="initial"
+            animate="animate"
+            variants={delayedVariants}
             transition={{ delay: 1, duration: 1 }}
             className="absolute bottom-10 left-1/2 -translate-x-1/2 transform cursor-pointer"
             onClick={handleScroll}
           >
             <div className="flex flex-col items-center">
-              <p className="mb-2 text-sm text-gray-400 optimize-text">Scroll Down</p>
+              <p className="mb-2 text-sm text-gray-400 lcp-optimized">Scroll Down</p>
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1.5 }}
@@ -243,11 +260,11 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             className="mb-16 text-center"
           >
-            <h2 className="font-serif text-3xl font-bold text-[#4D281F] md:text-4xl optimize-text">
+            <h2 className="font-serif text-3xl font-bold text-[#4D281F] md:text-4xl lcp-optimized">
               Our Signature Delights
             </h2>
             <div className="mx-auto mt-2 h-1 w-24 bg-[#91604F]"></div>
-            <p className="mx-auto mt-4 max-w-2xl text-[#653A2A] optimize-text">
+            <p className="mx-auto mt-4 max-w-2xl text-[#653A2A] lcp-optimized">
               Every dish tells a story of tradition, passed down through generations, crafted with love and
               authenticity.
             </p>
@@ -289,11 +306,11 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-serif text-xl font-bold text-[#4D281F] optimize-text">{item.name}</h3>
-                  <p className="mt-2 text-[#653A2A] optimize-text">{item.desc}</p>
+                  <h3 className="font-serif text-xl font-bold text-[#4D281F] lcp-optimized">{item.name}</h3>
+                  <p className="mt-2 text-[#653A2A] lcp-optimized">{item.desc}</p>
                   <Link
                     href="/menu"
-                    className="mt-4 inline-flex items-center font-medium text-[#91604F] transition-colors hover:text-[#4D281F] optimize-text"
+                    className="mt-4 inline-flex items-center font-medium text-[#91604F] transition-colors hover:text-[#4D281F] lcp-optimized"
                   >
                     Discover More
                     <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -317,7 +334,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="font-serif text-3xl font-bold md:text-4xl optimize-text"
+              className="font-serif text-3xl font-bold md:text-4xl lcp-optimized"
             >
               Welcome to Our Home
             </motion.h2>
@@ -333,7 +350,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="mt-8 font-serif text-lg leading-relaxed md:text-xl optimize-text stable-layout"
+              className="mt-8 font-serif text-lg leading-relaxed md:text-xl lcp-optimized stable-layout"
             >
               In every cup we serve, there's a story of Tamil Nadu's rich heritage. In every bite, there's a memory
               waiting to be created. We don't just serve food; we serve tradition, nostalgia, and a piece of our heart.
@@ -347,7 +364,7 @@ export default function Home() {
             >
               <Link
                 href="/our-story"
-                className="group flex items-center rounded-full border border-[#CDB090] px-8 py-3 font-medium transition-all duration-300 hover:bg-[#CDB090] hover:text-[#0D0906] optimize-text"
+                className="group flex items-center rounded-full border border-[#CDB090] px-8 py-3 font-medium transition-all duration-300 hover:bg-[#CDB090] hover:text-[#0D0906] lcp-optimized"
               >
                 Discover Our Journey
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -367,7 +384,7 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             className="mb-16 text-center"
           >
-            <h2 className="font-serif text-3xl font-bold text-[#4D281F] md:text-4xl optimize-text">
+            <h2 className="font-serif text-3xl font-bold text-[#4D281F] md:text-4xl lcp-optimized">
               A Taste of Our Menu
             </h2>
             <div className="mx-auto mt-2 h-1 w-24 bg-[#91604F]"></div>
@@ -398,7 +415,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
                   <div className="absolute inset-0 flex items-end p-6">
                     <div>
-                      <h3 className="font-serif text-2xl font-bold text-white optimize-text">{category.name}</h3>
+                      <h3 className="font-serif text-2xl font-bold text-white lcp-optimized">{category.name}</h3>
                       <div className="mt-2 h-0.5 w-0 bg-[#CDB090] transition-all duration-500 group-hover:w-full"></div>
                     </div>
                   </div>
@@ -416,7 +433,7 @@ export default function Home() {
           >
             <Link
               href="/menu"
-              className="rounded-full bg-[#653A2A] px-8 py-3 font-medium text-white transition-all duration-300 hover:bg-[#4D281F] hover:shadow-lg optimize-text"
+              className="rounded-full bg-[#653A2A] px-8 py-3 font-medium text-white transition-all duration-300 hover:bg-[#4D281F] hover:shadow-lg lcp-optimized"
             >
               View Full Menu
             </Link>
@@ -434,9 +451,9 @@ export default function Home() {
             viewport={{ once: true, margin: "-100px" }}
             className="mb-16 text-center"
           >
-            <h2 className="font-serif text-3xl font-bold text-[#4D281F] md:text-4xl optimize-text">From Our Journal</h2>
+            <h2 className="font-serif text-3xl font-bold text-[#4D281F] md:text-4xl lcp-optimized">From Our Journal</h2>
             <div className="mx-auto mt-2 h-1 w-24 bg-[#91604F]"></div>
-            <p className="mx-auto mt-4 max-w-2xl text-[#653A2A] optimize-text">
+            <p className="mx-auto mt-4 max-w-2xl text-[#653A2A] lcp-optimized">
               Stories, traditions, and the heritage behind our flavors
             </p>
           </motion.div>
@@ -460,13 +477,13 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-serif text-xl font-bold text-[#4D281F] transition-colors group-hover:text-[#653A2A] optimize-text">
+                  <h3 className="font-serif text-xl font-bold text-[#4D281F] transition-colors group-hover:text-[#653A2A] lcp-optimized">
                     {blog.title}
                   </h3>
-                  <p className="mt-2 text-[#653A2A] optimize-text">{blog.excerpt}</p>
+                  <p className="mt-2 text-[#653A2A] lcp-optimized">{blog.excerpt}</p>
                   <Link
                     href={`/blogs/${blog.slug}`}
-                    className="mt-4 inline-flex items-center font-medium text-[#91604F] transition-colors hover:text-[#4D281F] optimize-text"
+                    className="mt-4 inline-flex items-center font-medium text-[#91604F] transition-colors hover:text-[#4D281F] lcp-optimized"
                   >
                     Discover More Insights
                     <ArrowRight className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -485,7 +502,7 @@ export default function Home() {
           >
             <Link
               href="/blogs"
-              className="rounded-full border-2 border-[#653A2A] bg-transparent px-8 py-3 font-medium text-[#653A2A] transition-all duration-300 hover:bg-[#653A2A] hover:text-white optimize-text"
+              className="rounded-full border-2 border-[#653A2A] bg-transparent px-8 py-3 font-medium text-[#653A2A] transition-all duration-300 hover:bg-[#653A2A] hover:text-white lcp-optimized"
             >
               View All Stories
             </Link>
@@ -503,7 +520,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="font-serif text-3xl font-bold md:text-4xl optimize-text"
+              className="font-serif text-3xl font-bold md:text-4xl lcp-optimized"
             >
               Visit Us Today
             </motion.h2>
@@ -519,7 +536,7 @@ export default function Home() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="mt-6 font-serif text-lg italic optimize-text"
+              className="mt-6 font-serif text-lg italic lcp-optimized"
             >
               Experience the warmth of Tamil Nadu's heritage in every visit
             </motion.p>
@@ -533,23 +550,23 @@ export default function Home() {
             >
               <div className="flex flex-col items-center">
                 <Mail className="h-8 w-8 text-[#CDB090]" />
-                <h3 className="mt-4 font-serif text-xl font-semibold optimize-text">Email</h3>
-                <p className="mt-2 text-center text-sm optimize-text">thethoothukudicafe@gmail.com</p>
+                <h3 className="mt-4 font-serif text-xl font-semibold lcp-optimized">Email</h3>
+                <p className="mt-2 text-center text-sm lcp-optimized">thethoothukudicafe@gmail.com</p>
               </div>
               <div className="flex flex-col items-center">
                 <MapPin className="h-8 w-8 text-[#CDB090]" />
-                <h3 className="mt-4 font-serif text-xl font-semibold optimize-text">Location</h3>
-                <p className="mt-2 text-center text-sm optimize-text">Thoothukudi Café, Hyderabad</p>
+                <h3 className="mt-4 font-serif text-xl font-semibold lcp-optimized">Location</h3>
+                <p className="mt-2 text-center text-sm lcp-optimized">Thoothukudi Café, Hyderabad</p>
               </div>
               <div className="flex flex-col items-center">
                 <Phone className="h-8 w-8 text-[#CDB090]" />
-                <h3 className="mt-4 font-serif text-xl font-semibold optimize-text">Contact</h3>
-                <p className="mt-2 text-center text-sm optimize-text">+91 79957 11408</p>
+                <h3 className="mt-4 font-serif text-xl font-semibold lcp-optimized">Contact</h3>
+                <p className="mt-2 text-center text-sm lcp-optimized">+91 79957 11408</p>
               </div>
               <div className="flex flex-col items-center">
                 <Instagram className="h-8 w-8 text-[#CDB090]" />
-                <h3 className="mt-4 font-serif text-xl font-semibold optimize-text">Instagram</h3>
-                <p className="mt-2 text-center text-sm optimize-text">@thoothukudicafe</p>
+                <h3 className="mt-4 font-serif text-xl font-semibold lcp-optimized">Instagram</h3>
+                <p className="mt-2 text-center text-sm lcp-optimized">@thoothukudicafe</p>
               </div>
             </motion.div>
 
@@ -562,7 +579,7 @@ export default function Home() {
             >
               <Link
                 href="/contact-us"
-                className="rounded-full bg-[#CDB090] px-8 py-3 font-medium text-[#0D0906] transition-all duration-300 hover:bg-[#CDB090]/90 hover:shadow-lg optimize-text"
+                className="rounded-full bg-[#CDB090] px-8 py-3 font-medium text-[#0D0906] transition-all duration-300 hover:bg-[#CDB090]/90 hover:shadow-lg lcp-optimized"
               >
                 Contact Us
               </Link>

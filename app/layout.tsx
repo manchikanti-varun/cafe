@@ -9,11 +9,11 @@ import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import { Suspense } from "react"
 
-// Optimized font loading with system font fallbacks
+// Optimized font loading with font-display: swap and better fallbacks
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  display: "swap",
+  display: "swap", // Critical for LCP optimization
   preload: true,
   fallback: [
     "system-ui",
@@ -26,13 +26,13 @@ const inter = Inter({
     "Cantarell",
     "sans-serif",
   ],
-  adjustFontFallback: true, // Automatically adjust fallback metrics
+  adjustFontFallback: true,
 })
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
-  display: "swap",
+  display: "swap", // Critical for LCP optimization
   preload: true,
   fallback: ["Georgia", "Times New Roman", "Times", "serif"],
   adjustFontFallback: true,
@@ -55,41 +55,81 @@ export default function RootLayout({
   return (
     <html lang="en" className={`scroll-smooth ${inter.variable} ${playfair.variable}`}>
       <head>
-        {/* Critical font preloading with resource hints */}
+        {/* Critical font preloading for LCP optimization */}
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 
-        {/* Preload critical fonts for immediate availability */}
+        {/* Load fonts with proper fallback strategy */}
         <link
-          rel="preload"
-          href="/_next/static/media/inter-latin-400-normal.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         />
         <link
-          rel="preload"
-          href="/_next/static/media/playfair-display-latin-400-normal.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
         />
 
-        {/* Font loading optimization script */}
+        {/* Critical CSS for immediate font rendering */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `
+              /* Critical font loading styles */
+              .font-loading * {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+              }
+              
+              .font-loading .font-serif,
+              .font-loading .hero-title,
+              .font-loading h1, .font-loading h2, .font-loading h3 {
+                font-family: Georgia, "Times New Roman", Times, serif !important;
+              }
+
+              /* Prevent layout shift during font swap */
+              .hero-title {
+                font-size-adjust: 0.5;
+                line-height: 1.1;
+                font-synthesis: none;
+              }
+
+              .hero-text {
+                font-size-adjust: 0.5;
+                line-height: 1.5;
+                font-synthesis: none;
+              }
+
+              /* Critical above-the-fold content optimization */
+              .lcp-optimized {
+                font-display: swap;
+                text-rendering: optimizeSpeed;
+                contain: layout style paint;
+              }
+            `,
+          }}
+        />
+
+        {/* Font loading optimization script - runs immediately */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              // Optimize font loading with system font first
               (function() {
-                // Add font-loading class to enable system fonts initially
+                // Add font-loading class immediately
                 document.documentElement.classList.add('font-loading');
                 
-                // Remove font-loading class when custom fonts are ready
+                // Remove when fonts are ready
                 if ('fonts' in document) {
-                  document.fonts.ready.then(function() {
+                  Promise.race([
+                    document.fonts.ready,
+                    new Promise(resolve => setTimeout(resolve, 3000)) // 3s timeout
+                  ]).then(() => {
                     document.documentElement.classList.remove('font-loading');
                     document.documentElement.classList.add('fonts-loaded');
                   });
+                } else {
+                  // Fallback for older browsers
+                  setTimeout(() => {
+                    document.documentElement.classList.remove('font-loading');
+                    document.documentElement.classList.add('fonts-loaded');
+                  }, 3000);
                 }
               })();
             `,
