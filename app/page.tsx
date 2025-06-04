@@ -130,7 +130,7 @@ export default function Home() {
 
           {/* Mobile description - shorter and simpler */}
           <p className="mb-8 max-w-sm text-base leading-relaxed text-gray-300 md:hidden hero-text lcp-optimized">
-            Authentic South Indian flavors since 1995
+            Experience the finest coffee and delicacies crafted with passion and tradition.
           </p>
 
           {/* Delayed animations for non-critical elements */}
