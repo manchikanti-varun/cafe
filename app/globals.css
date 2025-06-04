@@ -94,6 +94,46 @@
   }
 }
 
+/* Critical mobile LCP optimizations */
+@media (max-width: 768px) {
+
+  /* Force immediate system font rendering on mobile */
+  h1,
+  .hero-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-display: block !important;
+    text-rendering: optimizeSpeed !important;
+    font-synthesis: none !important;
+    contain: layout style paint !important;
+    content-visibility: auto !important;
+  }
+
+  /* Reduce font size aggressively on mobile */
+  .hero-title {
+    font-size: 2rem !important;
+    /* Force 32px on mobile */
+    line-height: 1.1 !important;
+    letter-spacing: 0.05em !important;
+  }
+
+  /* Optimize mobile rendering */
+  .mobile-lcp-critical {
+    font-display: block !important;
+    text-rendering: optimizeSpeed !important;
+    contain: layout style paint !important;
+    content-visibility: auto !important;
+  }
+}
+
+/* Desktop font loading */
+@media (min-width: 769px) {
+
+  .fonts-loaded h1,
+  .fonts-loaded .hero-title {
+    font-family: var(--font-serif) !important;
+  }
+}
+
 /* Font Loading Strategy Implementation */
 
 /* Phase 1: System fonts for immediate rendering */
@@ -262,41 +302,6 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Mobile-specific logo optimization */
-@media (max-width: 768px) {
-  .navbar-logo {
-    height: 3rem;
-    /* 48px instead of 64px on mobile */
-    width: auto;
-    contain: layout style paint;
-    content-visibility: auto;
-  }
-
-  /* Faster transitions on mobile */
-  .hero-title {
-    font-size: 2.5rem;
-    /* Smaller on mobile for faster paint */
-    line-height: 1.1;
-    contain: layout style paint;
-    content-visibility: auto;
-  }
-
-  /* Optimize mobile font loading */
-  .font-loading .hero-title {
-    font-family: system-ui, -apple-system, sans-serif !important;
-    font-display: swap;
-  }
-
-  /* Critical mobile LCP optimizations */
-  .mobile-lcp-optimized {
-    font-display: swap;
-    text-rendering: optimizeSpeed;
-    contain: layout style paint;
-    content-visibility: auto;
-    font-synthesis: none;
-  }
 }
 
 /* Logo-specific optimizations */
