@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "if exist .next rmdir /s /q .next & next dev",
+    "build": "if exist .next rmdir /s /q .next & next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "if exist .next rmdir /s /q .next",
+    "dev:unix": "rm -rf .next && next dev",
+    "build:unix": "rm -rf .next && next build",
+    "clean:unix": "rm -rf .next"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
