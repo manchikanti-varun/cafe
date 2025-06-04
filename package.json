@@ -3,14 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "if exist .next rmdir /s /q .next & next dev",
-    "build": "if exist .next rmdir /s /q .next & next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "if exist .next rmdir /s /q .next",
-    "dev:unix": "rm -rf .next && next dev",
-    "build:unix": "rm -rf .next && next build",
-    "clean:unix": "rm -rf .next"
+    "clean": "rimraf .next",
+    "dev:clean": "rimraf .next && next dev",
+    "build:clean": "rimraf .next && next build"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
@@ -72,6 +71,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "postcss": "^8",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
