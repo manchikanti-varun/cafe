@@ -73,37 +73,56 @@ export default function RootLayout({
         <style
           dangerouslySetInnerHTML={{
             __html: `
-              /* Critical font loading styles */
-              .font-loading * {
-                font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-              }
-              
-              .font-loading .font-serif,
-              .font-loading .hero-title,
-              .font-loading h1, .font-loading h2, .font-loading h3 {
-                font-family: Georgia, "Times New Roman", Times, serif !important;
-              }
+      /* Critical font loading styles with mobile priority */
+      .font-loading * {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+      }
+      
+      .font-loading .font-serif,
+      .font-loading .hero-title,
+      .font-loading h1, .font-loading h2, .font-loading h3 {
+        font-family: Georgia, "Times New Roman", Times, serif !important;
+      }
 
-              /* Prevent layout shift during font swap */
-              .hero-title {
-                font-size-adjust: 0.5;
-                line-height: 1.1;
-                font-synthesis: none;
-              }
+      /* Mobile-first hero optimizations */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 1.875rem !important;
+          line-height: 1.1 !important;
+          font-synthesis: none !important;
+          font-display: swap !important;
+          text-rendering: optimizeSpeed !important;
+          contain: layout style paint !important;
+        }
+        
+        .hero-text {
+          font-size: 0.875rem !important;
+          line-height: 1.4 !important;
+          font-synthesis: none !important;
+          font-display: swap !important;
+        }
+      }
 
-              .hero-text {
-                font-size-adjust: 0.5;
-                line-height: 1.5;
-                font-synthesis: none;
-              }
+      /* Prevent layout shift during font swap */
+      .hero-title {
+        font-size-adjust: 0.5;
+        font-synthesis: none;
+        font-display: swap;
+      }
 
-              /* Critical above-the-fold content optimization */
-              .lcp-optimized {
-                font-display: swap;
-                text-rendering: optimizeSpeed;
-                contain: layout style paint;
-              }
-            `,
+      .hero-text {
+        font-size-adjust: 0.5;
+        font-synthesis: none;
+        font-display: swap;
+      }
+
+      /* Critical above-the-fold content optimization */
+      .lcp-optimized {
+        font-display: swap !important;
+        text-rendering: optimizeSpeed !important;
+        contain: layout style paint !important;
+      }
+    `,
           }}
         />
 
@@ -111,28 +130,32 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              (function() {
-                // Add font-loading class immediately
-                document.documentElement.classList.add('font-loading');
-                
-                // Remove when fonts are ready
-                if ('fonts' in document) {
-                  Promise.race([
-                    document.fonts.ready,
-                    new Promise(resolve => setTimeout(resolve, 3000)) // 3s timeout
-                  ]).then(() => {
-                    document.documentElement.classList.remove('font-loading');
-                    document.documentElement.classList.add('fonts-loaded');
-                  });
-                } else {
-                  // Fallback for older browsers
-                  setTimeout(() => {
-                    document.documentElement.classList.remove('font-loading');
-                    document.documentElement.classList.add('fonts-loaded');
-                  }, 3000);
-                }
-              })();
-            `,
+      (function() {
+        // Add font-loading class immediately
+        document.documentElement.classList.add('font-loading');
+        
+        // Faster timeout for mobile devices
+        const isMobile = window.innerWidth < 768;
+        const timeout = isMobile ? 1500 : 3000;
+        
+        // Remove when fonts are ready
+        if ('fonts' in document) {
+          Promise.race([
+            document.fonts.ready,
+            new Promise(resolve => setTimeout(resolve, timeout))
+          ]).then(() => {
+            document.documentElement.classList.remove('font-loading');
+            document.documentElement.classList.add('fonts-loaded');
+          });
+        } else {
+          // Fallback for older browsers
+          setTimeout(() => {
+            document.documentElement.classList.remove('font-loading');
+            document.documentElement.classList.add('fonts-loaded');
+          }, timeout);
+        }
+      })();
+    `,
           }}
         />
 
