@@ -46,7 +46,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`navbar-container fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${isScrolled
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${isScrolled
           ? "bg-white py-2 shadow-md backdrop-blur-md"
           : isHomePage
             ? "bg-transparent py-4"
@@ -54,18 +54,16 @@ export default function Navbar() {
         }`}
     >
       <div className="container mx-auto flex items-center justify-between px-4">
-        {/* Logo */}
+        {/* Logo - Optimized for LCP */}
         <Link href="/" className="z-10 flex items-center">
           <Image
             src="/Nav-logo.png"
             alt="Thoothukudi Cafe"
             width={64}
             height={64}
-            className="navbar-logo-optimized"
+            className="nav-logo h-16 w-auto object-contain"
             priority
-            sizes="(max-width: 768px) 48px, 64px"
-            quality={85}
-            placeholder="empty"
+            sizes="(max-width: 768px) 64px, 64px"
           />
         </Link>
 
