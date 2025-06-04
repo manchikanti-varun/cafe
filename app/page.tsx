@@ -130,7 +130,7 @@ export default function Home() {
 
           {/* Mobile description - shorter and simpler */}
           <p className="mb-8 max-w-sm text-base leading-relaxed text-gray-300 md:hidden hero-text lcp-optimized">
-            Savor authentic coffee and timeless treats crafted with heritage and heart.
+            Savor tradition. Taste crafted perfection.
           </p>
 
           {/* Delayed animations for non-critical elements */}
