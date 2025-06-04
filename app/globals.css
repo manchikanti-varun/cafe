@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font optimization */
+@font-face {
+  font-family: "Inter";
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-display: swap;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -56,7 +67,19 @@
 
   body {
     @apply bg-background text-foreground;
+    font-display: swap;
   }
+}
+
+/* Optimize LCP elements */
+.hero-title {
+  font-display: swap;
+  text-rendering: optimizeSpeed;
+}
+
+.hero-text {
+  font-display: swap;
+  text-rendering: optimizeSpeed;
 }
 
 /* Custom Scrollbar */

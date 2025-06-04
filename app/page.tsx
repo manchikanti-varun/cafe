@@ -92,7 +92,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.6, delay: 0.1 }} // Reduced delay
             className="mb-2"
           >
             <p className="font-serif text-xl text-[#CDB090] md:text-2xl">café</p>
@@ -101,8 +101,8 @@ export default function Home() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="mb-4 font-serif text-4xl font-bold tracking-wider text-white sm:text-5xl md:text-6xl lg:text-7xl"
+            transition={{ duration: 0.6, delay: 0 }}
+            className="mb-4 font-serif text-4xl font-bold tracking-wider text-white sm:text-5xl md:text-6xl lg:text-7xl hero-title"
           >
             THOOTHUKUDI
           </motion.h1>
@@ -110,14 +110,14 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, width: 0 }}
             animate={{ opacity: 1, width: "100px" }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.3 }} // Reduced delay
             className="mb-4 h-1 w-24 bg-[#CDB090]"
           ></motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
+            transition={{ duration: 0.6, delay: 0.4 }} // Reduced delay
             className="mb-6 font-serif text-xl italic text-[#CDB090] md:text-2xl"
           >
             secret of nature
@@ -126,8 +126,8 @@ export default function Home() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1 }}
-            className="mb-8 max-w-md text-lg leading-relaxed text-gray-300 md:text-xl"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-8 max-w-md text-lg leading-relaxed text-gray-300 md:text-xl hero-text"
           >
             Experience the finest coffee and delicacies crafted with passion and tradition. Our heritage recipes bring
             authentic flavors to your table.
@@ -136,7 +136,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.2 }}
+            transition={{ duration: 0.6, delay: 0.6 }} 
             className="flex flex-col space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"
           >
             <Link
