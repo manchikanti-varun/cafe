@@ -9,11 +9,10 @@ import { Analytics } from "@vercel/analytics/next"
 import Script from "next/script"
 import { Suspense } from "react"
 
-// AGGRESSIVE FONT SWAP CONFIGURATION
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
-  display: "swap", // IMMEDIATE SWAP
+  display: "swap", 
   preload: true,
   fallback: [
     "system-ui",
