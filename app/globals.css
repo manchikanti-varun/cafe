@@ -124,9 +124,8 @@
 /* Critical mobile LCP optimizations - more specific targeting */
 @media (max-width: 768px) {
 
-  /* Target only hero title, not navbar */
-  .hero-section h1,
-  .hero-section .hero-title {
+  /* Target ONLY the main hero title, nothing else */
+  .hero-section .hero-text-optimized {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-display: block !important;
     text-rendering: optimizeSpeed !important;
@@ -139,32 +138,32 @@
     letter-spacing: 0.05em !important;
   }
 
-  /* Navbar specific mobile optimization - separate from hero */
-  .navbar-container {
-    contain: layout style;
+  /* Ensure navbar is completely separate */
+  .navbar-container,
+  .navbar-container * {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+    font-display: swap !important;
   }
 
-  /* Don't apply hero optimizations to navbar */
-  nav,
-  nav *,
-  header,
-  header * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    font-display: swap;
+  /* Prevent any global font loading from affecting hero */
+  .font-loading .hero-section .hero-text-optimized {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
+  }
+
+  .fonts-loaded .hero-section .hero-text-optimized {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
   }
 }
 
 /* Desktop font loading - more specific */
 @media (min-width: 769px) {
-
-  .fonts-loaded .hero-section h1,
-  .fonts-loaded .hero-section .hero-title {
-    font-family: var(--font-serif) !important;
+  .fonts-loaded .hero-section .hero-text-optimized {
+    font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
   }
 
-  .fonts-loaded nav,
-  .fonts-loaded header {
-    font-family: var(--font-sans) !important;
+  .fonts-loaded .navbar-container,
+  .fonts-loaded .navbar-container * {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
   }
 }
 
@@ -357,5 +356,28 @@
   .font-loading * {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif !important;
     font-display: swap;
+  }
+}
+
+/* CRITICAL: Override any conflicting font rules for hero text */
+.hero-text-optimized {
+  font-display: swap !important;
+  text-rendering: optimizeSpeed !important;
+  font-synthesis: none !important;
+  contain: layout style paint !important;
+  content-visibility: auto !important;
+}
+
+/* Ensure hero text is never affected by global font loading states */
+.font-loading .hero-text-optimized,
+.fonts-loaded .hero-text-optimized {
+  font-weight: bold !important;
+  tracking: 0.05em !important;
+}
+
+@media (max-width: 768px) {
+  .hero-text-optimized {
+    font-size: 2rem !important;
+    line-height: 1.1 !important;
   }
 }
