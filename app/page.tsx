@@ -35,6 +35,7 @@ export default function Home() {
     }
 
     window.addEventListener("fontsLoaded", handleFontsLoaded)
+    
 
     // Fallback timeout
     const fontTimeout = setTimeout(() => {
